@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
+import Hero1 from "../assets/hero1.jpg";
 
 const About = () => {
   useEffect(() => {
@@ -33,7 +34,7 @@ const About = () => {
           {/* Image Section */}
           <div className="relative md:w-1/2 w-full z-10">
             <Image
-              src="/hero1.jpg"
+              src={Hero1}
               alt="GAIA"
               width={600} // you can adjust based on actual image ratio
               height={500}

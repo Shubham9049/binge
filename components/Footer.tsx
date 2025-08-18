@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
@@ -63,7 +64,7 @@ const Footer = () => {
             <div className="w-16 border-t border-[var(--primary-color)]" />
             <Link href="/" className="uppercase">
               <Image
-                src="/logo.png"
+                src={logo}
                 alt="Stellar Binge Logo"
                 width={150}
                 height={50}

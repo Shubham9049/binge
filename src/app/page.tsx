@@ -8,15 +8,20 @@ import Footer from "../../components/Footer";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import hero1 from "../../assets/hero1.jpg";
+import hero2 from "../../assets/hero2.jpg";
+import hero3 from "../../assets/hero3.jpg";
+import hero4 from "../../assets/hero4.jpg";
+import hero5 from "../../assets/hero5.jpg";
 
 const fundamentals = [
-  { poster: "/hero1.jpg" },
-  { poster: "/hero1.jpg" },
-  { poster: "/hero1.jpg" },
-  { poster: "/hero1.jpg" },
-  { poster: "/hero1.jpg" },
-  { poster: "/hero1.jpg" },
-  { poster: "/hero1.jpg" },
+  { poster: hero1 },
+  { poster: hero2 },
+  { poster: hero3 },
+  { poster: hero4 },
+  { poster: hero5 },
+  { poster: hero1 },
+  { poster: hero2 },
 ];
 
 export default function Home() {
@@ -52,7 +57,7 @@ export default function Home() {
                 className={`relative overflow-hidden rounded-sm bg-cover bg-center h-96 ${
                   index === 0 ? "md:col-span-2" : ""
                 }`}
-                style={{ backgroundImage: `url(${location.poster})` }}
+                style={{ backgroundImage: `url(${location.poster.src})` }} // ✅ fix
                 data-aos="zoom-in"
               />
             ))}

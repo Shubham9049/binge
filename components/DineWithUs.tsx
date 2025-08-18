@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
+import Hero2 from "../assets/hero2.jpg";
 
 const DiningExperienceSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -131,7 +132,7 @@ const DiningExperienceSection: React.FC = () => {
           <div className="absolute top-10 right-6 w-full h-full bg-[radial-gradient(#ccc_2.5px,transparent_2.5px)] bg-[length:28px_28px] z-0" />
           <div className="absolute right-10 top-44 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[#eaf3f7] dark:bg-gray-900 z-0"></div>
           <Image
-            src="/hero2.jpg"
+            src={Hero2}
             alt="Dining"
             width={600} // you can adjust based on actual image ratio
             height={400}

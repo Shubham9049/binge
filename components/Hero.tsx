@@ -1,30 +1,35 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import hero1 from "../assets/hero1.jpg";
+import hero2 from "../assets/hero2.jpg";
+import hero3 from "../assets/hero3.jpg";
+import hero4 from "../assets/hero4.jpg";
+import hero5 from "../assets/hero5.jpg";
 
 const slides = [
   {
-    image: "/hero1.jpg",
+    image: hero1,
     address: "CPD-78, BATA CHOWK METRO STATION, Faridabad (East), FARIDABAD",
     buttonText: "Reserve a table",
   },
   {
-    image: "/hero2.jpg",
+    image: hero2,
     address: "123 Connaught Place, New Delhi, DELHI",
     buttonText: "Reserve a table",
   },
   {
-    image: "/hero3.jpg",
+    image: hero3,
     address: "45 MG Road, Gurugram, HARYANA",
     buttonText: "Reserve a table",
   },
   {
-    image: "/hero4.jpg",
+    image: hero4,
     address: "22 Sector 17, Chandigarh, PUNJAB",
     buttonText: "Reserve a table",
   },
   {
-    image: "/hero5.jpg",
+    image: hero5,
     address: "78 Park Street, Kolkata, WEST BENGAL",
     buttonText: "Reserve a table",
   },
@@ -44,8 +49,8 @@ const Hero = () => {
     <div className="relative w-full h-[100vh] overflow-hidden font-raleway font-thin">
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
-          key={slides[index].image}
-          src={slides[index].image}
+          key={slides[index].image.src} // ✅ use .src for the key
+          src={slides[index].image.src} // ✅ string instead of StaticImageData
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
