@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Menu,
   Twitter,
@@ -13,6 +13,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../assets/logo.png";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { title: "Home", href: "/" },
@@ -25,8 +26,12 @@ const navItems = [
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [mobileMenu, setMobileMenu] = useState(false);
   const [activeLink, setActiveLink] = useState<string>(""); // Track active nav link
+  useEffect(() => {
+    setActiveLink(pathname);
+  }, [pathname]);
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full font-raleway font-light shadow-sm bg-[#ffffff]">
@@ -51,10 +56,10 @@ const Navbar = () => {
                 <Link
                   href={item.href}
                   onClick={() => setActiveLink(item.href)}
-                  className={`py-8 transition-colors ${
+                  className={`py-6 transition-colors border-b-4 border-transparent ${
                     activeLink === item.href
-                      ? "text-[#B10203] font-medium"
-                      : "text-[#000000] hover:text-[#B10203]"
+                      ? "text-[var(--primary-color)] font-medium "
+                      : "text-[#000000] hover:text-[var(--primary-color)] hover:border-b-[var(--primary-color)]"
                   }`}
                 >
                   {item.title}
@@ -75,7 +80,7 @@ const Navbar = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
+                className="flex items-center gap-2 px-4 py-2 hover:text-[var(--primary-color)]"
               >
                 <Facebook size={16} /> Facebook
               </Link>
@@ -83,7 +88,7 @@ const Navbar = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
+                className="flex items-center gap-2 px-4 py-2 hover:text-[var(--primary-color)]"
               >
                 <Instagram size={16} /> Instagram
               </Link>
@@ -91,7 +96,7 @@ const Navbar = () => {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
+                className="flex items-center gap-2 px-4 py-2 hover:text-[var(--primary-color)]"
               >
                 <Twitter size={16} /> Twitter
               </Link>
@@ -99,7 +104,7 @@ const Navbar = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
+                className="flex items-center gap-2 px-4 py-2 hover:text-[var(--primary-color)]"
               >
                 <Linkedin size={16} /> Linkedin
               </Link>
@@ -107,13 +112,13 @@ const Navbar = () => {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
+                className="flex items-center gap-2 px-4 py-2 hover:text-[var(--primary-color)]"
               >
                 <Youtube size={16} /> Youtube
               </Link>
             </div>
           </div>
-          <span className="text-md text-[#000000] font-thin cursor-pointer hover:text-[#B10203]">
+          <span className="text-md text-[#000000] font-thin cursor-pointer hover:text-[var(--primary-color)]">
             <Link
               href="tel:+919599816865
 
@@ -153,8 +158,8 @@ const Navbar = () => {
                   }}
                   className={`block py-2 font-light ${
                     activeLink === item.href
-                      ? "text-[#B10203] font-medium"
-                      : "text-black hover:text-[#B10203]"
+                      ? "text-[var(--primary-color)] font-medium"
+                      : "text-black hover:text-[var(--primary-color)]"
                   }`}
                 >
                   {item.title}
@@ -165,7 +170,7 @@ const Navbar = () => {
 
           {/* Call Box */}
           <div className="mt-8 flex w-full">
-            <div className="flex-1 border border-gray-500 text-center py-2 hover:text-[#B10203]">
+            <div className="flex-1 border border-gray-500 text-center py-2 hover:text-[var(--primary-color)]">
               <Link href="tel:+1234567890">Call Us</Link>
             </div>
           </div>
