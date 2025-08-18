@@ -10,6 +10,48 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="bg-white dark:bg-black text-black dark:text-white font-raleway text-sm">
+      {/* Newsletter Section */}
+      <div
+        id="newsletter-section"
+        className="border-t border-gray-300 dark:border-gray-700 w-full"
+      >
+        <div className="bg-white dark:bg-black text-black dark:text-white py-12 px-4 sm:px-6 md:px-10 font-raleway">
+          <div className="w-11/12 mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+            {/* Left Section */}
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
+              <h2 className="text-2xl md:text-4xl font-semibold text-black dark:text-white mt-2">
+                Sign up for exclusive <br /> offers from us
+              </h2>
+            </div>
+
+            {/* Right Section */}
+            <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-end gap-4">
+              <p className="text-center lg:text-left text-base">
+                Sign up to our newsletter for all the latest news and events.
+              </p>
+
+              {/* Input & Button */}
+              <div className="w-full flex flex-col sm:flex-row items-center  justify-end gap-3">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="w-full sm:w-[300px] px-4 py-3 text-black dark:text-white bg-transparent border border-gray-300 focus:outline-none"
+                />
+                <button className="relative group flex items-center justify-center text-[var(--primary-color)] border border-[var(--primary-color)] text-[12px] px-8 py-3 uppercase tracking-widest bg-transparent transition-all duration-300 overflow-hidden">
+                  <span className="z-10 relative flex items-center gap-1 group-hover:text-white transition-colors duration-300 font-light">
+                    Subscribe
+                  </span>
+                  <span
+                    className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
+                    style={{ backgroundColor: "#B10203" }}
+                  ></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Top horizontal line */}
       <div className="border-t border-gray-300 dark:border-gray-700 w-full" />
 
