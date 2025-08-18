@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
-import Hero2 from "../assets/hero2.jpg";
+import Hero2 from "../assets/hero2.jpeg";
 
 const DiningExperienceSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import hero1 from "../assets/hero1.jpg";
-import hero2 from "../assets/hero2.jpg";
-import hero3 from "../assets/hero3.jpg";
-import hero4 from "../assets/hero4.jpg";
-import hero5 from "../assets/hero5.jpg";
+import hero1 from "../assets/hero1.jpeg";
+import hero2 from "../assets/hero2.jpeg";
+import hero3 from "../assets/hero3.jpeg";
+import hero4 from "../assets/hero4.jpeg";
+import hero5 from "../assets/hero5.jpeg";
 
 const slides = [
   {
