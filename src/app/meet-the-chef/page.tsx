@@ -86,8 +86,8 @@ export default function MeetTheChef() {
       <section ref={headChefRef} className="bg-white py-16">
         <div className="w-11/12 md:w-5/6 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="relative w-full h-full z-10">
-            <div className="absolute top-10 right-6 w-full h-full bg-[radial-gradient(#ccc_2.5px,transparent_2.5px)] bg-[length:28px_28px] z-0" />
-            <div className="absolute right-10 top-44 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[#eaf3f7] dark:bg-gray-900 z-0"></div>
+            <div className="absolute top-16 right-6 w-full h-full bg-[radial-gradient(var(--primary-color)_2.5px,transparent_2.5px)] bg-[length:28px_28px] z-0" />
+            <div className="absolute right-16 top-28 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[#f9b3b3] z-0"></div>
             <Image
               src={hero2}
               alt="headChef"
@@ -98,7 +98,9 @@ export default function MeetTheChef() {
           </div>
 
           <div>
-            <h2 className="text-4xl font-bold mb-4">Meet Our Head Chef</h2>
+            <h2 className="text-3xl md:text-4xl text-[var(--primary-color)] font-semibold mb-4">
+              Meet Our Head Chef
+            </h2>
             <h3 className="text-xl font-semibold text-gray-700  mb-4">
               Chef Alessandro Romano
             </h3>
@@ -118,9 +120,11 @@ export default function MeetTheChef() {
       </section>
 
       {/* TEAM SECTION */}
-      <section className=" py-16">
+      <section className=" py-16 bg-[var(--secondary-color)]">
         <div className="w-11/12 md:w-5/6 container mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Our Culinary Team</h2>
+          <h2 className="text-3xl md:text-4xl text-[var(--primary-color)] mb-4">
+            Our Culinary Team
+          </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Behind every dish is a passionate team dedicated to delivering an
             unforgettable dining experience.

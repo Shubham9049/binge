@@ -74,16 +74,16 @@ export default function OurJourney() {
         </div>
       </section>
 
-      <section ref={ourStory} className=" py-16">
+      <section ref={ourStory} className="py-16">
         <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Side - Image */}
           <div className="relative w-full h-full z-10">
-            <div className="absolute top-10 right-6 w-full h-full bg-[radial-gradient(#ccc_2.5px,transparent_2.5px)] bg-[length:28px_28px] z-0" />
-            <div className="absolute right-10 top-44 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[#eaf3f7] dark:bg-gray-900 z-0"></div>
+            <div className="absolute top-16 right-6 w-full h-full bg-[radial-gradient(var(--primary-color)_2.5px,transparent_2.5px)] bg-[length:28px_28px] z-0" />
+            <div className="absolute right-16 top-28 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[#f9b3b3] z-0"></div>
             <Image
               src={aboutImage}
               alt="our story"
-              width={600} // you can adjust based on actual image ratio
+              width={600}
               height={400}
               className="relative z-10 w-full h-[300px] md:h-[400px] object-cover"
             />
@@ -91,7 +91,7 @@ export default function OurJourney() {
 
           {/* Right Side - Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)] mb-6">
               Our Story
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -108,11 +108,12 @@ export default function OurJourney() {
           </div>
         </div>
       </section>
-      <section className="py-16  ">
-        <div className="w-11/12 md:w-5/6 mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+      <section className="py-16 bg-[var(--secondary-color)] ">
+        <div className="w-11/12 md:w-5/6 mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center ">
           {/* Left - Text */}
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+            <h2 className="text-4xl font-bold text-[var(--primary-color)]">
               Our Culinary Philosophy
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -144,8 +145,8 @@ export default function OurJourney() {
 
           {/* Right - Image */}
           <div className="relative w-full h-full z-10">
-            <div className="absolute top-10 right-6 w-full h-full bg-[radial-gradient(#ccc_2.5px,transparent_2.5px)] bg-[length:28px_28px] z-0" />
-            <div className="absolute right-10 top-44 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[#eaf3f7] dark:bg-gray-900 z-0"></div>
+            <div className="absolute top-16 right-6 w-full h-full bg-[radial-gradient(var(--primary-color)_2.5px,transparent_2.5px)] bg-[length:28px_28px] z-0" />
+            <div className="absolute right-16 top-28 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[#f9b3b3] z-0"></div>
             <Image
               src={foodImage}
               alt="foodImage"
@@ -160,7 +161,7 @@ export default function OurJourney() {
       <section className="py-16 ">
         <div className="w-11/12 md:w-5/6 mx-auto px-6 text-center">
           {/* Title */}
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[var(--primary-color)]">
             What Makes Us Special
           </h2>
           <p className="text-gray-600 mb-12">

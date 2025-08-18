@@ -39,32 +39,35 @@ export default function Home() {
 
       {/* Section */}
       <section className="bg-white dark:bg-black font-raleway font-light dark:font-thin">
-        <div className="w-11/12 mx-auto px-3 md:px-8 py-10">
-          <p className="text-gray-700 dark:text-gray-300 text-xs tracking-widest mt-1 uppercase font-semibold">
-            NC Capital
+        <div className="w-11/12 md:w-5/6 mx-auto py-10">
+          {/* Small Label */}
+          <p className="text-[var(--primary-color)] text-xs tracking-widest mt-1 uppercase font-semibold">
+            Our Creations
           </p>
 
+          {/* Heading */}
           <div className="flex justify-between items-center mb-6 flex-wrap gap-4">
             <h2 className="text-2xl md:text-4xl font-semibold text-black dark:text-white mt-2">
-              Fern Hospitality <br /> expansion plan for the upcoming <br />{" "}
-              year
+              A Glimpse of Our Signature Restaurants <br /> & Dining Concepts
             </h2>
           </div>
+
           {/* Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-fr">
-            {fundamentals.map((location, index) => (
+            {fundamentals.map((creation, index) => (
               <div
                 key={index}
                 className={`relative overflow-hidden rounded-sm bg-cover bg-center h-96 ${
                   index === 0 ? "md:col-span-2" : ""
                 }`}
-                style={{ backgroundImage: `url(${location.poster.src})` }} // ✅ fix
+                style={{ backgroundImage: `url(${creation.poster.src})` }}
                 data-aos="zoom-in"
-              />
+              ></div>
             ))}
           </div>
         </div>
       </section>
+
       <ReviewSection />
       <Footer />
     </div>

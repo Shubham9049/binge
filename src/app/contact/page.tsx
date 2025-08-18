@@ -39,7 +39,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-white text-black dark:bg-[#121212] dark:text-white transition-colors">
+    <div className="bg-[var(--secondary-color)] text-black  transition-colors">
       <Navbar />
 
       {/* Hero Banner */}
@@ -167,7 +167,7 @@ export default function ContactPage() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-[var(--primary-color)] text-white px-6 py-3 rounded-tl-2xl rounded-br-2xl hover:bg-opacity-90 transition"
+            className="bg-[var(--primary-color)] text-white px-6 py-3  hover:rounded-xl transition"
           >
             {loading ? "Submitting..." : "Submit"}
           </button>
