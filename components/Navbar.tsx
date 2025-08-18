@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import logo from "../assets/logo.png";
 
 const navItems = [
   { title: "Home", href: "/" },
@@ -34,7 +35,7 @@ const Navbar = () => {
         <div className="flex items-center gap-6">
           <Link href="/" className="uppercase">
             <Image
-              src="/logo.png"
+              src={logo}
               alt="Stellar Binge Logo"
               width={150}
               height={50}
