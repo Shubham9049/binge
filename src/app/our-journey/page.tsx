@@ -6,6 +6,7 @@ import Footer from "../../../components/Footer";
 import banner from "../../../assets/hero1.jpeg";
 import aboutImage from "../../../assets/hero2.jpeg";
 import foodImage from "../../../assets/hero2.jpeg";
+import { useRef } from "react";
 const points = [
   {
     title: "Fresh Ingredients",
@@ -30,6 +31,16 @@ const points = [
 ];
 
 export default function OurJourney() {
+  const ourStory = useRef<HTMLDivElement | null>(null);
+  const scrollToNext = () => {
+    if (ourStory.current) {
+      const yOffset = -50; // 👈 adjust gap from top (e.g., navbar height)
+      const y =
+        ourStory.current.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
   return (
     <div>
       <Navbar />
@@ -54,13 +65,16 @@ export default function OurJourney() {
           </p>
 
           {/* Scroll Down Indicator */}
-          <div className="mt-10 animate-bounce border rounded-full w-fit px-1 py-2 mx-auto">
+          <button
+            onClick={scrollToNext}
+            className="mt-10 animate-bounce border rounded-full w-fit px-1 py-2 mx-auto cursor-pointer"
+          >
             <span className="text-3xl">↓</span>
-          </div>
+          </button>
         </div>
       </section>
 
-      <section className=" py-16">
+      <section ref={ourStory} className=" py-16">
         <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Side - Image */}
           <div className="relative w-full h-full z-10">
