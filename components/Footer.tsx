@@ -6,6 +6,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -60,14 +61,14 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start">
           <div className="flex items-center gap-4">
             <div className="w-16 border-t border-[var(--primary-color)]" />
-            <a href="/" className="uppercase">
+            <Link href="/" className="uppercase">
               <Image
                 src="/logo.png"
                 alt="Stellar Binge Logo"
                 width={150}
                 height={50}
               />
-            </a>
+            </Link>
             <div className="w-20 border-t border-[var(--primary-color)]" />
           </div>
         </div>

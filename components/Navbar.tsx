@@ -11,6 +11,7 @@ import {
   X,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const navItems = [
   { title: "Home", href: "/" },
@@ -31,21 +32,21 @@ const Navbar = () => {
       <div className="hidden md:flex justify-between items-center px-10">
         {/* Logo */}
         <div className="flex items-center gap-6">
-          <a href="/" className="uppercase">
+          <Link href="/" className="uppercase">
             <Image
               src="/logo.png"
               alt="Stellar Binge Logo"
               width={150}
               height={50}
             />
-          </a>
+          </Link>
           <div className="border-l self-stretch border-gray-400"></div>
 
           {/* Nav Items */}
           <ul className="flex gap-6">
             {navItems.map((item, idx) => (
               <li key={idx}>
-                <a
+                <Link
                   href={item.href}
                   onClick={() => setActiveLink(item.href)}
                   className={`py-8 transition-colors ${
@@ -55,7 +56,7 @@ const Navbar = () => {
                   }`}
                 >
                   {item.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
