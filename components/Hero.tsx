@@ -10,27 +10,32 @@ import hero5 from "../assets/hero5.jpeg";
 const slides = [
   {
     image: hero1,
-    address: "CPD-78, BATA CHOWK METRO STATION, Faridabad (East), FARIDABAD",
+    address:
+      "STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201307",
     buttonText: "Reserve a table",
   },
   {
     image: hero2,
-    address: "123 Connaught Place, New Delhi, DELHI",
+    address:
+      "STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201307",
     buttonText: "Reserve a table",
   },
   {
     image: hero3,
-    address: "45 MG Road, Gurugram, HARYANA",
+    address:
+      "STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201307",
     buttonText: "Reserve a table",
   },
   {
     image: hero4,
-    address: "22 Sector 17, Chandigarh, PUNJAB",
+    address:
+      "STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201307",
     buttonText: "Reserve a table",
   },
   {
     image: hero5,
-    address: "78 Park Street, Kolkata, WEST BENGAL",
+    address:
+      "STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201307",
     buttonText: "Reserve a table",
   },
 ];
@@ -70,7 +75,7 @@ const Hero = () => {
         transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
         className="absolute bottom-10 left-10 text-white max-w-3xl"
       >
-        <h1 className="text-2xl md:text-4xl font-bold mb-3 leading-snug">
+        <h1 className="text-2xl md:text-2xl font-bold mb-3 leading-snug">
           📍 {slides[index].address}
         </h1>
 

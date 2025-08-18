@@ -114,7 +114,13 @@ const Navbar = () => {
             </div>
           </div>
           <span className="text-md text-[#000000] font-thin cursor-pointer hover:text-[#B10203]">
-            <Link href="tel:+1234567890">Call Us</Link>
+            <Link
+              href="tel:+919599816865
+
+"
+            >
+              Call Us
+            </Link>
           </span>
         </div>
       </div>
