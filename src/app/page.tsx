@@ -13,6 +13,7 @@ import hero2 from "../../assets/hero2.jpeg";
 import hero3 from "../../assets/hero3.jpeg";
 import hero4 from "../../assets/hero4.jpeg";
 import hero5 from "../../assets/hero5.jpeg";
+import ReviewSection from "../../components/Testimonial";
 
 const fundamentals = [
   { poster: hero1 },
@@ -64,7 +65,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <ReviewSection />
       <Footer />
     </div>
   );
