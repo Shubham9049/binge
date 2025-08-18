@@ -18,8 +18,9 @@ const navItems = [
   { title: "Home", href: "/" },
   { title: "Our Journey", href: "/our-journey" },
   { title: "Meet the Chef", href: "/meet-the-chef" },
-  { title: "Our Creations", href: "/our-creations" },
-  { title: "Moments Captured", href: "/gallery" },
+  { title: "Menu", href: "/menu" },
+  { title: "Our Creations", href: "/gallery" },
+
   { title: "Let’s Connect", href: "/contact" },
 ];
 
