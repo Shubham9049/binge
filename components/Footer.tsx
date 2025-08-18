@@ -138,13 +138,13 @@ const Footer = () => {
         <span>Fern Hospitality ©2025 All Rights Reserved</span>
         <div className="flex gap-4">
           {["Terms of Use", "Privacy Policy", "Sitemap"].map((item, idx) => (
-            <a
+            <Link
               key={idx}
               href="#"
               className="cursor-pointer hover:text-[var(--primary-color)] transition"
             >
               {item}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

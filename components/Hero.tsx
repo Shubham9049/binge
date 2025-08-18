@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const slides = [
   {
@@ -68,7 +69,7 @@ const Hero = () => {
           📍 {slides[index].address}
         </h1>
 
-        <a href="/contact">
+        <Link href="/contact">
           <button className="relative inline-block px-6 py-2 border border-[var(--primary-color)] font-light group overflow-hidden transition-all">
             <span className="relative z-10 text-[var(--primary-color)] group-hover:text-black transition-colors duration-300">
               {slides[index].buttonText}
@@ -78,7 +79,7 @@ const Hero = () => {
               style={{ backgroundImage: "var(--bg-primary-gradient)" }}
             />
           </button>
-        </a>
+        </Link>
       </motion.div>
     </div>
   );

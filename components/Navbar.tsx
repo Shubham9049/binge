@@ -69,64 +69,64 @@ const Navbar = () => {
               Follow Us
             </span>
             <div className="absolute top-12 -right-20 min-w-[150px] rounded shadow-lg z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto bg-white dark:bg-gray-800">
-              <a
+              <Link
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
               >
                 <Facebook size={16} /> Facebook
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
               >
                 <Instagram size={16} /> Instagram
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
               >
                 <Twitter size={16} /> Twitter
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
               >
                 <Linkedin size={16} /> Linkedin
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
               >
                 <Youtube size={16} /> Youtube
-              </a>
+              </Link>
             </div>
           </div>
           <span className="text-md text-[#000000] font-thin cursor-pointer hover:text-[#B10203]">
-            <a href="tel:+1234567890">Call Us</a>
+            <Link href="tel:+1234567890">Call Us</Link>
           </span>
         </div>
       </div>
 
       {/* Mobile View */}
       <div className="md:hidden flex justify-between items-center px-4 py-3">
-        <a href="/">
+        <Link href="/">
           <Image
             src="/logo.png"
             alt="Stellar Binge Logo"
             width={150}
             height={50}
           />
-        </a>
+        </Link>
         <button onClick={() => setMobileMenu(!mobileMenu)}>
           {mobileMenu ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -137,7 +137,7 @@ const Navbar = () => {
           <div className="space-y-6">
             {navItems.map((item, idx) => (
               <div key={idx}>
-                <a
+                <Link
                   href={item.href}
                   onClick={() => {
                     setActiveLink(item.href);
@@ -150,7 +150,7 @@ const Navbar = () => {
                   }`}
                 >
                   {item.title}
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -158,7 +158,7 @@ const Navbar = () => {
           {/* Call Box */}
           <div className="mt-8 flex w-full">
             <div className="flex-1 border border-gray-500 text-center py-2 hover:text-[#B10203]">
-              <a href="tel:+1234567890">Call Us</a>
+              <Link href="tel:+1234567890">Call Us</Link>
             </div>
           </div>
         </div>
