@@ -44,7 +44,7 @@ export default function OurJourney() {
   return (
     <div>
       <Navbar />
-      <section className="relative w-full h-[90vh] flex items-center justify-center">
+      <section className="relative w-full h-[80vh] flex items-center justify-center">
         {/* Background Image */}
         <Image
           src={banner}

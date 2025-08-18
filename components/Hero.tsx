@@ -51,7 +51,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden font-raleway font-thin">
+    <div className="relative w-full h-[80vh] overflow-hidden font-raleway font-thin">
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           key={slides[index].image.src} // ✅ use .src for the key
@@ -75,7 +75,7 @@ const Hero = () => {
         transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
         className="absolute bottom-10 left-10 text-white max-w-3xl"
       >
-        <h1 className="text-2xl md:text-2xl font-bold mb-3 leading-snug">
+        {/* <h1 className="text-2xl md:text-2xl font-bold mb-3 leading-snug">
           📍 {slides[index].address}
         </h1>
 
@@ -89,7 +89,7 @@ const Hero = () => {
               style={{ backgroundImage: "var(--bg-primary-gradient)" }}
             />
           </button>
-        </Link>
+        </Link> */}
       </motion.div>
     </div>
   );

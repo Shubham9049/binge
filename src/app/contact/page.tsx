@@ -9,7 +9,7 @@ import {
 import { MdDeliveryDining, MdOutlineLocalDining } from "react-icons/md";
 import { RiTakeawayFill } from "react-icons/ri";
 import contactBanner from "../../../assets/hero5.jpeg";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import axios from "axios";
 import Navbar from "../../../components/Navbar";
 import Image from "next/image";
@@ -38,28 +38,59 @@ export default function ContactPage() {
     alert("form triggered");
   };
 
+  const contactRef = useRef<HTMLDivElement | null>(null);
+  const scrollToNext = () => {
+    if (contactRef.current) {
+      const yOffset = -50; // 👈 adjust gap from top (e.g., navbar height)
+      const y =
+        contactRef.current.getBoundingClientRect().top +
+        window.scrollY +
+        yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="bg-[var(--secondary-color)] text-black  transition-colors">
       <Navbar />
 
-      {/* Hero Banner */}
-      <div className="relative w-full h-[350px] md:h-[450px] overflow-hidden">
+      <section className="relative w-full h-[80vh] flex items-center justify-center">
+        {/* Background Image */}
         <Image
           src={contactBanner}
-          alt="Contact Us"
-          className="w-full h-full object-cover"
+          alt="Contact page"
+          fill
           priority
+          className="object-cover"
         />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-white text-4xl md:text-5xl font-bold drop-shadow-lg text-center px-4">
-            Get In Touch With Us
-          </h1>
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center text-white px-4">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4">Contact Us</h1>
+          <p className="text-lg md:text-2xl max-w-2xl mx-auto">
+            We'd love to hear from you! Reach out with questions, feedback, or
+            reservation inquiries.
+          </p>
+
+          {/* Scroll Down Indicator */}
+          <button
+            onClick={scrollToNext}
+            className="mt-10 animate-bounce border rounded-full w-fit px-1 py-2 mx-auto cursor-pointer"
+          >
+            <span className="text-3xl">↓</span>
+          </button>
         </div>
-      </div>
+      </section>
 
       {/* Main Contact Section */}
-      <section className="w-11/12 md:w-5/6 mx-auto py-16 grid md:grid-cols-2 gap-12 items-start">
+      <section
+        ref={contactRef}
+        className="w-11/12 md:w-5/6 mx-auto py-16 grid md:grid-cols-2 gap-12 items-start"
+      >
         {/* Left: Contact Info */}
         <div className="space-y-8">
           <h2 className="text-3xl font-bold text-[var(--primary-color)]">
