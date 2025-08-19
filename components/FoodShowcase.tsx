@@ -54,13 +54,13 @@ export default function SpringSlider() {
   return (
     <section className="w-11/12 md:w-5/6 mx-auto py-12 relative">
       {/* Custom Navigation Buttons */}
-      <button className="custom-prev absolute -left-14 top-1/2 -translate-y-1/2 z-10  ">
+      <button className="hidden md:block custom-prev absolute -left-14 top-1/2 -translate-y-1/2 z-10  ">
         <ChevronLeft
           className=" text-[var(--primary-color)] cursor-pointer"
           size={64}
         />
       </button>
-      <button className="custom-next absolute -right-14 top-1/2 -translate-y-1/2 z-10  ">
+      <button className="hidden md:block custom-next absolute -right-14 top-1/2 -translate-y-1/2 z-10  ">
         <ChevronRight
           className=" text-[var(--primary-color)] cursor-pointer"
           size={64}
