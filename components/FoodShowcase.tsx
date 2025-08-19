@@ -20,18 +20,18 @@ import img11 from "../assets/food/Tandoori Chicken.webp";
 import img12 from "../assets/food/Veg Manchurian Dry.webp";
 
 const foodImages: { src: StaticImageData; title: string }[] = [
-  { src: img1, title: "Chilli Chicken Dry" },
-  { src: img2, title: "Chilli Fish" },
-  { src: img3, title: "Crispy Babycorn" },
-  { src: img4, title: "Crispy Corns" },
-  { src: img5, title: "Hara Bhara Kebab" },
-  { src: img6, title: "Makhmali Seekh Kebab" },
-  { src: img7, title: "Murg Banno Kebab" },
-  { src: img8, title: "Murgh Malai Kebab" },
-  { src: img9, title: "Mutton Galouti" },
-  { src: img10, title: "Non-Veg Kebab Platter" },
-  { src: img11, title: "Tandoori Chicken" },
-  { src: img12, title: "Veg Manchurian Dry" },
+  { src: img1, title: "Chilli Chicken Dry 🌶️🍗" },
+  { src: img2, title: "Chilli Fish 🌶️🐟" },
+  { src: img3, title: "Crispy Babycorn 🥦" },
+  { src: img4, title: "Crispy Corns 🥦" },
+  { src: img5, title: "Hara Bhara Kebab 🥦" },
+  { src: img6, title: "Makhmali Seekh Kebab 🍗" },
+  { src: img7, title: "Murg Banno Kebab 🍗" },
+  { src: img8, title: "Murgh Malai Kebab 🍗" },
+  { src: img9, title: "Mutton Galouti 🍖" },
+  { src: img10, title: "Non-Veg Kebab Platter 🍗🍖" },
+  { src: img11, title: "Tandoori Chicken 🍗" },
+  { src: img12, title: "Veg Manchurian Dry 🥦" },
 ];
 
 export default function SpringSlider() {
@@ -59,7 +59,7 @@ export default function SpringSlider() {
               height={350}
               className="rounded-md shadow-md w-full h-[350px] object-cover"
             />
-            <p className="mt-3 text-lg font-semibold text-gray-800">
+            <p className="mt-3 text-lg font-semibold text-gray-800 text-center">
               {item.title}
             </p>
           </SwiperSlide>
