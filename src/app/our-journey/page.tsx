@@ -79,7 +79,7 @@ export default function OurJourney() {
           {/* Left Side - Image */}
           <div className="relative w-full h-full z-10">
             <div className="hidden md:block absolute top-16 right-6 w-full h-full bg-[radial-gradient(var(--primary-color)_2.5px,transparent_2.5px)] bg-[length:28px_28px] z-0" />
-            <div className="hidden md:block absolute right-16 top-28 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[#f9b3b3] z-0"></div>
+            <div className="hidden md:block absolute right-16 top-28 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[var(--primary-color)] z-0"></div>
             <Image
               src={aboutImage}
               alt="our story"
@@ -146,7 +146,7 @@ export default function OurJourney() {
           {/* Right - Image */}
           <div className="relative w-full h-full z-10">
             <div className="hidden md:block absolute top-16 right-6 w-full h-full bg-[radial-gradient(var(--primary-color)_2.5px,transparent_2.5px)] bg-[length:28px_28px] z-0" />
-            <div className="hidden md:block absolute right-16 top-28 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[#f9b3b3] z-0"></div>
+            <div className="hidden md:block absolute right-16 top-28 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[var(--primary-color)] z-0"></div>
             <Image
               src={foodImage}
               alt="foodImage"
