@@ -19,6 +19,13 @@ import img9 from "../assets/food/Mutton Galouti.webp";
 import img10 from "../assets/food/Non-Veg Kebab Paltter.webp";
 import img11 from "../assets/food/Tandoori Chicken.webp";
 import img12 from "../assets/food/Veg Manchurian Dry.webp";
+import img13 from "../assets/food/Fish Curry.webp";
+import img14 from "../assets/food/Mutton Roganjosh.webp";
+import img15 from "../assets/food/Diwani Handi.webp";
+import img16 from "../assets/food/Shahi Paneer.webp";
+import img17 from "../assets/food/Paneer Lababdar.webp";
+import img18 from "../assets/food/Dal Stellar.webp";
+import img19 from "../assets/food/Kshmiri Fish Tikka.webp";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const foodImages: { src: StaticImageData; title: string }[] = [
@@ -34,6 +41,13 @@ const foodImages: { src: StaticImageData; title: string }[] = [
   { src: img10, title: "Non-Veg Kebab Platter 🍗🍖" },
   { src: img11, title: "Tandoori Chicken 🍗" },
   { src: img12, title: "Veg Manchurian Dry 🥦" },
+  { src: img13, title: "Fish Curry 🐟" },
+  { src: img14, title: "Mutton Roganjosh 🍗🍖" },
+  { src: img15, title: "Diwani Handi 🥦" },
+  { src: img16, title: "Shahi Paneer 🥦" },
+  { src: img17, title: "Paneer Lababdar 🥦" },
+  { src: img18, title: "Dal Stellar 🥦" },
+  { src: img19, title: "Kshmiri Fish Tikka 🌶️🐟" },
 ];
 
 export default function SpringSlider() {
