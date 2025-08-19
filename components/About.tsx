@@ -23,13 +23,6 @@ const About = () => {
           </div>
         </div>
 
-        <p className="text-gray-700 dark:text-gray-300 max-w-xl mb-6">
-          Binge was born from a simple idea — to create a place where food,
-          flavor, and experience come together seamlessly. Every plate tells a
-          story, crafted with fresh ingredients, bold creativity, and a deep
-          respect for culinary traditions.
-        </p>
-
         {/* Image and Text Block */}
         <div className="relative flex flex-col md:flex-row">
           {/* Image Section */}
@@ -51,6 +44,12 @@ const About = () => {
             <h3 className="text-2xl md:text-4xl font-semibold text-black dark:text-white mb-4 relative">
               The Binge Experience
             </h3>
+            <p className="text-gray-700 dark:text-gray-300 max-w-xl mb-6">
+              Binge was born from a simple idea — to create a place where food,
+              flavor, and experience come together seamlessly. Every plate tells
+              a story, crafted with fresh ingredients, bold creativity, and a
+              deep respect for culinary traditions.
+            </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               At Binge, we believe dining is more than just a meal — it’s an
               experience. From the warm ambience and inviting design, to the

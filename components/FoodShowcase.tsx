@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules"; // ✅ Only Navigation
+import { Navigation, Autoplay } from "swiper/modules"; // ✅ Added Autoplay
 import "swiper/css";
 import "swiper/css/navigation";
 import Image, { StaticImageData } from "next/image";
@@ -36,18 +36,23 @@ const foodImages: { src: StaticImageData; title: string }[] = [
 
 export default function SpringSlider() {
   return (
-    <section className="bg-[#fff9e9] py-12">
+    <section className="w-11/12 md:w-5/6 mx-auto py-12">
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]} // ✅ enable autoplay
         grabCursor={true}
         loop={true}
         spaceBetween={30}
-        navigation={true}
-        className="w-full max-w-[95%] mx-auto"
+        navigation={false}
+        autoplay={{
+          delay: 2500, // ⏱️ time in ms between slides
+          disableOnInteraction: false, // ✅ keep autoplay after user swipe
+        }}
+        speed={1200} // smooth transition
+        className="w-full mx-auto"
         breakpoints={{
-          0: { slidesPerView: 1 }, // ✅ Mobile
-          640: { slidesPerView: 2 }, // ✅ Tablets
-          1024: { slidesPerView: 4 }, // ✅ Desktop
+          0: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 4 },
         }}
       >
         {foodImages.map((item, i) => (
