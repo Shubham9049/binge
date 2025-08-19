@@ -36,9 +36,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <DiningExperienceSection />
-      <FoodPanoramaSlider />
-      <About />
 
+      <About />
+      <FoodPanoramaSlider />
+      <ReviewSection />
       {/* Section */}
       <section className="bg-white dark:bg-black font-raleway font-light dark:font-thin">
         <div className="w-11/12 md:w-5/6 mx-auto py-10">
@@ -70,7 +71,6 @@ export default function Home() {
         </div>
       </section>
 
-      <ReviewSection />
       <Footer />
     </div>
   );

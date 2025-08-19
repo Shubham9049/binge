@@ -1,10 +1,11 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules"; // ✅ Added Autoplay
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image, { StaticImageData } from "next/image";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import img1 from "../assets/food/Chilli Chicken Dry.webp";
 import img2 from "../assets/food/Chilli Fish.webp";
@@ -18,6 +19,7 @@ import img9 from "../assets/food/Mutton Galouti.webp";
 import img10 from "../assets/food/Non-Veg Kebab Paltter.webp";
 import img11 from "../assets/food/Tandoori Chicken.webp";
 import img12 from "../assets/food/Veg Manchurian Dry.webp";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const foodImages: { src: StaticImageData; title: string }[] = [
   { src: img1, title: "Chilli Chicken Dry 🌶️🍗" },
@@ -36,18 +38,35 @@ const foodImages: { src: StaticImageData; title: string }[] = [
 
 export default function SpringSlider() {
   return (
-    <section className="w-11/12 md:w-5/6 mx-auto py-12">
+    <section className="w-11/12 md:w-5/6 mx-auto py-12 relative">
+      {/* Custom Navigation Buttons */}
+      <button className="custom-prev absolute -left-14 top-1/2 -translate-y-1/2 z-10  ">
+        <ChevronLeft
+          className=" text-[var(--primary-color)] cursor-pointer"
+          size={64}
+        />
+      </button>
+      <button className="custom-next absolute -right-14 top-1/2 -translate-y-1/2 z-10  ">
+        <ChevronRight
+          className=" text-[var(--primary-color)] cursor-pointer"
+          size={64}
+        />
+      </button>
+
       <Swiper
-        modules={[Navigation, Autoplay]} // ✅ enable autoplay
+        modules={[Navigation, Autoplay]}
         grabCursor={true}
         loop={true}
         spaceBetween={30}
-        navigation={false}
-        autoplay={{
-          delay: 2500, // ⏱️ time in ms between slides
-          disableOnInteraction: false, // ✅ keep autoplay after user swipe
+        navigation={{
+          nextEl: ".custom-next",
+          prevEl: ".custom-prev",
         }}
-        speed={1200} // smooth transition
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        speed={1200}
         className="w-full mx-auto"
         breakpoints={{
           0: { slidesPerView: 1 },

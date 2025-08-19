@@ -52,7 +52,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-[var(--secondary-color)] text-black  transition-colors">
+    <div className=" text-black  transition-colors">
       <Navbar />
 
       <section className="relative w-full h-[80vh] flex items-center justify-center">

@@ -11,7 +11,7 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-black text-black dark:text-white font-raleway text-sm">
+    <footer className="bg-[var(--secondary-color)]  text-black  font-raleway text-sm">
       {/* Newsletter Section */}
       {/* <div
         id="newsletter-section"
@@ -52,114 +52,113 @@ const Footer = () => {
       </div> */}
 
       {/* Top horizontal line */}
-      <div className="border-t border-gray-300 dark:border-gray-700 w-full" />
-
-      {/* Logo and CONTACTS Title */}
-      <div className="w-11/12 mx-auto  px-3 md:px-8 flex flex-col md:flex-row justify-between items-center">
-        <div className="flex flex-col items-center md:items-start">
-          <div className="flex items-center gap-4">
-            <div className="w-16 border-t border-[var(--primary-color)]" />
-            <Link href="/" className="uppercase">
-              <Image
-                src={logo}
-                alt="Stellar Binge Logo"
-                width={150}
-                height={50}
-              />
-            </Link>
-            <div className="w-20 border-t border-[var(--primary-color)]" />
-          </div>
-        </div>
-        <h2 className="text-2xl font-thin md:mt-0">CONTACTS</h2>
-      </div>
-
-      {/* Mid horizontal line */}
-      <div className="w-11/12 mx-auto px-3 md:px-10  border-t border-gray-300 dark:border-gray-700 mb-8" />
-
-      {/* Main content */}
-      <div className="w-11/12 mx-auto flex flex-col lg:flex-row justify-between px-6 sm:px-12 lg:px-6 gap-8 pb-10 font-light dark:font-thin ">
-        {/* Left: Navigation Columns */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-          {[
-            ["Reservations", "Careers"],
-            ["About Us", "Contact Us"],
-          ].map((group, idx) => (
-            <ul key={idx} className="space-y-2">
-              {group.map((item, i) => (
-                <li
-                  key={i}
-                  className="cursor-pointer hover:text-[var(--primary-color)] transition"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          ))}
-        </div>
-
-        {/* Right: Contact Info */}
-        <div className="space-y-4 lg:text-right">
-          <h3 className="text-lg">NOIDA,INDIA</h3>
-          <p className="text-gray-700 dark:text-gray-200">
-            <span>
-              STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area,
-              <br /> Sector 62, Noida, Uttar Pradesh 201307
-              <br />
-              <span className="text-sm text-gray-500">
-                Floor G · Stellar IT Park
-              </span>
-            </span>
-          </p>
-          <div className="flex justify-start lg:justify-end gap-4 pt-2 text-[var(--primary-color)] text-xl cursor-pointer">
-            <Link href="https://www.facebook.com/bingenoida" target="_blank">
-              <FaFacebookF />
+      <div className="w-11/12 md:w-5/6 mx-auto flex flex-col lg:flex-row justify-between items-start gap-10 py-10 text-sm">
+        {/* Left: Logo + Social Media */}
+        <div className="flex flex-col items-center lg:items-start space-y-4">
+          <Link href="/" className="uppercase">
+            <Image
+              src={logo}
+              alt="Stellar Binge Logo"
+              width={150}
+              height={50}
+            />
+          </Link>
+          <div className="flex gap-4 text-xl text-gray-600 dark:text-gray-300">
+            <Link
+              href="https://www.facebook.com/bingenoida"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF className="hover:text-[#4267B2] transition" />
             </Link>
             <Link
               href="https://www.linkedin.com/in/stellar-binge-78691321a/"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              <FaLinkedinIn />
+              <FaLinkedinIn className="hover:text-[#0077B5] transition" />
             </Link>
             <Link
               href="https://www.instagram.com/stellar_binge"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              <FaInstagram />
+              <FaInstagram className="hover:text-[#C13584] transition" />
             </Link>
-            <Link href="https://www.youtube.com/@Stellar_Binge" target="_blank">
-              <FaYoutube />
+            <Link
+              href="https://www.youtube.com/@Stellar_Binge"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaYoutube className="hover:text-[#FF0000] transition" />
             </Link>
           </div>
-          <div className="flex md:justify-end">
-            <button className="relative group flex items-center text-[var(--primary-color)] border border-[var(--primary-color)] text-[12px] px-8 py-4 uppercase tracking-widest bg-transparent transition-all duration-300 overflow-hidden w-fit">
-              <Link href="tel:+919599816865">
-                <span className="z-10 relative flex items-center gap-1 group-hover:text-white transition-colors duration-300 font-light">
-                  CALL US
-                </span>
-              </Link>
-              <span
-                className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
-                style={{ backgroundColor: "#B10203" }}
-              ></span>
-            </button>
-          </div>
+        </div>
+
+        {/* Center: Links */}
+        <div className="flex flex-col items-center space-y-4">
+          {/* Quick Links */}
+          <ul className="space-y-2 text-center">
+            {[
+              { name: "About Us", href: "/our-journey" },
+              { name: "Contact Us", href: "/contact" },
+              { name: "Menu", href: "/menu" },
+              { name: "Our Creations", href: "/gallery" },
+            ].map((item, idx) => (
+              <li key={idx}>
+                <Link
+                  href={item.href}
+                  className="hover:text-[var(--primary-color)] transition"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Policies & Sitemap */}
+          <ul className="flex flex-wrap justify-center gap-4 text-xs text-gray-500 dark:text-gray-400">
+            {[
+              { name: "Privacy Policy", href: "/privacy-policy" },
+              { name: "Terms & Conditions", href: "/terms" },
+              { name: "Sitemap", href: "/sitemap" },
+            ].map((item, idx) => (
+              <li key={idx}>
+                <Link
+                  href={item.href}
+                  className="hover:text-[var(--primary-color)] transition"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Right: Contact Info */}
+        <div className="lg:text-right space-y-2 text-gray-700 dark:text-gray-200">
+          <h3 className="text-lg font-semibold">Contact Us</h3>
+          <p>
+            STELLAR IT PARK, C-25, C Block, Phase 2,
+            <br /> Sector 62, Noida, Uttar Pradesh 201307
+          </p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            Floor G · Stellar IT Park
+          </p>
+          <p>
+            <Link
+              href="tel:+919599816865"
+              className="hover:text-[var(--primary-color)] transition"
+            >
+              +91 95998 16865
+            </Link>
+          </p>
         </div>
       </div>
 
-      {/* Footer Bottom Links */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-6 py-6 text-xs text-gray-600 dark:text-gray-400 flex flex-col sm:flex-row justify-between gap-2">
-        <span>Fern Hospitality ©2025 All Rights Reserved</span>
-        <div className="flex gap-4">
-          {["Terms of Use", "Privacy Policy", "Sitemap"].map((item, idx) => (
-            <Link
-              key={idx}
-              href="#"
-              className="cursor-pointer hover:text-[var(--primary-color)] transition"
-            >
-              {item}
-            </Link>
-          ))}
-        </div>
+      {/* Footer Bottom */}
+      <div className="border-t border-gray-300 dark:border-gray-700 py-4 text-xs text-gray-600 dark:text-gray-400 text-center">
+        BINGE ©2025 All Rights Reserved
       </div>
     </footer>
   );
