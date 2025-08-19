@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="bg-[var(--secondary-color)]  text-black  font-raleway text-sm">
       {/* Newsletter Section */}
-      {/* <div
+      <div
         id="newsletter-section"
         className="border-t border-gray-300 dark:border-gray-700 w-full"
       >
@@ -49,7 +49,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Top horizontal line */}
       <div className="w-11/12 md:w-5/6 mx-auto flex flex-col lg:flex-row justify-between items-start gap-10 py-10 text-sm">
