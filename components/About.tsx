@@ -3,13 +3,21 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import Hero1 from "../assets/hero1.jpeg";
+import upwards from "../assets/upwards.png";
+import downwards from "../assets/downwards.png";
 
 const About = () => {
   useEffect(() => {
     AOS.init({ duration: 1200 });
   }, []);
   return (
-    <section className="relative bg-[#EFEBE4] text-black font-raleway font-light dark:font-thin overflow-hidden">
+    <section className="relative bg-[var(--secondary-color)] text-black font-raleway font-light  overflow-hidden pb-12">
+      <div className="absolute top-0 left-0">
+        <Image src={upwards} alt="upwards" />
+      </div>
+      <div className="absolute bottom-0 left-0">
+        <Image src={downwards} alt="downwards" />
+      </div>
       <div className="w-11/12 md:w-5/6 mx-auto  py-10 ">
         {/* Heading */}
         <div className="mb-4 flex flex-col md:flex-row md:items-start md:justify-between gap-6">
@@ -65,7 +73,7 @@ const About = () => {
         </div>
 
         {/* Dotted pattern (bottom right) */}
-        <div className="hidden md:block absolute -bottom-2 right-16 w-52 h-52 bg-[radial-gradient(var(--primary-color)_2.5px,transparent_2.5px)] bg-[length:28px_28px] opacity-80 pointer-events-none z-0" />
+        <div className="hidden md:block absolute bottom-6 right-20 w-52 h-52 bg-[radial-gradient(var(--primary-color)_2.5px,transparent_2.5px)] bg-[length:28px_28px] opacity-80 pointer-events-none z-0" />
       </div>
     </section>
   );

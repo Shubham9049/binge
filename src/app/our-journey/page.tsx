@@ -7,6 +7,8 @@ import banner from "../../../assets/hero1.jpeg";
 import aboutImage from "../../../assets/hero2.jpeg";
 import foodImage from "../../../assets/hero2.jpeg";
 import { useRef } from "react";
+import upwards from "../../../assets/upwards.png";
+import downwards from "../../../assets/downwards.png";
 const points = [
   {
     title: "Fresh Ingredients",
@@ -109,7 +111,13 @@ export default function OurJourney() {
         </div>
       </section>
 
-      <section className="py-16 bg-[var(--secondary-color)] ">
+      <section className="pt-12 pb-24 bg-[var(--secondary-color)] relative">
+        <div className="absolute top-0 left-0">
+          <Image src={upwards} alt="upwards" />
+        </div>
+        <div className="absolute bottom-0 left-0">
+          <Image src={downwards} alt="downwards" />
+        </div>
         <div className="w-11/12 md:w-5/6 mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center ">
           {/* Left - Text */}
           <div className="space-y-6">

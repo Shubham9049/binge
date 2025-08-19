@@ -9,6 +9,7 @@ import hero3 from "../../../assets/hero3.jpeg";
 import hero4 from "../../../assets/hero4.jpeg";
 import hero5 from "../../../assets/hero5.jpeg";
 import { useRef } from "react";
+import downwards from "../../../assets/downwards.png";
 
 const team = [
   {
@@ -83,7 +84,13 @@ export default function MeetTheChef() {
       </section>
 
       {/* HEAD CHEF SECTION */}
-      <section ref={headChefRef} className="bg-[var(--secondary-color)] py-16">
+      <section
+        ref={headChefRef}
+        className="bg-[var(--secondary-color)] pt-12 pb-24 relative"
+      >
+        <div className="absolute bottom-0 left-0">
+          <Image src={downwards} alt="downwards" />
+        </div>
         <div className="w-11/12 md:w-5/6 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="relative w-full h-full z-10">
             <div className="hidden md:block absolute top-16 right-6 w-full h-full bg-[radial-gradient(var(--primary-color)_2.5px,transparent_2.5px)] bg-[length:28px_28px] z-0" />

@@ -5,6 +5,9 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
+import upwards from "../assets/upwards.png";
+import downwards from "../assets/downwards.png";
+import Image from "next/image";
 
 interface Review {
   name: string;
@@ -47,7 +50,13 @@ const reviews: Review[] = [
 
 export default function ReviewSection() {
   return (
-    <section className="w-full py-16  font-raleway bg-[var(--secondary-color)] text-black">
+    <section className="w-full py-16  font-raleway bg-[var(--secondary-color)] text-black relative">
+      <div className="absolute top-0 left-0">
+        <Image src={upwards} alt="upwards" />
+      </div>
+      <div className="absolute bottom-0 left-0">
+        <Image src={downwards} alt="downwards" />
+      </div>
       <div className="w-11/12 md:w-5/6 mx-auto">
         {/* Section Label */}
         <p className="text-[var(--primary-color)] text-xs tracking-widest mt-1 uppercase font-semibold text-start">
