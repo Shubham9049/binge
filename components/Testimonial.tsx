@@ -14,33 +14,33 @@ interface Review {
 
 const reviews: Review[] = [
   {
-    name: "OMAR KHAN",
+    name: "AARAV SHARMA",
     content:
-      "Thanks to Mondus Properties, I sold my villa quickly and at a great price. Their real estate agents are professional and always available to...",
+      "Stellar Binge is hands down the best restaurant in Noida! The food was absolutely delicious, and the service was warm and welcoming. Perfect place for family dinners.",
     rating: 5,
   },
   {
-    name: "ELENA PETROVA",
+    name: "PRIYA VERMA",
     content:
-      "I was worried about finding the right buyer for my property. But Mondus Properties made the whole process transparent and stress-free. Their...",
+      "Loved the ambience here — cozy yet elegant. The staff was very polite and attentive, and the food was fresh with authentic flavors. Will definitely be coming back!",
     rating: 5,
   },
   {
-    name: "RAJIV MEHTA",
+    name: "RAHUL SINGH",
     content:
-      "As a first-time buyer in Dubai, I was overwhelmed with choices. Mondus Properties helped me find the perfect apartment that I could dream of...",
+      "As a foodie, I’m very picky about taste, but Stellar Binge exceeded all my expectations. The variety on the menu and the presentation of dishes were excellent.",
     rating: 5,
   },
   {
-    name: "ELENA PETROVA",
+    name: "ANANYA GUPTA",
     content:
-      "I was worried about finding the right buyer for my property. But Mondus Properties made the whole process transparent and stress-free. Their...",
+      "Celebrated my birthday here, and it was a wonderful experience. The hospitality was amazing, the staff even arranged a small surprise dessert for me. Highly recommended!",
     rating: 5,
   },
   {
-    name: "RAJIV MEHTA",
+    name: "ROHAN MALHOTRA",
     content:
-      "As a first-time buyer in Dubai, I was overwhelmed with choices. Mondus Properties helped me find the perfect apartment that I could dream of...",
+      "A must-visit spot in Noida if you’re looking for great food and a relaxing atmosphere. The service was quick, and every dish we tried was perfectly cooked.",
     rating: 5,
   },
 ];

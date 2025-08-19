@@ -14,6 +14,7 @@ import hero3 from "../../assets/hero3.jpeg";
 import hero4 from "../../assets/hero4.jpeg";
 import hero5 from "../../assets/hero5.jpeg";
 import ReviewSection from "../../components/Testimonial";
+import FoodPanoramaSlider from "../../components/FoodShowcase";
 
 const fundamentals = [
   { poster: hero1 },
@@ -35,6 +36,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <DiningExperienceSection />
+      <FoodPanoramaSlider />
       <About />
 
       {/* Section */}

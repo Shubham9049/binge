@@ -77,42 +77,35 @@ const Navbar = () => {
             </span>
             <div className="absolute top-12 -right-20 min-w-[150px] rounded shadow-lg z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto bg-white dark:bg-gray-800">
               <Link
-                href="https://facebook.com"
+                href="https://www.facebook.com/bingenoida"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 hover:text-[var(--primary-color)]"
+                className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
               >
                 <Facebook size={16} /> Facebook
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/stellar_binge"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 hover:text-[var(--primary-color)]"
+                className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
               >
                 <Instagram size={16} /> Instagram
               </Link>
+
               <Link
-                href="https://twitter.com"
+                href="https://www.linkedin.com/in/stellar-binge-78691321a/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 hover:text-[var(--primary-color)]"
-              >
-                <Twitter size={16} /> Twitter
-              </Link>
-              <Link
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 hover:text-[var(--primary-color)]"
+                className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
               >
                 <Linkedin size={16} /> Linkedin
               </Link>
               <Link
-                href="https://youtube.com"
+                href="https://www.youtube.com/@Stellar_Binge"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 hover:text-[var(--primary-color)]"
+                className="flex items-center gap-2 px-4 py-2 hover:text-[#B10203]"
               >
                 <Youtube size={16} /> Youtube
               </Link>

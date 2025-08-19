@@ -13,26 +13,23 @@ const Footer = () => {
   return (
     <footer className="bg-white dark:bg-black text-black dark:text-white font-raleway text-sm">
       {/* Newsletter Section */}
-      <div
+      {/* <div
         id="newsletter-section"
         className="border-t border-gray-300 dark:border-gray-700 w-full"
       >
         <div className="bg-white dark:bg-black text-black dark:text-white py-12 px-4 sm:px-6 md:px-10 font-raleway">
           <div className="w-11/12 mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
-            {/* Left Section */}
             <div className="w-full lg:w-1/2 text-center lg:text-left">
               <h2 className="text-2xl md:text-4xl font-semibold text-black dark:text-white mt-2">
                 Sign up for exclusive <br /> offers from us
               </h2>
             </div>
 
-            {/* Right Section */}
             <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-end gap-4">
               <p className="text-center lg:text-left text-base">
                 Sign up to our newsletter for all the latest news and events.
               </p>
 
-              {/* Input & Button */}
               <div className="w-full flex flex-col sm:flex-row items-center  justify-end gap-3">
                 <input
                   type="email"
@@ -52,7 +49,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Top horizontal line */}
       <div className="border-t border-gray-300 dark:border-gray-700 w-full" />
@@ -84,14 +81,7 @@ const Footer = () => {
         {/* Left: Navigation Columns */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {[
-            ["Our Concepts", "GAIA", "Shanghai Me", "La Maison Ani"],
-            [
-              "Dubai Venues",
-              "International Venues",
-              "Events",
-              "Private Dining",
-            ],
-            ["Reservations", "Careers", "Press"],
+            ["Reservations", "Careers"],
             ["About Us", "Contact Us"],
           ].map((group, idx) => (
             <ul key={idx} className="space-y-2">
@@ -109,22 +99,44 @@ const Footer = () => {
 
         {/* Right: Contact Info */}
         <div className="space-y-4 lg:text-right">
-          <h3 className="text-lg">London, UK</h3>
+          <h3 className="text-lg">NOIDA,INDIA</h3>
           <p className="text-gray-700 dark:text-gray-200">
-            1 Bell Street, London, London, United Kingdom, NW1 5BY
+            <span>
+              STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area,
+              <br /> Sector 62, Noida, Uttar Pradesh 201307
+              <br />
+              <span className="text-sm text-gray-500">
+                Floor G · Stellar IT Park
+              </span>
+            </span>
           </p>
-          <div className="flex justify-start lg:justify-end gap-4 pt-2 text-[var(--primary-color)] text-xl">
-            <FaFacebookF />
-            <FaLinkedinIn />
-            <FaTwitter />
-            <FaInstagram />
-            <FaYoutube />
+          <div className="flex justify-start lg:justify-end gap-4 pt-2 text-[var(--primary-color)] text-xl cursor-pointer">
+            <Link href="https://www.facebook.com/bingenoida" target="_blank">
+              <FaFacebookF />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/stellar-binge-78691321a/"
+              target="_blank"
+            >
+              <FaLinkedinIn />
+            </Link>
+            <Link
+              href="https://www.instagram.com/stellar_binge"
+              target="_blank"
+            >
+              <FaInstagram />
+            </Link>
+            <Link href="https://www.youtube.com/@Stellar_Binge" target="_blank">
+              <FaYoutube />
+            </Link>
           </div>
           <div className="flex md:justify-end">
             <button className="relative group flex items-center text-[var(--primary-color)] border border-[var(--primary-color)] text-[12px] px-8 py-4 uppercase tracking-widest bg-transparent transition-all duration-300 overflow-hidden w-fit">
-              <span className="z-10 relative flex items-center gap-1 group-hover:text-white transition-colors duration-300 font-light">
-                CALL US
-              </span>
+              <Link href="tel:+919599816865">
+                <span className="z-10 relative flex items-center gap-1 group-hover:text-white transition-colors duration-300 font-light">
+                  CALL US
+                </span>
+              </Link>
               <span
                 className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
                 style={{ backgroundColor: "#B10203" }}
