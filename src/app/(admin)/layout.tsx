@@ -3,7 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, Users, FileText } from "lucide-react";
+import {
+  LayoutDashboard,
+  Users,
+  FileText,
+  ShieldQuestionMark,
+} from "lucide-react";
 import Image from "next/image";
 import logo from "../../../assets/logo.png";
 
@@ -19,6 +24,7 @@ export default function AdminDashboardLayout({
     { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
     { name: "Subscribers", href: "/adminSubscribers", icon: Users },
     { name: "Blogs", href: "/adminBlogs", icon: FileText },
+    { name: "Query", href: "/query", icon: ShieldQuestionMark },
   ];
 
   return (
