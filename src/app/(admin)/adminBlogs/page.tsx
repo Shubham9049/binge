@@ -3,8 +3,12 @@
 import { useEffect, useState } from "react";
 import { Edit, Trash2, Code, ImageIcon } from "lucide-react";
 import Fuse from "fuse.js";
-import AddBlog from "../../../../components/AddBlogs";
+import dynamic from "next/dynamic";
 
+// Replace static import with dynamic:
+const AddBlog = dynamic(() => import("../../../../components/AddBlogs"), {
+  ssr: false,
+});
 interface BlogPost {
   _id: string;
   title: string;

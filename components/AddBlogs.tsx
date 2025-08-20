@@ -12,6 +12,7 @@ interface BlogPost {
   author: string;
   tags?: string;
   coverImage?: string;
+  schemaMarkup?: string[]; // ✅ Add this
 }
 
 const AddBlog = ({
@@ -47,11 +48,10 @@ const AddBlog = ({
         author: existingBlog.author,
         tags: existingBlog.tags || "",
         coverImage: null,
-
         schemaMarkup:
-          (existingBlog as any).schemaMarkup?.length > 0
-            ? (existingBlog as any).schemaMarkup
-            : [""],
+          existingBlog.schemaMarkup && existingBlog.schemaMarkup.length > 0
+            ? existingBlog.schemaMarkup
+            : [""], // ✅ No `any` needed
       });
     }
   }, [existingBlog]);
