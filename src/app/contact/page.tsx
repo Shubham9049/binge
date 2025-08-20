@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  FaMapMarkerAlt,
-  FaEnvelope,
-  FaPhoneAlt,
-  FaClock,
-} from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaClock } from "react-icons/fa";
 import { MdDeliveryDining, MdOutlineLocalDining } from "react-icons/md";
 import { RiTakeawayFill } from "react-icons/ri";
 import contactBanner from "../../../assets/hero5.jpeg";
@@ -14,6 +9,7 @@ import axios from "axios";
 import Navbar from "../../../components/Navbar";
 import Image from "next/image";
 import Footer from "../../../components/Footer";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -24,8 +20,6 @@ export default function ContactPage() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [successMsg, setSuccessMsg] = useState("");
-  const [errorMsg, setErrorMsg] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -35,13 +29,32 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("form triggered");
+    setLoading(true);
+
+    try {
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_BASE}/query`,
+        formData
+      );
+
+      if (res.data.success) {
+        toast.success("Query sent successfully! 🎉");
+        setFormData({ name: "", email: "", subject: "", message: "" }); // reset
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to send message. Try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const contactRef = useRef<HTMLDivElement | null>(null);
   const scrollToNext = () => {
     if (contactRef.current) {
-      const yOffset = -50; // 👈 adjust gap from top (e.g., navbar height)
+      const yOffset = -50;
       const y =
         contactRef.current.getBoundingClientRect().top +
         window.scrollY +
@@ -53,10 +66,13 @@ export default function ContactPage() {
 
   return (
     <div className=" text-black  transition-colors">
+      {/* Toast container */}
+      <Toaster position="top-center" reverseOrder={false} />
+
       <Navbar />
 
+      {/* Hero Banner */}
       <section className="relative w-full h-[80vh] flex items-center justify-center">
-        {/* Background Image */}
         <Image
           src={contactBanner}
           alt="Contact page"
@@ -64,19 +80,13 @@ export default function ContactPage() {
           priority
           className="object-cover"
         />
-
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
-
-        {/* Content */}
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">Contact Us</h1>
           <p className="text-lg md:text-2xl max-w-2xl mx-auto">
             We&#39;d love to hear from you! Reach out with questions, feedback,
             or reservation inquiries.
           </p>
-
-          {/* Scroll Down Indicator */}
           <button
             onClick={scrollToNext}
             className="mt-10 animate-bounce border rounded-full w-fit px-1 py-2 mx-auto cursor-pointer"
@@ -86,12 +96,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Main Contact Section */}
+      {/* Main Section */}
       <section
         ref={contactRef}
         className="w-11/12 md:w-5/6 mx-auto py-16 grid md:grid-cols-2 gap-12 items-start"
       >
-        {/* Left: Contact Info */}
+        {/* Left info */}
         <div className="space-y-8">
           <h2 className="text-3xl font-bold text-[var(--primary-color)]">
             Contact Information
@@ -100,7 +110,6 @@ export default function ContactPage() {
             Reach out to us for any queries, bookings, or collaborations.
           </p>
 
-          {/* Services */}
           <div className="grid grid-cols-2 gap-4">
             <div className="flex items-center gap-2 p-3 rounded-lg bg-gray-100 dark:bg-[#1e1e1e] shadow">
               <MdOutlineLocalDining className="text-[var(--primary-color)] text-xl" />
@@ -116,7 +125,6 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Address */}
           <div className="flex items-start gap-3">
             <FaMapMarkerAlt className="mt-1 text-[var(--primary-color)]" />
             <span>
@@ -128,36 +136,21 @@ export default function ContactPage() {
               </span>
             </span>
           </div>
-
-          {/* Email */}
-          {/* <p className="flex items-center gap-3">
-            <FaEnvelope className="text-[var(--primary-color)]" />
-            info@integratedlognet.com
-          </p> */}
-
-          {/* Phone */}
           <p className="flex items-center gap-3">
             <FaPhoneAlt className="text-[var(--primary-color)]" />
             +91 95998 16865
           </p>
-
-          {/* Hours */}
           <p className="flex items-center gap-3">
             <FaClock className="text-[var(--primary-color)]" />
             Open ⋅ Closes 11 pm
           </p>
         </div>
 
-        {/* Right: Contact Form */}
+        {/* Right form */}
         <form
           onSubmit={handleSubmit}
           className="space-y-6 bg-white dark:bg-[#1e1e1e] p-8 rounded-xl shadow-lg border dark:border-white/10"
         >
-          {successMsg && (
-            <p className="text-green-600 font-medium">{successMsg}</p>
-          )}
-          {errorMsg && <p className="text-red-600 font-medium">{errorMsg}</p>}
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="text"
@@ -198,7 +191,7 @@ export default function ContactPage() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-[var(--primary-color)] text-white px-6 py-3  hover:rounded-xl transition"
+            className="bg-[var(--primary-color)] text-white px-6 py-3 rounded-md hover:rounded-xl transition disabled:opacity-60"
           >
             {loading ? "Submitting..." : "Submit"}
           </button>
