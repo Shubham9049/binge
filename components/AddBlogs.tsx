@@ -111,9 +111,11 @@ const AddBlog = ({
       if (formData.coverImage) {
         blogData.append("coverImage", formData.coverImage);
       }
-      formData.schemaMarkup.forEach((schema) => {
-        blogData.append("schemaMarkup", schema);
-      });
+
+      // ✅ Fix: send schemaMarkup array as JSON string
+      if (formData.schemaMarkup && formData.schemaMarkup.length > 0) {
+        blogData.append("schemaMarkup", JSON.stringify(formData.schemaMarkup));
+      }
 
       const res = await fetch(
         existingBlog
