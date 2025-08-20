@@ -5,6 +5,8 @@ import Image from "next/image";
 import Hero1 from "../assets/hero1.jpeg";
 import upwards from "../assets/upwards.png";
 import downwards from "../assets/downwards.png";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const About = () => {
   useEffect(() => {
@@ -69,6 +71,20 @@ const About = () => {
               celebration, our focus is on creating moments that linger — long
               after the last bite.
             </p>
+            <Link
+              href="https://www.zomato.com/ncr/stellar-binge-sector-62-noida"
+              target="blank"
+            >
+              <button className="relative group flex items-center text-[var(--primary-color)] border border-[var(--primary-color)] text-[12px] px-8 py-4 mt-10 uppercase tracking-widest bg-transparent transition-all duration-300 overflow-hidden cursor-pointer">
+                <span className="z-10 relative flex items-center gap-1 group-hover:text-white transition-colors duration-300 font-light">
+                  Reserve Your Table <ArrowRight size={16} />
+                </span>
+                <span
+                  className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
+                  style={{ backgroundColor: "#B10203" }}
+                ></span>
+              </button>
+            </Link>
           </div>
         </div>
 

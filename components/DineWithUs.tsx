@@ -118,8 +118,11 @@ const DiningExperienceSection: React.FC = () => {
           </div>
 
           {/* Button */}
-          <Link href="/contact">
-            <button className="relative group flex items-center text-[var(--primary-color)] border border-[var(--primary-color)] text-[12px] px-8 py-4 uppercase tracking-widest bg-transparent transition-all duration-300 overflow-hidden">
+          <Link
+            href="https://www.zomato.com/ncr/stellar-binge-sector-62-noida"
+            target="blank"
+          >
+            <button className="relative group flex items-center text-[var(--primary-color)] border border-[var(--primary-color)] text-[12px] px-8 py-4 uppercase tracking-widest bg-transparent transition-all duration-300 overflow-hidden cursor-pointer">
               <span className="z-10 relative flex items-center gap-1 group-hover:text-white transition-colors duration-300 font-light">
                 Reserve Your Table <ArrowRight size={16} />
               </span>
