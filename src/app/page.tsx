@@ -17,6 +17,7 @@ import hero6 from "../../assets/ab6.jpg";
 import hero7 from "../../assets/ab7.jpg";
 import ReviewSection from "../../components/Testimonial";
 import FoodPanoramaSlider from "../../components/FoodShowcase";
+import ScrollToTopButton from "../../components/ScrollToTopButton";
 
 const fundamentals = [
   { poster: hero6 },
@@ -74,6 +75,7 @@ export default function Home() {
       </section>
 
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }
