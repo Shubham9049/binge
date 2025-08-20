@@ -12,7 +12,6 @@ interface BlogPost {
   author: string;
   tags?: string;
   coverImage?: string;
-  schemaMarkup?: string[]; // 👈 add this
 }
 
 const AddBlog = ({
@@ -50,8 +49,8 @@ const AddBlog = ({
         coverImage: null,
 
         schemaMarkup:
-          existingBlog.schemaMarkup && existingBlog.schemaMarkup.length > 0
-            ? existingBlog.schemaMarkup
+          (existingBlog as any).schemaMarkup?.length > 0
+            ? (existingBlog as any).schemaMarkup
             : [""],
       });
     }
@@ -111,11 +110,9 @@ const AddBlog = ({
       if (formData.coverImage) {
         blogData.append("coverImage", formData.coverImage);
       }
-
-      // ✅ Fix: send schemaMarkup array as JSON string
-      if (formData.schemaMarkup && formData.schemaMarkup.length > 0) {
-        blogData.append("schemaMarkup", JSON.stringify(formData.schemaMarkup));
-      }
+      formData.schemaMarkup.forEach((schema) => {
+        blogData.append("schemaMarkup", schema);
+      });
 
       const res = await fetch(
         existingBlog
