@@ -1,6 +1,7 @@
+"use client";
 import { useEffect, useState } from "react";
 import ReactQuill from "react-quill-new";
-import "react-quill/dist/quill.snow.css";
+import "react-quill-new/dist/quill.snow.css";
 
 interface BlogPost {
   _id?: string;
@@ -11,7 +12,6 @@ interface BlogPost {
   author: string;
   tags?: string;
   coverImage?: string;
-  category: string;
 }
 
 const AddBlog = ({
@@ -31,7 +31,7 @@ const AddBlog = ({
     author: "",
     tags: "",
     coverImage: null as File | null,
-    category: "",
+
     schemaMarkup: [""], // initialize with one field
   });
 
@@ -47,7 +47,7 @@ const AddBlog = ({
         author: existingBlog.author,
         tags: existingBlog.tags || "",
         coverImage: null,
-        category: existingBlog.category || "",
+
         schemaMarkup:
           (existingBlog as any).schemaMarkup?.length > 0
             ? (existingBlog as any).schemaMarkup
@@ -106,7 +106,7 @@ const AddBlog = ({
       blogData.append("content", formData.content);
       blogData.append("author", formData.author);
       blogData.append("tags", formData.tags);
-      blogData.append("category", formData.category);
+
       if (formData.coverImage) {
         blogData.append("coverImage", formData.coverImage);
       }
@@ -116,8 +116,8 @@ const AddBlog = ({
 
       const res = await fetch(
         existingBlog
-          ? `${process.env.NEXT_PUBLIC_API_BASE}/${existingBlog.slug}`
-          : `${process.env.NEXT_PUBLIC_API_BASE}/add`,
+          ? `${process.env.NEXT_PUBLIC_API_BASE}/blog/${existingBlog.slug}`
+          : `${process.env.NEXT_PUBLIC_API_BASE}/blog/add`,
         {
           method: existingBlog ? "PUT" : "POST",
           body: blogData,

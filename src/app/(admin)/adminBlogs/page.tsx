@@ -3,10 +3,12 @@
 import { useEffect, useState } from "react";
 import { Edit, Trash2, Code, ImageIcon } from "lucide-react";
 import Fuse from "fuse.js";
+import AddBlog from "../../../../components/AddBlogs";
 
 interface BlogPost {
   _id: string;
   title: string;
+  excerpt: string;
   content: string;
   author: string;
   datePublished: string;
@@ -15,6 +17,8 @@ interface BlogPost {
 }
 
 export default function AdminBlogsPage() {
+  const [showAddModal, setShowAddModal] = useState(false);
+  const [editingBlog, setEditingBlog] = useState<BlogPost | null>(null);
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -55,7 +59,7 @@ export default function AdminBlogsPage() {
 
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE}/blogs/${slug}`,
+        `${process.env.NEXT_PUBLIC_API_BASE}/blog/${slug}`,
         { method: "DELETE" }
       );
       const json = await res.json();
@@ -78,7 +82,7 @@ export default function AdminBlogsPage() {
 
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE}/blogs/${editingSlug}/image`,
+        `${process.env.NEXT_PUBLIC_API_BASE}/blog/${editingSlug}/image`,
         {
           method: "PATCH",
           body: formData,
@@ -95,6 +99,19 @@ export default function AdminBlogsPage() {
       console.error(err);
       alert("Failed to update image");
     }
+  };
+
+  const handleEdit = (slug: string) => {
+    const blogToEdit = blogs.find((b) => b.slug === slug);
+    if (blogToEdit) {
+      setEditingBlog(blogToEdit);
+      setShowAddModal(true);
+    }
+  };
+
+  const handleModalClose = () => {
+    setShowAddModal(false);
+    setEditingBlog(null);
   };
 
   const fuse = new Fuse(blogs, {
@@ -120,7 +137,10 @@ export default function AdminBlogsPage() {
         <h1 className="text-2xl font-bold">Manage Blogs</h1>
         <button
           className="bg-transparent hover:text-[var(--primary-color)]"
-          onClick={() => alert("TODO: Add new blog modal")}
+          onClick={() => {
+            setEditingBlog(null);
+            setShowAddModal(true);
+          }}
         >
           Add Blog
         </button>
@@ -178,7 +198,10 @@ export default function AdminBlogsPage() {
                     {new Date(blog.datePublished).toLocaleDateString()}
                   </td>
                   <td className="px-3 py-2 flex gap-2">
-                    <button className="text-blue-500 hover:text-blue-700">
+                    <button
+                      onClick={() => handleEdit(blog.slug)}
+                      className="text-blue-500 hover:text-blue-700"
+                    >
                       <Edit size={16} />
                     </button>
                     <button
@@ -251,6 +274,14 @@ export default function AdminBlogsPage() {
         </div>
       )}
 
+      {showAddModal && (
+        <AddBlog
+          onClose={handleModalClose}
+          onSuccess={fetchBlogs}
+          existingBlog={editingBlog}
+        />
+      )}
+
       {/* HTML Editor Modal */}
       {showHtmlEditor && (
         <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
@@ -273,7 +304,7 @@ export default function AdminBlogsPage() {
                   if (!editingSlug) return;
                   try {
                     const res = await fetch(
-                      `${process.env.NEXT_PUBLIC_API_BASE}/blogs/${editingSlug}`,
+                      `${process.env.NEXT_PUBLIC_API_BASE}/blog/${editingSlug}`,
                       {
                         method: "PUT",
                         headers: { "Content-Type": "application/json" },
