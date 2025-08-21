@@ -73,7 +73,7 @@ function Blogs() {
       <Navbar />
 
       {/* Blogs container */}
-      <main className="flex-1 w-11/12 md:w-5/6 mx-auto py-28">
+      <main className="flex-1 w-11/12 md:w-5/6 mx-auto py-36 ">
         {/* Search */}
         <div className="flex justify-center mb-6">
           <input

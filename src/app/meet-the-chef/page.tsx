@@ -55,7 +55,7 @@ export default function MeetTheChef() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative w-full h-[80vh] flex items-center justify-center">
+      <section className="relative w-full h-[80vh] flex items-center justify-center pt-32">
         <Image
           src={banner}
           alt="Meet the Chef"

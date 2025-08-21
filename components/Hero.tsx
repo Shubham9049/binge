@@ -51,7 +51,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[90vh] overflow-hidden font-raleway font-thin">
+    <div className="relative w-full h-[90vh] overflow-hidden font-raleway font-thin ">
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           key={slides[index].image.src} // ✅ use .src for the key
