@@ -16,10 +16,10 @@ export default function PrivacyPolicy() {
           </h1>
 
           <p className="mb-6">
-            Stellar Binge ("we", "us", or "our") values your privacy. This
-            Privacy Policy explains how we collect, use, and protect your
-            personal information when you interact with our restaurant, website,
-            and services.
+            Stellar Binge (&#34;we&#34;, &#34;us&#34;, or &#34;our&#34;) values
+            your privacy. This Privacy Policy explains how we collect, use, and
+            protect your personal information when you interact with our
+            restaurant, website, and services.
           </p>
 
           {/* Section 1 */}
