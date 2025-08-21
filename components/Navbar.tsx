@@ -9,11 +9,23 @@ import {
   Linkedin,
   Youtube,
   X,
+  Phone,
+  MapPin,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../assets/logo.png";
 import { usePathname } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faInstagram,
+  faYoutube,
+  faXTwitter,
+  faLinkedin,
+  faPinterest,
+} from "@fortawesome/free-brands-svg-icons";
+import { FaEnvelope } from "react-icons/fa";
 
 const navItems = [
   { title: "Home", href: "/" },
@@ -33,8 +45,97 @@ const Navbar = () => {
     setActiveLink(pathname);
   }, [pathname]);
 
+  const socialLinks = [
+    {
+      icon: faFacebookF,
+      href: "https://www.facebook.com/bingenoida",
+      color: "#1877F2",
+    },
+    {
+      icon: faInstagram,
+      href: "https://www.instagram.com/stellar_binge",
+      color: "#E1306C",
+    },
+    {
+      icon: faYoutube,
+      href: "https://www.youtube.com/@Stellar_Binge",
+      color: "#FF0000",
+    },
+
+    {
+      icon: faLinkedin,
+      href: "https://www.linkedin.com/in/stellar-binge-78691321a/",
+      color: "#0077B5",
+    },
+  ];
+
   return (
     <nav className="fixed top-0 left-0 z-50 w-full font-raleway font-light shadow-sm bg-[#ffffff]">
+      {/* Top Bar */}
+      <div className="bg-gray-100 shadow text-black text-sm px-4 md:px-16 py-2 flex justify-between items-center flex-wrap gap-2">
+        <div className="hidden md:flex items-center gap-2">
+          <MapPin className="w-4 h-4 text-[var(--primary-color)]" />
+          <span>
+            STELLAR IT PARK, C-25, C Block, Phase 2, Sector 62, Noida, Uttar
+            Pradesh 201307
+          </span>
+        </div>
+
+        <div className="flex items-center gap-3 w-full md:w-auto justify-end">
+          <a
+            href="tel:+918368573451"
+            className="hidden md:flex items-center gap-1"
+          >
+            <Phone className="w-4 h-4 hover:text-[var(--primary-color)]" />
+            <span>+91 95998 16865</span>
+          </a>
+          {/* <a
+            href="mailto:vipul@bigwigmedia.in"
+            className="w-7 h-7 flex items-center justify-center border border-gray-500 rounded-full transition-transform duration-500 hover:rotate-[360deg]"
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "var(--primary-color)";
+              const icon = e.currentTarget.querySelector("svg");
+              if (icon) icon.style.color = "#ffffff";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+              const icon = e.currentTarget.querySelector("svg");
+              if (icon) icon.style.color = "var(--primary-color)";
+            }}
+          >
+            <FaEnvelope
+              className="text-md"
+              style={{ color: "var(--primary-color)" }}
+            />
+          </a> */}
+
+          {socialLinks.map((social, i) => (
+            <a
+              key={i}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-7 h-7 flex items-center justify-center border border-gray-500 rounded-full transition-all duration-300 hover:rotate-[360deg]"
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = social.color;
+                const icon = e.currentTarget.querySelector("svg");
+                if (icon) icon.style.color = "#ffffff";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "transparent";
+                const icon = e.currentTarget.querySelector("svg");
+                if (icon) icon.style.color = social.color;
+              }}
+            >
+              <FontAwesomeIcon
+                icon={social.icon}
+                className="text-sm"
+                style={{ color: social.color }}
+              />
+            </a>
+          ))}
+        </div>
+      </div>
       {/* Desktop View */}
       <div className="hidden md:flex justify-between items-center px-10">
         {/* Logo */}
@@ -45,6 +146,7 @@ const Navbar = () => {
               alt="Stellar Binge Logo"
               width={150}
               height={50}
+              className="p-2"
             />
           </Link>
           <div className="border-l self-stretch border-gray-400"></div>
