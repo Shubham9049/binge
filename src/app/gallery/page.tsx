@@ -30,7 +30,7 @@ export default function OurCreationsPage() {
 
   const scrollToNext = () => {
     if (creationsRef.current) {
-      const yOffset = -50; // 👈 adjust gap from top (navbar height)
+      const yOffset = -50;
       const y =
         creationsRef.current.getBoundingClientRect().top +
         window.scrollY +
@@ -40,8 +40,7 @@ export default function OurCreationsPage() {
     }
   };
 
-  // 👉 Store all images in an array
-  // 👉 Menu Items (name + image + type)
+  // Menu Items
   const menuItems = [
     { name: "Chilli Chicken Dry", img: img1, type: "non-veg" },
     { name: "Chilli Fish", img: img2, type: "non-veg" },
@@ -64,22 +63,65 @@ export default function OurCreationsPage() {
     { name: "Kashmiri Fish Tikka", img: img19, type: "non-veg" },
   ];
 
-  // 👉 Modal state
+  // Separate Veg & Non-Veg
+  const vegItems = menuItems.filter((item) => item.type === "veg");
+  const nonVegItems = menuItems.filter((item) => item.type === "non-veg");
+
+  // Modal state
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openModal = (index: number) => {
+  const openModal = (index: number, items: typeof menuItems) => {
+    // index relative to that category
     setCurrentIndex(index);
     setIsOpen(true);
+    // save which list (veg or non-veg)
+    setActiveList(items);
   };
+
+  const [activeList, setActiveList] = useState<typeof menuItems>(menuItems);
 
   const closeModal = () => setIsOpen(false);
 
   const prevImage = () =>
-    setCurrentIndex((prev) => (prev === 0 ? menuItems.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? activeList.length - 1 : prev - 1));
 
   const nextImage = () =>
-    setCurrentIndex((prev) => (prev === menuItems.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === activeList.length - 1 ? 0 : prev + 1));
+
+  // Card component (to avoid repetition)
+  const MenuGrid = ({
+    title,
+    items,
+  }: {
+    title: string;
+    items: typeof menuItems;
+  }) => (
+    <div className="mb-16">
+      <h2 className="text-3xl font-bold mb-6">{title}</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {items.map((item, idx) => (
+          <div
+            key={idx}
+            onClick={() => openModal(idx, items)}
+            className="relative aspect-[3/4] w-full shadow-md rounded-xl overflow-hidden hover:shadow-2xl transition cursor-pointer flex flex-col"
+          >
+            <div className="relative flex-1">
+              <Image
+                src={item.img}
+                alt={item.name}
+                fill
+                className="object-contain bg-white hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="bg-gray-100 py-2 text-center font-semibold text-gray-800">
+              {item.name} {item.type === "veg" ? "🥦" : "🍗"}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <div>
@@ -87,7 +129,6 @@ export default function OurCreationsPage() {
 
       {/* HERO SECTION */}
       <section className="relative w-full h-[75vh] flex items-center justify-center pt-32">
-        {/* Background Image */}
         <Image
           src={banner}
           alt="Our Creations"
@@ -95,19 +136,13 @@ export default function OurCreationsPage() {
           priority
           className="object-fill"
         />
-
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
-
-        {/* Content */}
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">Our Creations</h1>
           <p className="text-lg md:text-2xl max-w-2xl mx-auto">
             A showcase of flavors, artistry, and passion — crafted by our chefs
             to delight your senses.
           </p>
-
-          {/* Scroll Down Indicator */}
           <button
             onClick={scrollToNext}
             className="mt-10 animate-bounce border rounded-full w-fit px-1 py-2 mx-auto cursor-pointer"
@@ -125,65 +160,41 @@ export default function OurCreationsPage() {
             Flip through our menu pages just like a catalog.
           </p>
 
-          {/* Menu Pages Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {menuItems.map((item, idx) => (
-              <div
-                key={idx}
-                onClick={() => openModal(idx)}
-                className="relative aspect-[3/4] w-full shadow-md rounded-xl overflow-hidden hover:shadow-2xl transition cursor-pointer flex flex-col"
-              >
-                <div className="relative flex-1">
-                  <Image
-                    src={item.img}
-                    alt={item.name}
-                    fill
-                    className="object-contain bg-white hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="bg-gray-100 py-2 text-center font-semibold text-gray-800">
-                  {item.name} {item.type === "veg" ? "🥦" : "🍗"}
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* Veg Section */}
+          <MenuGrid title="🥦 Vegetarian Dishes" items={vegItems} />
+
+          {/* Non-Veg Section */}
+          <MenuGrid title="🍗 Non-Vegetarian Dishes" items={nonVegItems} />
         </div>
       </section>
 
       {/* FULLSCREEN MODAL */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
-          {/* Close button */}
           <button
             onClick={closeModal}
             className="absolute top-5 right-5 text-white text-3xl font-bold"
           >
             ✕
           </button>
-
-          {/* Prev button */}
           <button
             onClick={prevImage}
             className="absolute left-5 text-white text-4xl font-bold"
           >
             ‹
           </button>
-
-          {/* Next button */}
           <button
             onClick={nextImage}
             className="absolute right-5 text-white text-4xl font-bold"
           >
             ›
           </button>
-
-          {/* Image */}
           <div className="relative w-11/12 md:w-3/4 lg:w-1/2 h-[80vh]">
             <Image
-              src={menuItems[currentIndex].img}
-              alt={menuItems[currentIndex].name}
+              src={activeList[currentIndex].img}
+              alt={activeList[currentIndex].name}
               fill
-              className="object-contain"
+              className="object-cover"
             />
           </div>
         </div>
