@@ -48,13 +48,14 @@ export default function Home() {
         <div className="w-11/12 md:w-5/6 mx-auto py-10">
           {/* Small Label */}
           <p className="text-[var(--primary-color)] text-xs tracking-widest mt-1 uppercase font-semibold">
-            Our Creations
+            Redefining Dining Through Signature Experiences
           </p>
 
           {/* Heading */}
           <div className="flex justify-between items-center mb-6 flex-wrap gap-4">
             <h2 className="text-2xl md:text-4xl font-semibold text-black dark:text-white mt-2">
-              A Glimpse of Our Signature Restaurants <br /> & Dining Concepts
+              At Stellar Binge, it’s a journey of taste, ambience, and
+              indulgence
             </h2>
           </div>
 

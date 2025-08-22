@@ -109,16 +109,16 @@ export default function MenuPage() {
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">Our Menu</h1>
-          <p className="text-lg md:text-2xl max-w-2xl mx-auto">
+          <p className="text-lg md:text-2xl max-w-3xl mx-auto">
             Discover flavors crafted with passion — from appetizers to desserts.
           </p>
 
           {/* Scroll Down Button */}
           <button
             onClick={scrollToNext}
-            className="mt-10 animate-bounce border border-white rounded-full w-fit px-3 py-2 mx-auto cursor-pointer hover:bg-white hover:text-black transition"
+            className="mt-10 animate-bounce border rounded-full w-fit px-1 py-2 mx-auto cursor-pointer"
           >
-            <span className="text-2xl">↓</span>
+            <span className="text-3xl">↓</span>
           </button>
         </div>
       </section>

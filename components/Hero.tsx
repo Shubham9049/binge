@@ -10,33 +10,28 @@ import hero5 from "../assets/hero5.jpeg";
 const slides = [
   {
     image: hero1,
-    address:
-      "STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201307",
-    buttonText: "Reserve a table",
+    title: "Dine. Sip. Unwind.",
+    subtitle:
+      "From Indian to Pan-Asian to World Cuisine – paired with crafted drinks in a luxurious setting.",
   },
   {
     image: hero2,
-    address:
-      "STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201307",
-    buttonText: "Reserve a table",
+    title: "Where Culinary Art Meets Timeless Elegance",
+    subtitle:
+      "Savor global flavors, signature cocktails, and a lounge experience like no other in Noida.",
   },
-  {
-    image: hero3,
-    address:
-      "STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201307",
-    buttonText: "Reserve a table",
-  },
+
   {
     image: hero4,
-    address:
-      "STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201307",
-    buttonText: "Reserve a table",
+    title: "Flavors of the World, Served with Class",
+    subtitle:
+      "From rich Indian curries to Pan-Asian delights and global plates – crafted for the true connoisseur.",
   },
   {
     image: hero5,
-    address:
-      "STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area, Sector 62, Noida, Uttar Pradesh 201307",
-    buttonText: "Reserve a table",
+    title: "Modern & Sophisticated",
+    subtitle:
+      "A fine blend of world-class dining, elegant ambience, and unforgettable evenings",
   },
 ];
 
@@ -69,27 +64,19 @@ const Hero = () => {
 
       {/* Address & Button - pinned to bottom-left */}
       <motion.div
-        key={slides[index].address}
+        key={slides[index].title}
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-        className="absolute bottom-10 left-10 text-white max-w-3xl"
+        className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6"
       >
-        {/* <h1 className="text-2xl md:text-2xl font-bold mb-3 leading-snug">
-          📍 {slides[index].address}
+        <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-snug">
+          {slides[index].title}
         </h1>
 
-        <Link href="/contact">
-          <button className="relative inline-block px-6 py-2 border border-[var(--primary-color)] font-light group overflow-hidden transition-all">
-            <span className="relative z-10 text-[var(--primary-color)] group-hover:text-black transition-colors duration-300">
-              {slides[index].buttonText}
-            </span>
-            <span
-              className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
-              style={{ backgroundImage: "var(--bg-primary-gradient)" }}
-            />
-          </button>
-        </Link> */}
+        <p className="mb-8 max-w-4xl text-lg md:text-xl text-gray-200 font-semibold">
+          {slides[index].subtitle}
+        </p>
       </motion.div>
     </div>
   );

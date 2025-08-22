@@ -25,7 +25,7 @@ import {
   faLinkedin,
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons";
-import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 const navItems = [
   { title: "Home", href: "/" },
@@ -82,13 +82,13 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-3 w-full md:w-auto justify-end">
-          <a
+          {/* <a
             href="tel:+918368573451"
             className="hidden md:flex items-center gap-1"
           >
             <Phone className="w-4 h-4 hover:text-[var(--primary-color)]" />
             <span>+91 95998 16865</span>
-          </a>
+          </a> */}
           {/* <a
             href="mailto:vipul@bigwigmedia.in"
             className="w-7 h-7 flex items-center justify-center border border-gray-500 rounded-full transition-transform duration-500 hover:rotate-[360deg]"
@@ -108,7 +108,7 @@ const Navbar = () => {
               style={{ color: "var(--primary-color)" }}
             />
           </a> */}
-
+          <p className="text-lg">Follow us:</p>
           {socialLinks.map((social, i) => (
             <a
               key={i}
@@ -173,7 +173,7 @@ const Navbar = () => {
 
         {/* Right Section */}
         <div className="flex items-center gap-4">
-          <div className="relative group">
+          {/* <div className="relative group">
             <span className="text-md text-[#000000] font-thin cursor-pointer py-8 ">
               Follow Us
             </span>
@@ -212,14 +212,13 @@ const Navbar = () => {
                 <Youtube size={16} /> Youtube
               </Link>
             </div>
-          </div>
+          </div> */}
           <span className="text-md text-[#000000] font-thin cursor-pointer hover:text-[var(--primary-color)]">
-            <Link
-              href="tel:+919599816865
-
-"
-            >
-              Call Us
+            <Link href="tel:+919599816865">
+              <span className="inline-flex items-center gap-2">
+                <FaPhoneAlt />
+                Call Us: +91 9599816865
+              </span>
             </Link>
           </span>
         </div>

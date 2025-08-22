@@ -96,16 +96,23 @@ export default function OurJourney() {
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)] mb-6">
               Our Story
             </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-              What started as a small family kitchen has now become a place
-              where flavors meet passion. From our humble beginnings, we have
-              grown into a space that brings people together over delicious
-              meals and warm hospitality.
+            <p className="text-md text-gray-800 dark:text-gray-200 leading-loose mb-4">
+              From our humble beginnings, we have grown into more than just a
+              dining space – we’ve become a place where stories are shared,
+              friendships are nurtured, and moments are celebrated. What started
+              as a simple idea has blossomed into a welcoming home for anyone
+              who believes that food has the power to bring people closer
+              together.
             </p>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+
+            <p className="text-md text-gray-800 dark:text-gray-200 leading-loose">
               Every dish we serve carries a piece of our journey – a blend of
-              tradition, love, and innovation. For us, food isn’t just about
-              taste, it’s about creating memories with every bite.
+              tradition, passion, and innovation passed down through time. For
+              us, food isn’t just about flavors on a plate; it’s about creating
+              experiences that linger in your heart long after the last bite.
+              Whether it’s a quiet dinner with loved ones or a joyful gathering
+              with friends, we strive to make every meal a memory worth
+              cherishing.
             </p>
           </div>
         </div>

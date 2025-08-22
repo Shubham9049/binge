@@ -69,14 +69,15 @@ export default function MeetTheChef() {
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
             Meet Our Chef & Team
           </h1>
-          <p className="text-lg md:text-2xl max-w-2xl mx-auto">
-            The passion, creativity, and dedication behind every dish we serve.
+          <p className="text-lg md:text-2xl max-w-3xl mx-auto">
+            The passion, creativity, and dedication behind every dish <br /> we
+            create.
           </p>
 
           {/* Scroll Down Button */}
           <button
             onClick={scrollToNext}
-            className="mt-10 animate-bounce border rounded-full w-fit px-1 py-2 mx-auto"
+            className="mt-10 animate-bounce border rounded-full w-fit px-1 py-2 mx-auto cursor-pointer"
           >
             <span className="text-3xl">↓</span>
           </button>

@@ -65,8 +65,9 @@ export default function ReviewSection() {
 
         {/* Heading */}
         <h2 className="text-2xl md:text-4xl font-semibold text-black mt-2 text-start mb-4">
-          What Our Guests{" "}
-          <span className="text-[var(--primary-color)]">Are Saying</span>
+          From Our <span className="text-[var(--primary-color)]">Kitchen</span>{" "}
+          to Their
+          <span className="text-[var(--primary-color)]"> Hearts</span>
         </h2>
 
         {/* Swiper Slider */}

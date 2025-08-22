@@ -28,7 +28,7 @@ const About = () => {
               Our Story
             </p>
             <h2 className="text-2xl md:text-4xl font-semibold text-black mt-2">
-              Binge — redefining the art of dining
+              Binge — Redefining The Art Of Dining
             </h2>
           </div>
         </div>
