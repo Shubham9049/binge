@@ -16,22 +16,22 @@ const slides = [
   },
   {
     image: hero2,
-    title: "Where Culinary Art Meets Timeless Elegance",
+    title: "Modern & Sophisticated",
     subtitle:
       "Savor global flavors, signature cocktails, and a lounge experience like no other in Noida.",
   },
 
   {
     image: hero4,
-    title: "Flavors of the World, Served with Class",
+    title: "Where Culinary Art Meets Timeless Elegance",
     subtitle:
-      "From rich Indian curries to Pan-Asian delights and global plates – crafted for the true connoisseur.",
+      "A fine blend of world-class dining, elegant ambience, and unforgettable evenings",
   },
   {
     image: hero5,
-    title: "Modern & Sophisticated",
+    title: "Flavors of the World, Served with Class",
     subtitle:
-      "A fine blend of world-class dining, elegant ambience, and unforgettable evenings",
+      "From rich Indian curries to Pan-Asian delights and global plates – crafted for the true connoisseur.",
   },
 ];
 

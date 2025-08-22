@@ -92,12 +92,12 @@ export default function ReviewSection() {
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>
-              <div className="relative bg-white rounded-2xl border border-neutral-200 p-6 shadow-md h-full flex flex-col justify-between hover:shadow-lg transition duration-300">
+              <div className="relative bg-white rounded-2xl border border-neutral-200 p-6 shadow-md h-80 flex flex-col justify-between hover:shadow-lg transition duration-300">
                 {/* Quote Icon */}
-                <FaQuoteLeft className="text-[var(--primary-color)] text-2xl opacity-40 mb-4" />
+                <FaQuoteLeft className="text-[var(--primary-color)] text-2xl opacity-40" />
 
-                {/* Review Content */}
-                <p className="text-base leading-relaxed mb-6 text-black">
+                {/* Review Content (truncate if too long) */}
+                <p className="text-base leading-relaxed text-black line-clamp-4">
                   {review.content}
                 </p>
 
