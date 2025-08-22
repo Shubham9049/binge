@@ -106,19 +106,19 @@ export default function MeetTheChef() {
           </div>
 
           <div>
-            <h2 className="text-3xl md:text-4xl text-[var(--primary-color)] font-semibold mb-4">
+            <h2 className="text-3xl md:text-4xl text-white font-semibold mb-4">
               Meet Our Head Chef
             </h2>
-            <h3 className="text-xl font-semibold text-gray-700  mb-4">
+            <h3 className="text-xl font-semibold text-gray-200  mb-4">
               Chef Alessandro Romano
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+            <p className="text-gray-300 dark:text-gray-400 leading-relaxed mb-6">
               With over 20 years of culinary expertise, Chef Alessandro brings
               authentic flavors from Italy with a modern twist. His philosophy
               is simple: fresh ingredients, bold flavors, and a touch of love in
               every dish.
             </p>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p className="text-gray-300 dark:text-gray-400 leading-relaxed">
               Having worked in Michelin-starred restaurants, he now leads our
               kitchen with passion, creativity, and dedication to unforgettable
               dining experiences.

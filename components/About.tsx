@@ -24,10 +24,10 @@ const About = () => {
         {/* Heading */}
         <div className="mb-4 flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           <div className="flex-1">
-            <p className="uppercase tracking-widest font-semibold mt-2 text-xs text-[var(--primary-color)]">
+            <p className="uppercase tracking-widest font-semibold mt-2 text-xs text-white">
               Our Story
             </p>
-            <h2 className="text-2xl md:text-4xl font-semibold text-black mt-2">
+            <h2 className="text-2xl md:text-4xl font-semibold text-white mt-2">
               Binge — Redefining The Art Of Dining
             </h2>
           </div>

@@ -59,15 +59,14 @@ export default function ReviewSection() {
       </div>
       <div className="w-11/12 md:w-5/6 mx-auto">
         {/* Section Label */}
-        <p className="text-[var(--primary-color)] text-xs tracking-widest mt-1 uppercase font-semibold text-start">
+        <p className="text-white text-xs tracking-widest mt-1 uppercase font-semibold text-start">
           Testimonials
         </p>
 
         {/* Heading */}
         <h2 className="text-2xl md:text-4xl font-semibold text-black mt-2 text-start mb-4">
-          From Our <span className="text-[var(--primary-color)]">Kitchen</span>{" "}
-          to Their
-          <span className="text-[var(--primary-color)]"> Hearts</span>
+          From Our <span className="text-white">Kitchen</span> to Their
+          <span className="text-white"> Hearts</span>
         </h2>
 
         {/* Swiper Slider */}

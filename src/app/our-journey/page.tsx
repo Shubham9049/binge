@@ -128,10 +128,10 @@ export default function OurJourney() {
         <div className="w-11/12 md:w-5/6 mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center ">
           {/* Left - Text */}
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold text-[var(--primary-color)]">
+            <h2 className="text-4xl font-bold text-white">
               Our Culinary Philosophy
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
+            <p className="text-lg text-gray-300 dark:text-gray-300">
               At our restaurant, food is not just about taste — it’s about
               passion, freshness, and authenticity. We believe in sourcing the
               finest local ingredients and crafting every dish with love, care,
@@ -140,18 +140,18 @@ export default function OurJourney() {
 
             <div className="grid grid-cols-2 gap-6 mt-6">
               <div>
-                <h4 className="font-semibold text-gray-900 ">
+                <h4 className="font-semibold text-gray-200 ">
                   🌱 Fresh Ingredients
                 </h4>
-                <p className="text-gray-600  text-sm">
+                <p className="text-gray-300  text-sm">
                   Handpicked from local farmers and markets.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white">
+                <h4 className="font-semibold text-gray-200 dark:text-white">
                   👨‍🍳 Crafted with Love
                 </h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                <p className="text-gray-300 dark:text-gray-400 text-sm">
                   Every dish tells a story of our passion for food.
                 </p>
               </div>

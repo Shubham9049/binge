@@ -11,7 +11,7 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[var(--secondary-color)]  text-black  font-raleway text-sm">
+    <footer className="  text-black  font-raleway text-sm">
       {/* Newsletter Section */}
       <div
         id="newsletter-section"
