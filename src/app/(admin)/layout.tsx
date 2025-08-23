@@ -8,6 +8,8 @@ import {
   Users,
   FileText,
   ShieldQuestionMark,
+  Menu,
+  X,
 } from "lucide-react";
 import Image from "next/image";
 import logo from "../../../assets/logo.png";
@@ -28,7 +30,7 @@ export default function AdminDashboardLayout({
   ];
 
   return (
-    <div className="flex h-screen bg-[#000000] text-white">
+    <div className="flex h-screen bg-[#000000] text-white overflow-hidden">
       {/* Sidebar */}
       <div
         className={`fixed inset-y-0 left-0 z-40 w-64 transform transition-transform duration-300 bg-[#0b121a] ${
@@ -37,7 +39,7 @@ export default function AdminDashboardLayout({
       >
         <div className="flex flex-col h-full">
           <div className="px-6 py-4 text-xl font-bold border-b border-gray-800">
-            <Image src={logo} alt="Binge" width={200} />
+            <Image src={logo} alt="Binge" width={160} />
           </div>
           <nav className="flex-1 p-4 space-y-2">
             {navItems.map((item) => {
@@ -52,6 +54,7 @@ export default function AdminDashboardLayout({
                       ? "bg-[#1a2332] text-white"
                       : "text-gray-400 hover:bg-[#1a2332] hover:text-white"
                   }`}
+                  onClick={() => setSidebarOpen(false)} // close on mobile when link clicked
                 >
                   <Icon size={18} />
                   <span>{item.name}</span>
@@ -62,9 +65,27 @@ export default function AdminDashboardLayout({
         </div>
       </div>
 
+      {/* Overlay for mobile */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       {/* Main content */}
-      <div className="flex-1 overflow-y-auto">
-        <main className="p-6 min-h-screen">{children}</main>
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Top bar for mobile */}
+        <div className="md:hidden flex items-center justify-between p-4 bg-[#0b121a] border-b border-gray-800">
+          <button onClick={() => setSidebarOpen(!sidebarOpen)}>
+            {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+          <Image src={logo} alt="Binge" width={120} />
+          {/* Spacer to balance layout */}
+          <div style={{ width: 24 }} />
+        </div>
+
+        <main className="flex-1 overflow-y-auto p-6">{children}</main>
       </div>
     </div>
   );

@@ -169,13 +169,13 @@ const Navbar = () => {
           <div className="border-l self-stretch border-gray-400"></div>
 
           {/* Nav Items */}
-          <ul className="flex gap-6">
+          <ul className="flex gap-3">
             {navItems.map((item, idx) => (
               <li key={idx}>
                 <Link
                   href={item.href}
                   onClick={() => setActiveLink(item.href)}
-                  className={`flex items-center gap-2 py-6 transition-colors border-b-4 border-transparent ${
+                  className={`flex items-center text-sm gap-1 py-6 transition-colors border-b-4 border-transparent ${
                     activeLink === item.href
                       ? "text-[var(--primary-color)] font-medium "
                       : "text-[#000000] hover:text-[var(--primary-color)] hover:border-b-[var(--primary-color)]"
