@@ -12,6 +12,15 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import {
+  Home,
+  BookOpen,
+  ChefHat,
+  Utensils,
+  Images,
+  Newspaper,
+  MessageCircle,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../assets/logo.png";
@@ -28,13 +37,21 @@ import {
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 const navItems = [
-  { title: "Home", href: "/" },
-  { title: "Our Journey", href: "/our-journey" },
-  { title: "Meet the Chef", href: "/meet-the-chef" },
-  { title: "Menu", href: "/menu" },
-  { title: "Our Creations", href: "/gallery" },
-  { title: "Blogs", href: "/blogs" },
-  { title: "Let’s Connect", href: "/contact" },
+  { title: "Home", href: "/", icon: <Home size={16} /> },
+  { title: "Our Journey", href: "/our-journey", icon: <BookOpen size={16} /> },
+  {
+    title: "Meet the Chef",
+    href: "/meet-the-chef",
+    icon: <ChefHat size={16} />,
+  },
+  { title: "Menu", href: "/menu", icon: <Utensils size={16} /> },
+  { title: "Our Creations", href: "/gallery", icon: <Images size={16} /> },
+  { title: "Blogs", href: "/blogs", icon: <Newspaper size={16} /> },
+  {
+    title: "Let’s Connect",
+    href: "/contact",
+    icon: <MessageCircle size={16} />,
+  },
 ];
 
 const Navbar = () => {
@@ -158,12 +175,13 @@ const Navbar = () => {
                 <Link
                   href={item.href}
                   onClick={() => setActiveLink(item.href)}
-                  className={`py-6 transition-colors border-b-4 border-transparent ${
+                  className={`flex items-center gap-2 py-6 transition-colors border-b-4 border-transparent ${
                     activeLink === item.href
                       ? "text-[var(--primary-color)] font-medium "
                       : "text-[#000000] hover:text-[var(--primary-color)] hover:border-b-[var(--primary-color)]"
                   }`}
                 >
+                  {item.icon}
                   {item.title}
                 </Link>
               </li>
@@ -227,12 +245,7 @@ const Navbar = () => {
       {/* Mobile View */}
       <div className="md:hidden flex justify-between items-center px-4 py-3">
         <Link href="/">
-          <Image
-            src="/logo.png"
-            alt="Stellar Binge Logo"
-            width={150}
-            height={50}
-          />
+          <Image src={logo} alt="Stellar Binge Logo" width={150} height={50} />
         </Link>
         <button onClick={() => setMobileMenu(!mobileMenu)}>
           {mobileMenu ? <X size={24} /> : <Menu size={24} />}
@@ -240,7 +253,7 @@ const Navbar = () => {
       </div>
 
       {mobileMenu && (
-        <div className="md:hidden fixed top-20 left-0 w-full h-[calc(100vh-3rem)] overflow-y-auto px-4 pt-4 pb-4 z-40 bg-white dark:bg-black">
+        <div className="md:hidden fixed top-32 left-0 w-full h-[calc(100vh-3rem)] overflow-y-auto px-4 pt-4 pb-4 z-40 bg-white dark:bg-black">
           <div className="space-y-6">
             {navItems.map((item, idx) => (
               <div key={idx}>
@@ -250,12 +263,13 @@ const Navbar = () => {
                     setActiveLink(item.href);
                     setMobileMenu(false);
                   }}
-                  className={`block py-2 font-light ${
+                  className={`flex items-center gap-2 py-2 font-light ${
                     activeLink === item.href
                       ? "text-[var(--primary-color)] font-medium"
                       : "text-black hover:text-[var(--primary-color)]"
                   }`}
                 >
+                  {item.icon}
                   {item.title}
                 </Link>
               </div>
@@ -265,7 +279,7 @@ const Navbar = () => {
           {/* Call Box */}
           <div className="mt-8 flex w-full">
             <div className="flex-1 border border-gray-500 text-center py-2 hover:text-[var(--primary-color)]">
-              <Link href="tel:+1234567890">Call Us</Link>
+              <Link href="tel:+919599816865">Call Us</Link>
             </div>
           </div>
         </div>
