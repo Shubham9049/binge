@@ -10,6 +10,7 @@ import hero4 from "../../../assets/hero4.jpeg";
 import hero5 from "../../../assets/hero5.jpeg";
 import { useRef } from "react";
 import downwards from "../../../assets/downwards.png";
+import MobileContactBar from "../../../components/MobileContactBar";
 
 const team = [
   {
@@ -163,6 +164,7 @@ export default function MeetTheChef() {
       </section>
 
       <Footer />
+      <MobileContactBar />
     </div>
   );
 }

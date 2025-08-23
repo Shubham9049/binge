@@ -10,7 +10,7 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="text-black font-raleway text-sm">
+    <footer className="text-black font-raleway text-sm pb-20 md:pb-4">
       {/* Newsletter Section */}
       <div className="border-t border-gray-300 dark:border-gray-700 w-full">
         <div className="bg-white dark:bg-black text-black dark:text-white py-12 px-4 sm:px-6 md:px-10 font-raleway">

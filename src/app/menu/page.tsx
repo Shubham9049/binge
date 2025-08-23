@@ -34,6 +34,7 @@ import menuPage23 from "../../../assets/menu/2025-01-17 (6).webp";
 import menuPage24 from "../../../assets/menu/2025-01-17 (7).webp";
 import menuPage25 from "../../../assets/menu/2025-01-17 (8).webp";
 import menuPage26 from "../../../assets/menu/2025-01-17 (9).webp";
+import MobileContactBar from "../../../components/MobileContactBar";
 
 export default function MenuPage() {
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -191,6 +192,7 @@ export default function MenuPage() {
       )}
 
       <Footer />
+      <MobileContactBar />
     </div>
   );
 }

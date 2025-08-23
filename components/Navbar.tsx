@@ -169,7 +169,7 @@ const Navbar = () => {
           <div className="border-l self-stretch border-gray-400"></div>
 
           {/* Nav Items */}
-          <ul className="flex gap-3">
+          <ul className="flex gap-5">
             {navItems.map((item, idx) => (
               <li key={idx}>
                 <Link
@@ -274,13 +274,6 @@ const Navbar = () => {
                 </Link>
               </div>
             ))}
-          </div>
-
-          {/* Call Box */}
-          <div className="mt-8 flex w-full">
-            <div className="flex-1 border border-gray-500 text-center py-2 hover:text-[var(--primary-color)]">
-              <Link href="tel:+919599816865">Call Us</Link>
-            </div>
           </div>
         </div>
       )}

@@ -24,6 +24,7 @@ import img17 from "../../../assets/food/Paneer Lababdar.webp";
 import img18 from "../../../assets/food/Dal Stellar.webp";
 import img19 from "../../../assets/food/Kshmiri Fish Tikka.webp";
 import { useRef, useState } from "react";
+import MobileContactBar from "../../../components/MobileContactBar";
 
 export default function OurCreationsPage() {
   const creationsRef = useRef<HTMLDivElement | null>(null);
@@ -201,6 +202,7 @@ export default function OurCreationsPage() {
       )}
 
       <Footer />
+      <MobileContactBar />
     </div>
   );
 }

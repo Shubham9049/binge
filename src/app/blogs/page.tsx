@@ -5,6 +5,7 @@ import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import Fuse from "fuse.js";
 import Image from "next/image";
+import MobileContactBar from "../../../components/MobileContactBar";
 
 interface Blog {
   _id: string;
@@ -162,6 +163,7 @@ function Blogs() {
 
       {/* Footer */}
       <Footer />
+      <MobileContactBar />
     </div>
   );
 }

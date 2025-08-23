@@ -10,6 +10,7 @@ import Navbar from "../../../components/Navbar";
 import Image from "next/image";
 import Footer from "../../../components/Footer";
 import toast, { Toaster } from "react-hot-toast";
+import MobileContactBar from "../../../components/MobileContactBar";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -199,6 +200,7 @@ export default function ContactPage() {
       </section>
 
       <Footer />
+      <MobileContactBar />
     </div>
   );
 }

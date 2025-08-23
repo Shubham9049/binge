@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import Navbar from "../../../../components/Navbar";
 import Footer from "../../../../components/Footer";
 import Image from "next/image";
+import MobileContactBar from "../../../../components/MobileContactBar";
 
 interface Blog {
   _id: string;
@@ -76,6 +77,7 @@ export default function BlogDetails() {
       </section>
 
       <Footer />
+      <MobileContactBar />
     </div>
   );
 }

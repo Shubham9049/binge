@@ -9,6 +9,7 @@ import foodImage from "../../../assets/hero2.jpeg";
 import { useRef } from "react";
 import upwards from "../../../assets/upwards.png";
 import downwards from "../../../assets/downwards.png";
+import MobileContactBar from "../../../components/MobileContactBar";
 const points = [
   {
     title: "Fresh Ingredients",
@@ -199,6 +200,7 @@ export default function OurJourney() {
         </div>
       </section>
       <Footer />
+      <MobileContactBar />
     </div>
   );
 }
