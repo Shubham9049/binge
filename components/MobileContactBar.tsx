@@ -8,17 +8,17 @@ const MobileContactBar = () => {
       {/* Call Us Button */}
       <a
         href="tel:+919599816865"
-        className="w-1/2 flex flex-col items-center justify-center py-3 bg-[var(--primary-color)] text-white"
+        className="w-1/2 flex flex-col items-center justify-center py-2 bg-[var(--primary-color)] text-white"
       >
-        <Phone className="w-6 h-6" />
+        <Phone className="w-4 h-4" />
         <span className="text-xs mt-1">Call Us</span>
       </a>
 
       <a
         href="/contact"
-        className="w-1/2 flex flex-col items-center justify-center py-3 bg-white  text-[var(--primary-color)]"
+        className="w-1/2 flex flex-col items-center justify-center py-2 bg-white  text-[var(--primary-color)]"
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="w-4 h-4" />
         <span className="text-xs mt-1">Enquire Us</span>
       </a>
     </div>
