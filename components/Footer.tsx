@@ -159,6 +159,8 @@ const Footer = () => {
           Made & Marketed with ❤{" "}
           <a
             href="https://www.bigwigmediadigital.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hover:text-[var(--primary-color)] transition"
           >
             Bigwig Media Digital
