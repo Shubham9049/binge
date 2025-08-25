@@ -35,6 +35,7 @@ import {
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { span } from "framer-motion/client";
 
 const navItems = [
   { title: "Home", href: "/", icon: <Home size={16} /> },
@@ -92,10 +93,10 @@ const Navbar = () => {
       <div className="bg-gray-100 shadow text-black text-sm px-4 md:px-16 py-2 flex justify-between items-center flex-wrap gap-2">
         <div className="hidden md:flex items-center gap-2">
           <MapPin className="w-4 h-4 text-[var(--primary-color)]" />
-          <span>
+          <Link href="https://maps.app.goo.gl/NKoKxW8kgo1MkHsy9" target="blank">
             STELLAR IT PARK, C-25, C Block, Phase 2, Sector 62, Noida, Uttar
             Pradesh 201307
-          </span>
+          </Link>
         </div>
 
         <div className="flex items-center gap-3 w-full md:w-auto justify-end">

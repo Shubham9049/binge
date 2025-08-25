@@ -97,10 +97,10 @@ const Footer = () => {
         <div className="flex flex-col items-center space-y-4">
           <ul className="space-y-2 text-center">
             {[
-              { name: "About Us", href: "/our-journey" },
-              { name: "Contact Us", href: "/contact" },
               { name: "Menu", href: "/menu" },
               { name: "Our Creations", href: "/gallery" },
+              { name: "About Us", href: "/our-journey" },
+              { name: "Contact Us", href: "/contact" },
             ].map((item, idx) => (
               <li key={idx}>
                 <Link
