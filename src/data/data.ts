@@ -73,28 +73,34 @@ export type GalleryItem = {
   type?: "veg" | "non-veg"; // only applies to food
 };
 
-// ✅ Food Menu Items
-export const menuItems: GalleryItem[] = [
-  { name: "Chilli Chicken Dry", img: img1, type: "non-veg" },
-  { name: "Chilli Fish", img: img2, type: "non-veg" },
-  { name: "Crispy Babycorn", img: img3, type: "veg" },
-  { name: "Crispy Corns", img: img4, type: "veg" },
-  { name: "Hara Bhara Kebab", img: img5, type: "veg" },
-  { name: "Makhmali Seekh Kebab", img: img6, type: "non-veg" },
-  { name: "Murg Banno Kebab", img: img7, type: "non-veg" },
-  { name: "Murgh Malai Kebab", img: img8, type: "non-veg" },
-  { name: "Mutton Galouti", img: img9, type: "non-veg" },
-  { name: "Non-Veg Kebab Platter", img: img10, type: "non-veg" },
-  { name: "Tandoori Chicken", img: img11, type: "non-veg" },
-  { name: "Veg Manchurian Dry", img: img12, type: "veg" },
-  { name: "Fish Curry", img: img13, type: "non-veg" },
-  { name: "Mutton Roganjosh", img: img14, type: "non-veg" },
-  { name: "Diwani Handi", img: img15, type: "veg" },
-  { name: "Shahi Paneer", img: img16, type: "veg" },
-  { name: "Paneer Lababdar", img: img17, type: "veg" },
-  { name: "Dal Stellar", img: img18, type: "veg" },
-  { name: "Kashmiri Fish Tikka", img: img19, type: "non-veg" },
+// ✅ VEG Food Menu Items
+export const vegMenuItems: GalleryItem[] = [
+  { name: "🍃 Crispy Babycorn", img: img3, type: "veg" },
+  { name: "🍃 Crispy Corns", img: img4, type: "veg" },
+  { name: "🍃 Hara Bhara Kebab", img: img5, type: "veg" },
+  { name: "🍃 Veg Manchurian Dry", img: img12, type: "veg" },
+  { name: "🍃 Diwani Handi", img: img15, type: "veg" },
+  { name: "🍃 Shahi Paneer", img: img16, type: "veg" },
+  { name: "🍃 Paneer Lababdar", img: img17, type: "veg" },
+  { name: "🍃 Dal Stellar", img: img18, type: "veg" },
 ];
+
+// ✅ NON-VEG Food Menu Items
+export const nonVegMenuItems: GalleryItem[] = [
+  { name: "🍗 Chilli Chicken Dry", img: img1, type: "non-veg" },
+  { name: "🍗 Chilli Fish", img: img2, type: "non-veg" },
+  { name: "🍗 Makhmali Seekh Kebab", img: img6, type: "non-veg" },
+  { name: "🍗 Murg Banno Kebab", img: img7, type: "non-veg" },
+  { name: "🍗 Murgh Malai Kebab", img: img8, type: "non-veg" },
+  { name: "🍗 Mutton Galouti", img: img9, type: "non-veg" },
+  { name: "🍗 Non-Veg Kebab Platter", img: img10, type: "non-veg" },
+  { name: "🍗 Tandoori Chicken", img: img11, type: "non-veg" },
+  { name: "🍗 Fish Curry", img: img13, type: "non-veg" },
+  { name: "🍗 Mutton Roganjosh", img: img14, type: "non-veg" },
+  { name: "🍗 Kashmiri Fish Tikka", img: img19, type: "non-veg" },
+];
+
+export const menuItems: GalleryItem[] = [...vegMenuItems, ...nonVegMenuItems];
 
 // ✅ Restaurant Images
 export const restaurantImages: GalleryItem[] = [

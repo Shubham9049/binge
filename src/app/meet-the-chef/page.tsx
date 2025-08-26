@@ -41,7 +41,7 @@ export default function MeetTheChef() {
 
   const scrollToNext = () => {
     if (headChefRef.current) {
-      const yOffset = -50; // 👈 adjust gap from top (e.g., navbar height)
+      const yOffset = -70; // 👈 adjust gap from top (e.g., navbar height)
       const y =
         headChefRef.current.getBoundingClientRect().top +
         window.scrollY +
@@ -56,7 +56,7 @@ export default function MeetTheChef() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative w-full h-[80vh] flex items-center justify-center pt-32">
+      <section className="relative w-full h-[100vh] flex items-center justify-center pt-32">
         <Image
           src={banner}
           alt="Meet the Chef"

@@ -37,7 +37,7 @@ export default function OurJourney() {
   const ourStory = useRef<HTMLDivElement | null>(null);
   const scrollToNext = () => {
     if (ourStory.current) {
-      const yOffset = -50; // 👈 adjust gap from top (e.g., navbar height)
+      const yOffset = -70; // 👈 adjust gap from top (e.g., navbar height)
       const y =
         ourStory.current.getBoundingClientRect().top + window.scrollY + yOffset;
 
@@ -47,7 +47,7 @@ export default function OurJourney() {
   return (
     <div>
       <Navbar />
-      <section className="relative w-full h-[80vh] flex items-center justify-center pt-32">
+      <section className="relative w-full h-[100vh] flex items-center justify-center pt-32">
         {/* Background Image */}
         <Image
           src={banner}

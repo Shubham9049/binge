@@ -46,7 +46,7 @@ const navItems = [
   //   icon: <ChefHat size={16} />,
   // },
   { title: "Menu", href: "/menu", icon: <Utensils size={16} /> },
-  { title: "Our Creations", href: "/gallery", icon: <Images size={16} /> },
+  { title: "Gallery", href: "/gallery", icon: <Images size={16} /> },
   { title: "Blogs", href: "/blogs", icon: <Newspaper size={16} /> },
   {
     title: "Let’s Connect",

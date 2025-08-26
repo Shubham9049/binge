@@ -9,7 +9,8 @@ import MobileContactBar from "../../../components/MobileContactBar";
 
 // ✅ Import data & type
 import {
-  menuItems,
+  vegMenuItems,
+  nonVegMenuItems,
   restaurantImages,
   type GalleryItem,
 } from "../../../src/data/data";
@@ -19,7 +20,7 @@ export default function OurCreationsPage() {
 
   const scrollToNext = () => {
     if (creationsRef.current) {
-      const yOffset = -50;
+      const yOffset = -70;
       const y =
         creationsRef.current.getBoundingClientRect().top +
         window.scrollY +
@@ -30,14 +31,14 @@ export default function OurCreationsPage() {
   };
 
   // Dropdown state
-  const [activeCategory, setActiveCategory] = useState<"food" | "restaurant">(
-    "food"
-  );
+  const [activeCategory, setActiveCategory] = useState<
+    "veg" | "non-veg" | "restaurant"
+  >("veg");
 
   // Modal state
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [activeList, setActiveList] = useState<GalleryItem[]>(menuItems);
+  const [activeList, setActiveList] = useState<GalleryItem[]>(vegMenuItems);
 
   const openModal = (index: number, items: GalleryItem[]) => {
     setCurrentIndex(index);
@@ -83,13 +84,13 @@ export default function OurCreationsPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative w-full h-[75vh] flex items-center justify-center pt-32">
+      <section className="relative w-full h-[100vh] flex items-center justify-center pt-32">
         <Image
           src={banner}
           alt="Our Creations"
           fill
           priority
-          className="object-fill"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 text-center text-white px-4">
@@ -117,19 +118,22 @@ export default function OurCreationsPage() {
             <select
               value={activeCategory}
               onChange={(e) =>
-                setActiveCategory(e.target.value as "food" | "restaurant")
+                setActiveCategory(
+                  e.target.value as "veg" | "non-veg" | "restaurant"
+                )
               }
               className="px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
             >
-              <option value="food">🍲 Food Menu</option>
+              <option value="veg">🍃 Veg Menu</option>
+              <option value="non-veg">🍗 Non-Veg Menu</option>
               <option value="restaurant">🏠 Restaurant Interiors</option>
             </select>
           </div>
 
           {/* Show selected category */}
-          {activeCategory === "food" ? (
-            <MenuGrid items={menuItems} />
-          ) : (
+          {activeCategory === "veg" && <MenuGrid items={vegMenuItems} />}
+          {activeCategory === "non-veg" && <MenuGrid items={nonVegMenuItems} />}
+          {activeCategory === "restaurant" && (
             <MenuGrid items={restaurantImages} />
           )}
         </div>

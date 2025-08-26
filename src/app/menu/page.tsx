@@ -41,7 +41,7 @@ export default function MenuPage() {
 
   const scrollToNext = () => {
     if (menuRef.current) {
-      const yOffset = -50; // adjust for navbar
+      const yOffset = -70; // adjust for navbar
       const y =
         menuRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
 
@@ -101,7 +101,7 @@ export default function MenuPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative w-full h-[80vh] flex items-center justify-center pt-32">
+      <section className="relative w-full h-[100vh] flex items-center justify-center pt-32">
         <Image src={banner} alt="Menu" fill priority className="object-cover" />
 
         {/* Overlay */}

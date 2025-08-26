@@ -55,7 +55,7 @@ export default function ContactPage() {
   const contactRef = useRef<HTMLDivElement | null>(null);
   const scrollToNext = () => {
     if (contactRef.current) {
-      const yOffset = -50;
+      const yOffset = -70;
       const y =
         contactRef.current.getBoundingClientRect().top +
         window.scrollY +
@@ -73,7 +73,7 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Hero Banner */}
-      <section className="relative w-full h-[80vh] flex items-center justify-center pt-32">
+      <section className="relative w-full h-[90vh] flex items-center justify-center pt-32">
         <Image
           src={contactBanner}
           alt="Contact page"

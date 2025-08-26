@@ -71,20 +71,43 @@ const About = () => {
               celebration, our focus is on creating moments that linger — long
               after the last bite.
             </p>
-            <Link
-              href="https://www.zomato.com/ncr/stellar-binge-sector-62-noida"
-              target="blank"
-            >
-              <button className="relative group flex items-center text-[var(--primary-color)] border border-[var(--primary-color)] text-[12px] px-8 py-4 mt-10 uppercase tracking-widest bg-transparent transition-all duration-300 overflow-hidden cursor-pointer">
-                <span className="z-10 relative flex items-center gap-1 group-hover:text-white transition-colors duration-300 font-light">
-                  Reserve Your Table <ArrowRight size={16} />
-                </span>
-                <span
-                  className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
-                  style={{ backgroundColor: "#B10203" }}
-                ></span>
-              </button>
-            </Link>
+            <div className="flex flex-wrap gap-2 mt-10">
+              <Link
+                href="https://www.zomato.com/ncr/stellar-binge-sector-62-noida"
+                target="_blank"
+              >
+                <button className="relative group px-6 py-3 text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] overflow-hidden transition-all duration-300 hover:text-white">
+                  <span className="relative z-10">🍴 Order on Zomato</span>
+                  <span
+                    className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
+                    style={{ backgroundColor: "#B10203" }}
+                  ></span>
+                </button>
+              </Link>
+
+              <Link
+                href="https://www.swiggy.com/city/noida-1/stellar-binge-sector-62-rest61296"
+                target="_blank"
+              >
+                <button className="relative group px-6 py-3 text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] overflow-hidden transition-all duration-300 hover:text-white">
+                  <span className="relative z-10">🛵 Order on Swiggy</span>
+                  <span
+                    className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
+                    style={{ backgroundColor: "#B10203" }}
+                  ></span>
+                </button>
+              </Link>
+
+              <a href="tel:+919599816865">
+                <button className="relative group px-6 py-3 text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] overflow-hidden transition-all duration-300 hover:text-white">
+                  <span className="relative z-10">📞 Call Us</span>
+                  <span
+                    className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
+                    style={{ backgroundColor: "#B10203" }}
+                  ></span>
+                </button>
+              </a>
+            </div>
           </div>
         </div>
 
