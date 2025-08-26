@@ -7,7 +7,7 @@ import hero3 from "../assets/hero3.jpg";
 import hero4 from "../assets/hero4.jpg";
 import hero5 from "../assets/hero5.jpg";
 import hero6 from "../assets/hero6.jpg";
-import hero7 from "../assets/hero7.jpg";
+import hero7 from "../assets/hero7.jpeg";
 
 const slides = [
   {
