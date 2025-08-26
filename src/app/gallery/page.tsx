@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import banner from "../../../assets/hero1.jpg";
@@ -32,6 +32,13 @@ import rest3 from "../../../assets/restaurant/interior3.jpg";
 import { useRef, useState } from "react";
 import MobileContactBar from "../../../components/MobileContactBar";
 
+// ✅ Define a shared type for items
+type GalleryItem = {
+  name: string;
+  img: StaticImageData;
+  type?: "veg" | "non-veg"; // only for food
+};
+
 export default function OurCreationsPage() {
   const creationsRef = useRef<HTMLDivElement | null>(null);
 
@@ -48,7 +55,7 @@ export default function OurCreationsPage() {
   };
 
   // Food Menu Items
-  const menuItems = [
+  const menuItems: GalleryItem[] = [
     { name: "Chilli Chicken Dry", img: img1, type: "non-veg" },
     { name: "Chilli Fish", img: img2, type: "non-veg" },
     { name: "Crispy Babycorn", img: img3, type: "veg" },
@@ -71,10 +78,10 @@ export default function OurCreationsPage() {
   ];
 
   // Restaurant Images
-  const restaurantImages = [
-    { name: "Restaurant Interior 1", img: img19 },
-    { name: "Restaurant Interior 2", img: img19 },
-    { name: "Restaurant Interior 3", img: img19 },
+  const restaurantImages: GalleryItem[] = [
+    { name: "Restaurant Interior 1", img: rest1 },
+    { name: "Restaurant Interior 2", img: rest2 },
+    { name: "Restaurant Interior 3", img: rest3 },
   ];
 
   // Dropdown state
@@ -85,9 +92,9 @@ export default function OurCreationsPage() {
   // Modal state
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [activeList, setActiveList] = useState<any[]>(menuItems);
+  const [activeList, setActiveList] = useState<GalleryItem[]>(menuItems);
 
-  const openModal = (index: number, items: any[]) => {
+  const openModal = (index: number, items: GalleryItem[]) => {
     setCurrentIndex(index);
     setIsOpen(true);
     setActiveList(items);
@@ -102,11 +109,7 @@ export default function OurCreationsPage() {
     setCurrentIndex((prev) => (prev === activeList.length - 1 ? 0 : prev + 1));
 
   // Card grid
-  const MenuGrid = ({
-    items,
-  }: {
-    items: typeof menuItems | typeof restaurantImages;
-  }) => (
+  const MenuGrid = ({ items }: { items: GalleryItem[] }) => (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {items.map((item, idx) => (
         <div
