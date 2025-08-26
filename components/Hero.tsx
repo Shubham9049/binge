@@ -14,7 +14,7 @@ const slides = [
     image: hero7,
     title: "Dine. Sip. Unwind.",
     subtitle:
-      "From Indian to Pan-Asian to World Cuisine – paired with crafted drinks in a luxurious setting.",
+      "From Indian to Pan-Asian to World Cuisine – paired with crafted drinks in a luxurious setting .",
   },
   {
     image: hero1,
