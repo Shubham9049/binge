@@ -20,6 +20,7 @@ import FoodPanoramaSlider from "../../components/FoodShowcase";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
 import MobileContactBar from "../../components/MobileContactBar";
 import WhatsAppButton from "../../components/floatingBtn";
+import BanquetSection from "../../components/BanquetSection";
 
 const fundamentals = [
   { poster: hero6 },
@@ -41,7 +42,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <DiningExperienceSection />
-
+      <BanquetSection />
       <About />
       <FoodPanoramaSlider />
       <ReviewSection />

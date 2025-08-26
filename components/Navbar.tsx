@@ -19,6 +19,7 @@ import {
   Utensils,
   Images,
   Newspaper,
+  HouseIcon,
   MessageCircle,
 } from "lucide-react";
 import Image from "next/image";
@@ -52,6 +53,11 @@ const navItems = [
     title: "Let’s Connect",
     href: "/contact",
     icon: <MessageCircle size={16} />,
+  },
+  {
+    title: "Banquet",
+    href: "/banquet",
+    icon: <HouseIcon size={16} />,
   },
 ];
 

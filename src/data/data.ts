@@ -66,6 +66,12 @@ import rest40 from "../../assets/interior/Int1 (40).webp";
 import rest41 from "../../assets/interior/Int1 (41).webp";
 import rest42 from "../../assets/interior/Int1 (42).webp";
 
+// banquate
+
+import banquet1 from "../../assets/banqutes/img1.webp";
+import banquet2 from "../../assets/banqutes/img1.webp";
+import banquet3 from "../../assets/banqutes/img1.webp";
+
 // ✅ Shared type
 export type GalleryItem = {
   name: string;
@@ -147,4 +153,10 @@ export const restaurantImages: GalleryItem[] = [
   { name: "Restaurant Interior 3", img: rest40 },
   { name: "Restaurant Interior 3", img: rest41 },
   { name: "Restaurant Interior 3", img: rest42 },
+];
+
+export const banquetImages = [
+  { src: banquet1, alt: "Banquet Hall 1" },
+  { src: banquet2, alt: "Banquet Hall 2" },
+  { src: banquet3, alt: "Banquet Hall 3" },
 ];
