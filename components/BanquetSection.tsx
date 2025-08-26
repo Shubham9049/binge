@@ -81,7 +81,7 @@ const BanquetSection: React.FC = () => {
               className="uppercase tracking-widest font-semibold mt-2 text-xs text-[var(--primary-color)]"
               data-aos="fade-left"
             >
-              Celebrate at Stellar Binge
+              Celebrate at Stellar Gymkhana
             </p>
           </div>
           <h2
