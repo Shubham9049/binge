@@ -1,43 +1,18 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import banner from "../../../assets/hero1.jpg";
-import img1 from "../../../assets/food/Chilli Chicken Dry.webp";
-import img2 from "../../../assets/food/Chilli Fish.webp";
-import img3 from "../../../assets/food/Crispy Babycorn.webp";
-import img4 from "../../../assets/food/Crispy Corns.webp";
-import img5 from "../../../assets/food/Hara Bhara Kebab  - Copy.webp";
-import img6 from "../../../assets/food/Makhmali seekh kebab.webp";
-import img7 from "../../../assets/food/Murg Banno Kebab.webp";
-import img8 from "../../../assets/food/Murgh Malai Kebab.webp";
-import img9 from "../../../assets/food/Mutton Galouti.webp";
-import img10 from "../../../assets/food/Non-Veg Kebab Paltter.webp";
-import img11 from "../../../assets/food/Tandoori Chicken.webp";
-import img12 from "../../../assets/food/Veg Manchurian Dry.webp";
-import img13 from "../../../assets/food/Fish Curry.webp";
-import img14 from "../../../assets/food/Mutton Roganjosh.webp";
-import img15 from "../../../assets/food/Diwani Handi.webp";
-import img16 from "../../../assets/food/Shahi Paneer.webp";
-import img17 from "../../../assets/food/Paneer Lababdar.webp";
-import img18 from "../../../assets/food/Dal Stellar.webp";
-import img19 from "../../../assets/food/Kshmiri Fish Tikka.webp";
-
-// 👉 Import some restaurant images
-import rest1 from "../../../assets/restaurant/interior1.jpg";
-import rest2 from "../../../assets/restaurant/interior2.jpg";
-import rest3 from "../../../assets/restaurant/interior3.jpg";
-
 import { useRef, useState } from "react";
 import MobileContactBar from "../../../components/MobileContactBar";
 
-// ✅ Define a shared type for items
-type GalleryItem = {
-  name: string;
-  img: StaticImageData;
-  type?: "veg" | "non-veg"; // only for food
-};
+// ✅ Import data & type
+import {
+  menuItems,
+  restaurantImages,
+  type GalleryItem,
+} from "../../../src/data/data";
 
 export default function OurCreationsPage() {
   const creationsRef = useRef<HTMLDivElement | null>(null);
@@ -53,36 +28,6 @@ export default function OurCreationsPage() {
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
-
-  // Food Menu Items
-  const menuItems: GalleryItem[] = [
-    { name: "Chilli Chicken Dry", img: img1, type: "non-veg" },
-    { name: "Chilli Fish", img: img2, type: "non-veg" },
-    { name: "Crispy Babycorn", img: img3, type: "veg" },
-    { name: "Crispy Corns", img: img4, type: "veg" },
-    { name: "Hara Bhara Kebab", img: img5, type: "veg" },
-    { name: "Makhmali Seekh Kebab", img: img6, type: "non-veg" },
-    { name: "Murg Banno Kebab", img: img7, type: "non-veg" },
-    { name: "Murgh Malai Kebab", img: img8, type: "non-veg" },
-    { name: "Mutton Galouti", img: img9, type: "non-veg" },
-    { name: "Non-Veg Kebab Platter", img: img10, type: "non-veg" },
-    { name: "Tandoori Chicken", img: img11, type: "non-veg" },
-    { name: "Veg Manchurian Dry", img: img12, type: "veg" },
-    { name: "Fish Curry", img: img13, type: "non-veg" },
-    { name: "Mutton Roganjosh", img: img14, type: "non-veg" },
-    { name: "Diwani Handi", img: img15, type: "veg" },
-    { name: "Shahi Paneer", img: img16, type: "veg" },
-    { name: "Paneer Lababdar", img: img17, type: "veg" },
-    { name: "Dal Stellar", img: img18, type: "veg" },
-    { name: "Kashmiri Fish Tikka", img: img19, type: "non-veg" },
-  ];
-
-  // Restaurant Images
-  const restaurantImages: GalleryItem[] = [
-    { name: "Restaurant Interior 1", img: rest1 },
-    { name: "Restaurant Interior 2", img: rest2 },
-    { name: "Restaurant Interior 3", img: rest3 },
-  ];
 
   // Dropdown state
   const [activeCategory, setActiveCategory] = useState<"food" | "restaurant">(
