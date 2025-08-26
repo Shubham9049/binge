@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
-import banner from "../../../assets/hero1.jpeg";
+import banner from "../../../assets/hero1.jpg";
 import img1 from "../../../assets/food/Chilli Chicken Dry.webp";
 import img2 from "../../../assets/food/Chilli Fish.webp";
 import img3 from "../../../assets/food/Crispy Babycorn.webp";

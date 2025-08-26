@@ -80,7 +80,7 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* Dark overlay across image */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/35" />
 
       {/* Address & Button - pinned to bottom-left */}
       <motion.div

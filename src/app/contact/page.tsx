@@ -3,7 +3,7 @@
 import { FaMapMarkerAlt, FaPhoneAlt, FaClock } from "react-icons/fa";
 import { MdDeliveryDining, MdOutlineLocalDining } from "react-icons/md";
 import { RiTakeawayFill } from "react-icons/ri";
-import contactBanner from "../../../assets/hero5.jpeg";
+import contactBanner from "../../../assets/hero5.jpg";
 import { useRef, useState } from "react";
 import axios from "axios";
 import Navbar from "../../../components/Navbar";
