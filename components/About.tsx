@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
-import Hero1 from "../assets/hero1.jpeg";
+import Hero1 from "../assets/hero1.jpg";
 import upwards from "../assets/upwards.png";
 import downwards from "../assets/downwards.png";
 import Link from "next/link";

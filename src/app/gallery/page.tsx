@@ -23,6 +23,12 @@ import img16 from "../../../assets/food/Shahi Paneer.webp";
 import img17 from "../../../assets/food/Paneer Lababdar.webp";
 import img18 from "../../../assets/food/Dal Stellar.webp";
 import img19 from "../../../assets/food/Kshmiri Fish Tikka.webp";
+
+// 👉 Import some restaurant images
+import rest1 from "../../../assets/restaurant/interior1.jpg";
+import rest2 from "../../../assets/restaurant/interior2.jpg";
+import rest3 from "../../../assets/restaurant/interior3.jpg";
+
 import { useRef, useState } from "react";
 import MobileContactBar from "../../../components/MobileContactBar";
 
@@ -41,7 +47,7 @@ export default function OurCreationsPage() {
     }
   };
 
-  // Menu Items
+  // Food Menu Items
   const menuItems = [
     { name: "Chilli Chicken Dry", img: img1, type: "non-veg" },
     { name: "Chilli Fish", img: img2, type: "non-veg" },
@@ -64,23 +70,28 @@ export default function OurCreationsPage() {
     { name: "Kashmiri Fish Tikka", img: img19, type: "non-veg" },
   ];
 
-  // Separate Veg & Non-Veg
-  const vegItems = menuItems.filter((item) => item.type === "veg");
-  const nonVegItems = menuItems.filter((item) => item.type === "non-veg");
+  // Restaurant Images
+  const restaurantImages = [
+    { name: "Restaurant Interior 1", img: img19 },
+    { name: "Restaurant Interior 2", img: img19 },
+    { name: "Restaurant Interior 3", img: img19 },
+  ];
+
+  // Dropdown state
+  const [activeCategory, setActiveCategory] = useState<"food" | "restaurant">(
+    "food"
+  );
 
   // Modal state
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeList, setActiveList] = useState<any[]>(menuItems);
 
-  const openModal = (index: number, items: typeof menuItems) => {
-    // index relative to that category
+  const openModal = (index: number, items: any[]) => {
     setCurrentIndex(index);
     setIsOpen(true);
-    // save which list (veg or non-veg)
     setActiveList(items);
   };
-
-  const [activeList, setActiveList] = useState<typeof menuItems>(menuItems);
 
   const closeModal = () => setIsOpen(false);
 
@@ -90,37 +101,32 @@ export default function OurCreationsPage() {
   const nextImage = () =>
     setCurrentIndex((prev) => (prev === activeList.length - 1 ? 0 : prev + 1));
 
-  // Card component (to avoid repetition)
+  // Card grid
   const MenuGrid = ({
-    title,
     items,
   }: {
-    title: string;
-    items: typeof menuItems;
+    items: typeof menuItems | typeof restaurantImages;
   }) => (
-    <div className="mb-16">
-      <h2 className="text-3xl font-bold mb-6">{title}</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {items.map((item, idx) => (
-          <div
-            key={idx}
-            onClick={() => openModal(idx, items)}
-            className="relative aspect-[3/4] w-full shadow-md rounded-xl overflow-hidden hover:shadow-2xl transition cursor-pointer flex flex-col"
-          >
-            <div className="relative flex-1">
-              <Image
-                src={item.img}
-                alt={item.name}
-                fill
-                className="object-contain bg-white hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="bg-gray-100 py-2 text-center font-semibold text-gray-800">
-              {item.name} {item.type === "veg" ? "🥦" : "🍗"}
-            </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {items.map((item, idx) => (
+        <div
+          key={idx}
+          onClick={() => openModal(idx, items)}
+          className="relative aspect-[3/4] w-full shadow-md rounded-xl overflow-hidden hover:shadow-2xl transition cursor-pointer flex flex-col"
+        >
+          <div className="relative flex-1">
+            <Image
+              src={item.img}
+              alt={item.name}
+              fill
+              className="object-cover bg-white hover:scale-105 transition-transform duration-300"
+            />
           </div>
-        ))}
-      </div>
+          <div className="bg-gray-100 py-2 text-center font-semibold text-gray-800">
+            {item.name}
+          </div>
+        </div>
+      ))}
     </div>
   );
 
@@ -153,19 +159,31 @@ export default function OurCreationsPage() {
         </div>
       </section>
 
-      {/* MENU GRID SECTION */}
+      {/* MENU / RESTAURANT IMAGES */}
       <section ref={creationsRef} className="bg-white py-16">
         <div className="w-11/12 md:w-5/6 mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Explore Our Dishes</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
-            Flip through our menu pages just like a catalog.
-          </p>
+          <h2 className="text-4xl font-bold mb-6">Explore Our Creations</h2>
 
-          {/* Veg Section */}
-          <MenuGrid title="🥦 Vegetarian Dishes" items={vegItems} />
+          {/* Dropdown */}
+          <div className="mb-10">
+            <select
+              value={activeCategory}
+              onChange={(e) =>
+                setActiveCategory(e.target.value as "food" | "restaurant")
+              }
+              className="px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
+            >
+              <option value="food">🍲 Food Menu</option>
+              <option value="restaurant">🏠 Restaurant Interiors</option>
+            </select>
+          </div>
 
-          {/* Non-Veg Section */}
-          <MenuGrid title="🍗 Non-Vegetarian Dishes" items={nonVegItems} />
+          {/* Show selected category */}
+          {activeCategory === "food" ? (
+            <MenuGrid items={menuItems} />
+          ) : (
+            <MenuGrid items={restaurantImages} />
+          )}
         </div>
       </section>
 

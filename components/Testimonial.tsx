@@ -9,10 +9,16 @@ import upwards from "../assets/upwards.png";
 import downwards from "../assets/downwards.png";
 import Image from "next/image";
 
+// 👉 Import review source logos
+import zomatoLogo from "../assets/Zomato-Logo.png";
+import swiggyLogo from "../assets/Swiggy-Symbol.png";
+import googleLogo from "../assets/pngimg.com - google_PNG19644.png";
+
 interface Review {
   name: string;
   content: string;
   rating: number;
+  source: "zomato" | "swiggy" | "google";
 }
 
 const reviews: Review[] = [
@@ -21,36 +27,55 @@ const reviews: Review[] = [
     content:
       "Stellar Binge is hands down the best restaurant in Noida! The food was absolutely delicious, and the service was warm and welcoming. Perfect place for family dinners.",
     rating: 5,
+    source: "google",
   },
   {
     name: "PRIYA VERMA",
     content:
       "Loved the ambience here — cozy yet elegant. The staff was very polite and attentive, and the food was fresh with authentic flavors. Will definitely be coming back!",
     rating: 5,
+    source: "zomato",
   },
   {
     name: "RAHUL SINGH",
     content:
       "As a foodie, I’m very picky about taste, but Stellar Binge exceeded all my expectations. The variety on the menu and the presentation of dishes were excellent.",
     rating: 5,
+    source: "swiggy",
   },
   {
     name: "ANANYA GUPTA",
     content:
       "Celebrated my birthday here, and it was a wonderful experience. The hospitality was amazing, the staff even arranged a small surprise dessert for me. Highly recommended!",
     rating: 5,
+    source: "google",
   },
   {
     name: "ROHAN MALHOTRA",
     content:
       "A must-visit spot in Noida if you’re looking for great food and a relaxing atmosphere. The service was quick, and every dish we tried was perfectly cooked.",
     rating: 5,
+    source: "zomato",
   },
 ];
 
+// Utility: map source to logo
+const getSourceLogo = (source: Review["source"]) => {
+  switch (source) {
+    case "zomato":
+      return zomatoLogo;
+    case "swiggy":
+      return swiggyLogo;
+    case "google":
+      return googleLogo;
+    default:
+      return googleLogo;
+  }
+};
+
 export default function ReviewSection() {
   return (
-    <section className="w-full py-16  font-raleway bg-[var(--secondary-color)] text-black relative">
+    <section className="w-full py-16 font-raleway bg-[var(--secondary-color)] text-black relative">
       <div className="absolute top-0 left-0">
         <Image src={upwards} alt="upwards" />
       </div>
@@ -92,11 +117,20 @@ export default function ReviewSection() {
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>
               <div className="relative bg-white rounded-2xl border border-neutral-200 p-6 shadow-md h-80 flex flex-col justify-between hover:shadow-lg transition duration-300">
+                {/* Source Logo - Top Right */}
+                <div className="absolute top-4 right-8">
+                  <Image
+                    src={getSourceLogo(review.source)}
+                    alt={review.source}
+                    className="w-16 h-16 object-contain"
+                  />
+                </div>
+
                 {/* Quote Icon */}
                 <FaQuoteLeft className="text-[var(--primary-color)] text-2xl opacity-40" />
 
-                {/* Review Content (truncate if too long) */}
-                <p className="text-base leading-relaxed text-black line-clamp-4">
+                {/* Review Content */}
+                <p className="text-base leading-relaxed text-black line-clamp-4 mt-2">
                   {review.content}
                 </p>
 

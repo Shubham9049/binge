@@ -19,6 +19,7 @@ import ReviewSection from "../../components/Testimonial";
 import FoodPanoramaSlider from "../../components/FoodShowcase";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
 import MobileContactBar from "../../components/MobileContactBar";
+import WhatsAppButton from "../../components/floatingBtn";
 
 const fundamentals = [
   { poster: hero6 },
@@ -79,6 +80,7 @@ export default function Home() {
       <Footer />
       <ScrollToTopButton />
       <MobileContactBar />
+      <WhatsAppButton />
     </div>
   );
 }

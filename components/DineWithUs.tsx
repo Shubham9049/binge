@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
-import Hero2 from "../assets/hero2.jpeg";
+import Hero2 from "../assets/hero2.jpg";
 import Link from "next/link";
 
 const DiningExperienceSection: React.FC = () => {

@@ -1,34 +1,54 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import hero1 from "../assets/hero1.jpeg";
-import hero2 from "../assets/hero2.jpeg";
-import hero3 from "../assets/hero3.jpeg";
-import hero4 from "../assets/hero4.jpeg";
-import hero5 from "../assets/hero5.jpeg";
+import hero1 from "../assets/hero1.jpg";
+import hero2 from "../assets/hero2.jpg";
+import hero3 from "../assets/hero3.jpg";
+import hero4 from "../assets/hero4.jpg";
+import hero5 from "../assets/hero5.jpg";
+import hero6 from "../assets/hero6.jpg";
+import hero7 from "../assets/hero7.jpg";
 
 const slides = [
   {
-    image: hero1,
+    image: hero7,
     title: "Dine. Sip. Unwind.",
     subtitle:
       "From Indian to Pan-Asian to World Cuisine – paired with crafted drinks in a luxurious setting.",
   },
   {
-    image: hero2,
+    image: hero1,
     title: "Modern & Sophisticated",
     subtitle:
       "Savor global flavors, signature cocktails, and a lounge experience like no other in Noida.",
   },
 
   {
-    image: hero4,
+    image: hero2,
     title: "Where Culinary Art Meets Timeless Elegance",
     subtitle:
       "A fine blend of world-class dining, elegant ambience, and unforgettable evenings",
   },
   {
+    image: hero3,
+    title: "Flavors of the World, Served with Class",
+    subtitle:
+      "From rich Indian curries to Pan-Asian delights and global plates – crafted for the true connoisseur.",
+  },
+  {
+    image: hero4,
+    title: "Flavors of the World, Served with Class",
+    subtitle:
+      "From rich Indian curries to Pan-Asian delights and global plates – crafted for the true connoisseur.",
+  },
+  {
     image: hero5,
+    title: "Flavors of the World, Served with Class",
+    subtitle:
+      "From rich Indian curries to Pan-Asian delights and global plates – crafted for the true connoisseur.",
+  },
+  {
+    image: hero6,
     title: "Flavors of the World, Served with Class",
     subtitle:
       "From rich Indian curries to Pan-Asian delights and global plates – crafted for the true connoisseur.",
@@ -60,7 +80,7 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* Dark overlay across image */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/40" />
 
       {/* Address & Button - pinned to bottom-left */}
       <motion.div
