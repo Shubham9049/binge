@@ -147,7 +147,7 @@ export default function ContactPage() {
           </p>
           <p className="flex items-center gap-3">
             <FaClock className="text-[var(--primary-color)]" />
-            Open ⋅ Closes 11 pm
+            Open 11 am ⋅ Closes 11 pm
           </p>
         </div>
 
@@ -202,7 +202,19 @@ export default function ContactPage() {
           </button>
         </form>
       </section>
-
+      {/* Map Section */}
+      <section className="w-11/12 md:w-5/6 mx-auto h-[400px] md:h-[400px]  ">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.585670226247!2d77.3624109!3d28.6122041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce56996f6ab5b%3A0xda132206ab62c25f!2sStellar%20Binge!5e0!3m2!1sen!2sin!4v1756282825010!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="rounded-2xl"
+        ></iframe>
+      </section>
       <Footer />
       <MobileContactBar />
     </div>

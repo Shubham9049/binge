@@ -6,6 +6,7 @@ import banquetHero from "../../../assets/banqutes/img1.webp"; // replace with yo
 import { banquetImages } from "../../../src/data/data"; // import your banquet/gallery images
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import Link from "next/link";
 
 export default function BanquetPage() {
   return (
@@ -26,7 +27,8 @@ export default function BanquetPage() {
               Banquet & Celebrations
             </h1>
             <p className="mt-3 text-lg md:text-xl">
-              Celebrate life’s special moments in style
+              Stellar Binge - A perfect venue for hosting your Wedding /
+              Reception:
             </p>
           </div>
         </section>
@@ -34,46 +36,71 @@ export default function BanquetPage() {
         {/* Content Section */}
         <section className="w-11/12 md:w-4/5 mx-auto py-16 leading-relaxed text-gray-700 space-y-6">
           <p>
-            At <span className="font-semibold">The Stellar Gymkhana</span> life
-            is a celebration! Whether a destination wedding where one plus one
-            are made ONE or a private birthday bash celebrating togetherness or
-            just a kitty party, the lavish food spreads and spacious seating
-            arrangements make The Stellar Gymkhana a perfect joy for hosting all
-            types of events. Our rolling lawns can comfortably accommodate 2500
-            guests, while our large indoor venues – the Banquet Halls – can
-            easily cater to social functions for up to 500 persons making it one
-            of the best & a premium venue for destination Wedding in
-            Noida/Greater Noida-NCR.
+            At <span className="font-semibold">Stellar Binge</span> is a great
+            place to host your special day - be it an engagement, a wedding or
+            any other social function. Rolling lawns, large indoor venues
+            including lavish food spreads and spacious seating arrangements,
+            with ample parking, all combine and contribute to making your
+            special event truly memorable. Our lawns can comfortably accommodate
+            2000 guests and the Banquet Halls can easily cater to functions of
+            upto 700 guests.
           </p>
 
           <p>
-            Entertain in style at our lake-facing premium lawns suitable for
-            most banquet functions, including theme dinners. We offer a lavish
-            choice of cuisines – Indian, Tandoori, Continental, Mughlai and
-            Chinese – prepared in-house by our proficient Chefs offering you an
-            excellent fare for your palate.
+            At Stellar Binge, we endeavor collectively to set new standards in
+            the field of gastronomy matched with impeccable service.
           </p>
 
           <p>
-            Whether your event is for 500 or 2500, we assure you of unmatched
-            quality in our offerings and services. We take charge and work
-            closely with event planners to provide any service, entertainment or
-            otherwise that our guests require for their special events.
+            We also undertake Outdoor Catering for 100 to 2000 guests for your
+            special occasion at your preferred location in Noida.
           </p>
 
           <p>
-            Rolling lawns, large indoor and outdoor venues and ample parking not
-            to mention the peace and tranquility all combine and contribute to
-            making the simplest of your functions truly memorable.
+            <b>Dining</b>: Far away from the hustle & bustle of the city. Binge
+            Restaurant & Lounge Bar is one of it's kind & offers services set in
+            a lavish & chic ambience, The multi-cuisine restaurant is an ideal
+            place for discerning diners & specializes in Indian, Chinese and
+            Continental cuisine. It offers a blend of delectable food &
+            excellent service and boasts of beautiful interiors & a relaxed
+            ambience. Apart from a wide range of a-la-carte menu, it offers a
+            lavish buffet spread for a quick meal with colleagues & friends.
           </p>
 
           <p>
-            The Stellar Gymkhana is considered to be one of the best venues for
-            Social Functions & Weddings in Delhi NCR with a choice of outdoor
-            venues in Noida/Greater Noida and is located amidst the vast open
-            space of Greater Noida far from the maddening cacophony of city
-            crowds. It is a perfect venue for luxury destination wedding in NCR
-            and other private events.
+            <b>Conferences & Banquets</b>: For meetings and events that leave an
+            enduring impression, Binge has a distinctive allure. We bring to
+            every event a dedicated focus and unbridled enthusiasm. Whether
+            you're planning a company strategy session, a corporate cocktail
+            party or a celebratory banquet, you always have our undivided
+            attention. The Conference & Banquet rooms can accommodate upto 150
+            guests and offers distinctive and flexible spaces. A wide range of
+            state-of-the-art audio-visual equipment is available on extra
+            charges.
+          </p>
+          <p>
+            <b>Lounge Bar</b>: Operational from 12 noon till 11 pm! Binge offers
+            a wide array of drinks & lip smacking cocktails in its Chic bar
+            offering a splendid evening. It has the finest and rarest collection
+            of whiskies, cognacs, single malts, beers and a selection of
+            cocktail mixes. It also runs Happy Hours offers from 12 noon till
+            10.30 pm. Binge Restaurant & Lounge Bar is more than a pit stop for
+            its discerning guests.
+          </p>
+
+          <p className="">
+            <b>Contact Us</b>:{" "}
+            <Link className="hover:text-blue-600" href="tel:+919599816863">
+              9599816863
+            </Link>
+            /{" "}
+            <Link className="hover:text-blue-600" href="tel:+919599816618">
+              9599816618
+            </Link>{" "}
+            /{" "}
+            <Link className="hover:text-blue-600" href="tel:+919599816866">
+              9599816866
+            </Link>
           </p>
         </section>
 
