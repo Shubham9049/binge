@@ -139,7 +139,11 @@ export default function ContactPage() {
           </div>
           <p className="flex items-center gap-3">
             <FaPhoneAlt className="text-[var(--primary-color)]" />
-            +91 95998 16865
+            +91 9599816865
+          </p>
+          <p className="flex items-center gap-3">
+            <FaPhoneAlt className="text-[var(--primary-color)]" />
+            +91 9871952133
           </p>
           <p className="flex items-center gap-3">
             <FaClock className="text-[var(--primary-color)]" />

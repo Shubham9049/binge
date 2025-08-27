@@ -21,7 +21,7 @@ const BanquetSection: React.FC = () => {
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
           animateValue(setEvents, 500, 1000); // total events hosted
-          animateValue(setCapacity, 300, 1000); // max capacity
+          animateValue(setCapacity, 150, 1000); // max capacity
           setHasAnimated(true);
         }
       },
