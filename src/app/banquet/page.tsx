@@ -58,10 +58,10 @@ export default function BanquetPage() {
 
           <p>
             <b>Dining</b>: Far away from the hustle & bustle of the city. Binge
-            Restaurant & Lounge Bar is one of it's kind & offers services set in
-            a lavish & chic ambience, The multi-cuisine restaurant is an ideal
-            place for discerning diners & specializes in Indian, Chinese and
-            Continental cuisine. It offers a blend of delectable food &
+            Restaurant & Lounge Bar is one of it&#39;s kind & offers services
+            set in a lavish & chic ambience, The multi-cuisine restaurant is an
+            ideal place for discerning diners & specializes in Indian, Chinese
+            and Continental cuisine. It offers a blend of delectable food &
             excellent service and boasts of beautiful interiors & a relaxed
             ambience. Apart from a wide range of a-la-carte menu, it offers a
             lavish buffet spread for a quick meal with colleagues & friends.
@@ -71,7 +71,7 @@ export default function BanquetPage() {
             <b>Conferences & Banquets</b>: For meetings and events that leave an
             enduring impression, Binge has a distinctive allure. We bring to
             every event a dedicated focus and unbridled enthusiasm. Whether
-            you're planning a company strategy session, a corporate cocktail
+            you&#39;re planning a company strategy session, a corporate cocktail
             party or a celebratory banquet, you always have our undivided
             attention. The Conference & Banquet rooms can accommodate upto 150
             guests and offers distinctive and flexible spaces. A wide range of
