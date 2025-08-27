@@ -21,6 +21,29 @@ import img16 from "../../assets/food/Shahi Paneer.webp";
 import img17 from "../../assets/food/Paneer Lababdar.webp";
 import img18 from "../../assets/food/Dal Stellar.webp";
 import img19 from "../../assets/food/Kshmiri Fish Tikka.webp";
+import img20 from "../../assets/food/Achari Paneer Tikka - Copy.webp";
+import img21 from "../../assets/food/Afghani Murg.webp";
+import img22 from "../../assets/food/Aloo Gobhi.webp";
+import img23 from "../../assets/food/Chicken Biryani.webp";
+import img24 from "../../assets/food/Chicken Dum Biryani.webp";
+import img25 from "../../assets/food/Chicken Tikka.webp";
+import img26 from "../../assets/food/Chilli Paneer.webp";
+import img27 from "../../assets/food/Crispy Chicken  salt  Pepper.webp";
+import img28 from "../../assets/food/Dal Tadka.webp";
+import img29 from "../../assets/food/Dimisum platter.webp";
+import img30 from "../../assets/food/Dimisum.webp";
+import img31 from "../../assets/food/Honey Chilli Potato.webp";
+import img32 from "../../assets/food/Malai Kofta.webp";
+import img33 from "../../assets/food/Mix Vegetables.webp";
+import img34 from "../../assets/food/Mutter Methi Malai.webp";
+import img35 from "../../assets/food/Mutton Seekh kebab.webp";
+import img36 from "../../assets/food/Paneer Kali mirch.webp";
+import img37 from "../../assets/food/Paneer Shashlik.webp";
+import img38 from "../../assets/food/Rara Gosht.webp";
+import img39 from "../../assets/food/tandoori dimisum.webp";
+import img40 from "../../assets/food/Tandoori Prawn.webp";
+import img41 from "../../assets/food/Tandoori Veg Platter.webp";
+import img42 from "../../assets/food/Veg Salt & Pepper.webp";
 
 // 👉 Restaurant Images
 import rest1 from "../../assets/interior/Int1 (1).webp";
@@ -69,8 +92,8 @@ import rest42 from "../../assets/interior/Int1 (42).webp";
 // banquate
 
 import banquet1 from "../../assets/banqutes/img1.webp";
-import banquet2 from "../../assets/banqutes/img1.webp";
-import banquet3 from "../../assets/banqutes/img1.webp";
+import banquet2 from "../../assets/banqute.webp";
+import banquet3 from "../../assets/banqute2.webp";
 
 // ✅ Shared type
 export type GalleryItem = {
@@ -89,6 +112,22 @@ export const vegMenuItems: GalleryItem[] = [
   { name: "🍃 Shahi Paneer", img: img16, type: "veg" },
   { name: "🍃 Paneer Lababdar", img: img17, type: "veg" },
   { name: "🍃 Dal Stellar", img: img18, type: "veg" },
+
+  // Newly added veg items
+  { name: "🍃 Achari Paneer Tikka", img: img20, type: "veg" },
+  { name: "🍃 Aloo Gobhi", img: img22, type: "veg" },
+  { name: "🍃 Chilli Paneer", img: img26, type: "veg" },
+  { name: "🍃 Dal Tadka", img: img28, type: "veg" },
+  { name: "🍃 Dimisum Platter", img: img29, type: "veg" },
+  { name: "🍃 Honey Chilli Potato", img: img31, type: "veg" },
+  { name: "🍃 Malai Kofta", img: img32, type: "veg" },
+  { name: "🍃 Mix Vegetables", img: img33, type: "veg" },
+  { name: "🍃 Mutter Methi Malai", img: img34, type: "veg" },
+  { name: "🍃 Paneer Kali Mirch", img: img36, type: "veg" },
+  { name: "🍃 Paneer Shashlik", img: img37, type: "veg" },
+  { name: "🍃 Tandoori Dimisum", img: img39, type: "veg" },
+  { name: "🍃 Tandoori Veg Platter", img: img41, type: "veg" },
+  { name: "🍃 Veg Salt & Pepper", img: img42, type: "veg" },
 ];
 
 // ✅ NON-VEG Food Menu Items
@@ -104,6 +143,18 @@ export const nonVegMenuItems: GalleryItem[] = [
   { name: "🍗 Fish Curry", img: img13, type: "non-veg" },
   { name: "🍗 Mutton Roganjosh", img: img14, type: "non-veg" },
   { name: "🍗 Kashmiri Fish Tikka", img: img19, type: "non-veg" },
+  { name: "🍗 Tandoori Dimisum", img: img39, type: "veg" },
+  { name: "🍗 Dimisum", img: img30, type: "veg" },
+
+  // Newly added non-veg items
+  { name: "🍗 Afghani Murg", img: img21, type: "non-veg" },
+  { name: "🍗 Chicken Biryani", img: img23, type: "non-veg" },
+  { name: "🍗 Chicken Dum Biryani", img: img24, type: "non-veg" },
+  { name: "🍗 Chicken Tikka", img: img25, type: "non-veg" },
+  { name: "🍗 Crispy Chicken Salt & Pepper", img: img27, type: "non-veg" },
+  { name: "🍗 Mutton Seekh Kebab", img: img35, type: "non-veg" },
+  { name: "🍗 Rara Gosht", img: img38, type: "non-veg" },
+  { name: "🍗 Tandoori Prawn", img: img40, type: "non-veg" },
 ];
 
 export const menuItems: GalleryItem[] = [...vegMenuItems, ...nonVegMenuItems];
