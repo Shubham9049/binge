@@ -14,7 +14,7 @@ const slides = [
     image: hero7,
     title: "Dine. Sip. Unwind.",
     subtitle:
-      "From Indian to Pan-Asian to World Cuisine – paired with crafted drinks in a luxurious setting .",
+      "From Indian to Pan-Asian to World Cuisine – paired with crafted drinks in a luxurious setting.",
   },
   {
     image: hero1,
@@ -22,36 +22,35 @@ const slides = [
     subtitle:
       "Savor global flavors, signature cocktails, and a lounge experience like no other in Noida.",
   },
-
   {
     image: hero2,
     title: "Where Culinary Art Meets Timeless Elegance",
     subtitle:
-      "A fine blend of world-class dining, elegant ambience, and unforgettable evenings",
+      "A fine blend of world-class dining, elegant ambience, and unforgettable evenings.",
   },
   {
     image: hero3,
-    title: "Flavors of the World, Served with Class",
+    title: "Crafted Plates, Memorable Evenings",
     subtitle:
-      "From rich Indian curries to Pan-Asian delights and global plates – crafted for the true connoisseur.",
+      "Experience chef-curated dishes designed to delight every palate.",
   },
   {
     image: hero4,
-    title: "Flavors of the World, Served with Class",
+    title: "Sip, Savor & Celebrate",
     subtitle:
-      "From rich Indian curries to Pan-Asian delights and global plates – crafted for the true connoisseur.",
+      "Raise a glass to good times with handcrafted cocktails and premium spirits.",
   },
   {
     image: hero5,
-    title: "Flavors of the World, Served with Class",
+    title: "Ambience That Inspires",
     subtitle:
-      "From rich Indian curries to Pan-Asian delights and global plates – crafted for the true connoisseur.",
+      "Immerse yourself in a stylish setting perfect for gatherings, celebrations, or quiet escapes.",
   },
   {
     image: hero6,
-    title: "Flavors of the World, Served with Class",
+    title: "Global Flavors, Local Heart",
     subtitle:
-      "From rich Indian curries to Pan-Asian delights and global plates – crafted for the true connoisseur.",
+      "Authentic tastes from around the world, served with warm Indian hospitality.",
   },
 ];
 
