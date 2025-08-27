@@ -14,7 +14,7 @@ export default function BanquetPage() {
       <Navbar />
       <main className="bg-white text-black font-raleway mt-28">
         {/* Hero Section */}
-        <section className="relative w-full h-[60vh] flex items-center justify-center">
+        <section className="relative w-full h-[80vh] flex items-center justify-center">
           <Image
             src={banquetHero}
             alt="Banquet Hall"
