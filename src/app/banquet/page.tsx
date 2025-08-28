@@ -2,11 +2,23 @@
 "use client";
 
 import Image from "next/image";
-import banquetHero from "../../../assets/banqutes/img1.webp"; // replace with your hero image
-import { banquetImages } from "../../../src/data/data"; // import your banquet/gallery images
+import banquetHero from "../../../assets/banqutes/img1.webp";
+import { banquetImages } from "../../../src/data/data";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import Link from "next/link";
+import {
+  MapPin,
+  Users,
+  Utensils,
+  Sparkles,
+  Car,
+  Headphones,
+  Wine,
+  Briefcase,
+} from "lucide-react";
+import upwards from "../../../assets/upwards.png";
+import downwards from "../../../assets/downwards.png";
 
 export default function BanquetPage() {
   return (
@@ -14,7 +26,7 @@ export default function BanquetPage() {
       <Navbar />
       <main className="bg-white text-black font-raleway mt-28">
         {/* Hero Section */}
-        <section className="relative w-full h-[80vh] flex items-center justify-center">
+        <section className="relative w-full h-[90vh] flex items-center justify-center">
           <Image
             src={banquetHero}
             alt="Banquet Hall"
@@ -22,116 +34,212 @@ export default function BanquetPage() {
             className="object-cover brightness-75"
             priority
           />
-          <div className="relative z-10 text-center text-white">
+          <div className="relative z-10 text-center text-white max-w-2xl">
             <h1 className="text-4xl md:text-6xl font-bold">
               Gather & Celebrate
             </h1>
-            <p className="mt-3 text-lg md:text-xl">
-              The Ideal Space for Your Corporate Meets & Cozy Get-Togethers
+            <p className="mt-4 text-lg md:text-xl">
+              The Ideal Space for Corporate Meets & Cozy Get-Togethers
             </p>
           </div>
         </section>
 
-        {/* Content Section */}
-        <section className="w-11/12 md:w-4/5 mx-auto py-16 leading-relaxed text-gray-700 space-y-6">
-          <i className="font-semibold">
+        {/* Intro Section */}
+        <section className="w-11/12 md:w-5/6 mx-auto py-12 text-center space-y-6">
+          <h2 className="text-2xl md:text-4xl font-semibold  text-black">
             Host Your Special Moments at{" "}
-            <span className="font-semibold">Stellar Binge</span>
-          </i>
-
-          <p>
-            Looking for the perfect venue for an intimate celebration? Stellar
-            Binge offers an elegant space exclusively designed for smaller,
-            private gatherings whether it’s a birthday party, kitty party,
-            corporate meet, or a cozy family get-together.
-          </p>
-
-          <p>
-            Our chic and stylish banquet hall comfortably accommodates up to 150
-            guests , making it the ideal choice for those who value personalized
-            service and premium ambience. <br /> The space comes with spacious
-            seating arrangements, impeccable décor, and a curated menu to
-            suit your occasion.
-          </p>
-
-          <h3 className="font-semibold">
-            Why Choose Stellar Binge for Your Event?
-          </h3>
-          <ul>
-            <li>
-              <span className="font-semibold">Prime Location</span>–
-              Conveniently located in Sector 62, Noida, easy to access from all
-              parts of the city
-            </li>
-            <li>
-              <span className="font-semibold">Perfect Size </span>– Ideal for
-              small corporate events, social gatherings, kitty parties &
-              birthdays
-            </li>
-            <li>
-              <span className="font-semibold">Lavish Food Spreads</span>–
-              Multi-cuisine options featuring Indian, Chinese, and Continental
-              delicacies
-            </li>
-            <li>
-              <span className="font-semibold">Elegant Ambience</span> – Modern
-              interiors with flexible seating arrangements
-            </li>
-            <li>
-              <span className="font-semibold">Ample Parking</span> – Hassle-free
-              experience for all your guests
-            </li>
-            <li>
-              <span className="font-semibold">Complete Event Support</span>–
-              Audio-visual setup available on request
-            </li>
-          </ul>
-
-          <p>
-            <b>Dining at Binge Restaurant & Lounge</b>: Located right in Noida
-            city, Binge Restaurant & Lounge Bar offers a multi-cuisine dining
-            experience with lavish buffet spreads, à la carte selections, and a
-            chic atmosphere. It’s the perfect spot for celebratory meals,
-            informal meetings, or pre/post-event gatherings.
-          </p>
-
-          <p>
-            <b>Elegant Spaces for Conferences & Celebrations</b>: For meetings
-            and events that leave an enduring impression, Binge has a
-            distinctive allure. We bring to every event a dedicated focus and
-            unbridled enthusiasm. Whether you&#39;re planning a company strategy
-            session, a corporate cocktail party or a celebratory banquet, you
-            always have our undivided attention. The Conference & Banquet rooms
-            can accommodate upto 150 guests and offers distinctive and flexible
-            spaces. A wide range of state-of-the-art audio-visual equipment is
-            available on extra charges.
-          </p>
-          <p>
-            <b>The Lounge Bar</b>: Our stylish lounge bar serves an exquisite
-            range of whiskies, cognacs, cocktails, and premium spirits, with
-            Happy Hours from 12 noon to 10:30 pm. A perfect addition to your
-            event for an unforgettable experience.
-          </p>
-
-          <p className="">
-            <b>Contact Us</b>:{" "}
-            <Link className="hover:text-blue-600" href="tel:+919599816863">
-              9599816863
-            </Link>
-            /{" "}
-            <Link className="hover:text-blue-600" href="tel:+919599816618">
-              9599816618
-            </Link>{" "}
-            /{" "}
-            <Link className="hover:text-blue-600" href="tel:+919599816866">
-              9599816866
-            </Link>
+            <span className="text-[var(--primary-color)]">Stellar Binge</span>
+          </h2>
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+            Whether it’s a birthday party, kitty party, corporate meet, or a
+            cozy family gathering, Stellar Binge offers the perfect banquet hall
+            with elegant interiors, premium ambience, and tailored service.
           </p>
         </section>
 
-        {/* Image Gallery Section */}
-        <section className="w-11/12 md:w-4/5 mx-auto pb-20">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-center">
+        {/* Why Choose Section */}
+        <section className="relative bg-[var(--secondary-color)] pt-12 pb-20">
+          <div className="absolute top-0 left-0">
+            <Image src={upwards} alt="upwards" />
+          </div>
+          <div className="absolute bottom-0 left-0">
+            <Image src={downwards} alt="downwards" />
+          </div>
+          <div className="w-11/12 md:w-5/6 mx-auto">
+            <h3 className="text-2xl md:text-4xl text-white font-semibold text-center mb-12">
+              Why Choose Stellar Binge?
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: (
+                    <MapPin className="w-8 h-8 text-[var(--primary-color)]" />
+                  ),
+                  title: "Prime Location",
+                  desc: "Located in Sector 62, Noida, easily accessible from all parts of the city.",
+                },
+                {
+                  icon: (
+                    <Users className="w-8 h-8 text-[var(--primary-color)]" />
+                  ),
+                  title: "Perfect Size",
+                  desc: "Ideal for up to 150 guests – small corporate events, birthdays & kitty parties.",
+                },
+                {
+                  icon: (
+                    <Utensils className="w-8 h-8 text-[var(--primary-color)]" />
+                  ),
+                  title: "Lavish Food",
+                  desc: "Multi-cuisine menu with Indian, Chinese & Continental delicacies.",
+                },
+                {
+                  icon: (
+                    <Sparkles className="w-8 h-8 text-[var(--primary-color)]" />
+                  ),
+                  title: "Elegant Ambience",
+                  desc: "Modern interiors with stylish décor & flexible seating.",
+                },
+                {
+                  icon: <Car className="w-8 h-8 text-[var(--primary-color)]" />,
+                  title: "Ample Parking",
+                  desc: "Hassle-free experience with sufficient parking space for guests.",
+                },
+                {
+                  icon: (
+                    <Headphones className="w-8 h-8 text-[var(--primary-color)]" />
+                  ),
+                  title: "Event Support",
+                  desc: "Audio-visual setup & technical support available on request.",
+                },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+                >
+                  {item.icon}
+                  <h4 className="mt-4 font-semibold text-lg">{item.title}</h4>
+                  <p className="text-gray-600 text-sm mt-2">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Highlights Section */}
+        <section className="w-11/12 md:w-5/6 mx-auto py-16 space-y-20">
+          {/* Dining */}
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="overflow-hidden rounded-xl shadow-md">
+              <Image
+                src={banquetImages[0].src}
+                alt="Dining at Binge"
+                width={600}
+                height={400}
+                className="w-full h-[350px] md:h-[400px] object-cover hover:scale-105 transition-transform"
+              />
+            </div>
+            <div>
+              <h3 className="text-3xl font-semibold mb-4">
+                Dining at Binge Restaurant & Lounge
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-lg mb-4">
+                Step into a world of flavours at Binge Restaurant & Lounge,
+                where every meal is designed to be a memorable experience. From
+                lavish buffet spreads to hand-picked à la carte delights, our
+                chefs bring together authentic recipes with a modern twist.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-lg mb-4">
+                The chic interiors and inviting ambience make it the perfect
+                setting for everything from a casual dinner to a formal
+                celebration. Guests can enjoy gourmet dishes across Indian,
+                Continental, and Oriental cuisines, paired with carefully
+                curated beverages.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                Whether you’re hosting a family gathering, a client lunch, or a
+                friends’ night out, the atmosphere blends comfort and elegance
+                to make every dining occasion feel special.
+              </p>
+            </div>
+          </div>
+
+          {/* Conferences */}
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="order-2 md:order-1">
+              <h3 className="text-3xl font-semibold mb-4">
+                Elegant Spaces for Conferences & Celebrations
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-lg mb-4">
+                Our banquet and conference rooms are purpose-built to provide
+                the perfect balance of professionalism and style. With seating
+                capacity of up to 150 guests, these versatile spaces adapt
+                easily to host board meetings, training sessions, product
+                launches, and celebratory banquets.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-lg mb-4">
+                Designed with modern interiors and flexible layouts, every
+                detail has been thought of to enhance your event. From
+                comfortable seating to elegant lighting, the ambience elevates
+                both corporate and social gatherings.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                A wide range of state-of-the-art audio-visual equipment is
+                available on request, ensuring your presentations, speeches, and
+                entertainment are delivered flawlessly. Our dedicated staff is
+                always on hand to make sure your event runs seamlessly from
+                start to finish.
+              </p>
+            </div>
+            <div className="overflow-hidden rounded-xl shadow-md order-1 md:order-2">
+              <Image
+                src={banquetImages[1].src}
+                alt="Conference Hall"
+                width={600}
+                height={400}
+                className="w-full h-[350px] md:h-[400px] object-cover hover:scale-105 transition-transform"
+              />
+            </div>
+          </div>
+
+          {/* Lounge Bar */}
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="overflow-hidden rounded-xl shadow-md">
+              <Image
+                src={banquetImages[2].src}
+                alt="Lounge Bar"
+                width={600}
+                height={400}
+                className="w-full h-[350px] md:h-[400px] object-cover hover:scale-105 transition-transform"
+              />
+            </div>
+            <div>
+              <h3 className="text-3xl font-semibold mb-4">The Lounge Bar</h3>
+              <p className="text-gray-600 leading-relaxed text-lg mb-4">
+                The Lounge Bar is the heartbeat of our banquet experience,
+                offering an exclusive selection of premium spirits, fine wines,
+                and handcrafted cocktails. it is designed to add an indulgent
+                touch to your events.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-lg mb-4">
+                Guests can unwind in a chic, vibrant setting that perfectly
+                complements both formal and informal occasions. Whether you’re
+                entertaining clients, hosting a cocktail evening, or simply
+                celebrating with friends, the Lounge Bar sets the stage for
+                unforgettable memories.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                From rare whiskies to signature blends, every sip is curated for
+                sophistication. Combined with our personalized service, the
+                Lounge Bar is not just a place to drink, it’s an experience to
+                savor.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery */}
+        {/* <section className="w-11/12 md:w-5/6 mx-auto pb-20">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
             Our Banquet Venues & Events
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -150,9 +258,38 @@ export default function BanquetPage() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
+
+        {/* Contact CTA */}
+        {/* <section className="bg-[var(--primary-color)] text-white py-16 text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            Let’s Plan Your Perfect Event
+          </h2>
+          <p className="mb-6">Call us today and reserve your dates now!</p>
+          <div className="space-x-4">
+            <Link
+              href="tel:+919599816863"
+              className="px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-white hover:text-black transition"
+            >
+              9599816863
+            </Link>
+            <Link
+              href="tel:+919599816618"
+              className="px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-white hover:text-black transition"
+            >
+              9599816618
+            </Link>
+            <Link
+              href="tel:+919599816866"
+              className="px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-white hover:text-black transition"
+            >
+              9599816866
+            </Link>
+          </div>
+        </section> */}
       </main>
       <Footer />
+         
     </div>
   );
 }
