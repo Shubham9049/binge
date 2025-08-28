@@ -238,7 +238,7 @@ const Navbar = () => {
               </Link>
             </div>
           </div> */}
-          <span className="text-md text-[#000000] font-thin cursor-pointer hover:text-[var(--primary-color)]">
+          <span className="text-md text-[#af0002] font-thin cursor-pointer hover:text-[var(--primary-color)]">
             <Link href="tel:+919599816865">
               <span className="inline-flex items-center gap-2">
                 <FaPhoneAlt />

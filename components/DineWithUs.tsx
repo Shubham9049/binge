@@ -63,7 +63,7 @@ const DiningExperienceSection: React.FC = () => {
     >
       <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-16">
         {/* Text Content */}
-        <div className="z-10 space-y-16">
+        <div className="z-10 ">
           <div className="mb-2">
             <p
               className="uppercase tracking-widest font-semibold mt-2 text-xs text-[var(--primary-color)]"
@@ -79,15 +79,24 @@ const DiningExperienceSection: React.FC = () => {
             Your destination for flavors, finesse, and unforgettable moments.
           </h2>
           <p
-            className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4"
+            className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify"
             data-aos="fade-right"
           >
-            At Stellar Binge, every dish is a masterpiece — crafted with
-            passion, plated with precision. More than just food, we serve
-            experiences that linger beyond the last bite. From signature
-            cocktails to chef’s curated creations, indulge in flavors that
-            define luxury dining in Noida.
+            At Stellar Binge, every dish is a masterpiece—crafted with passion,
+            plated with precision. We go beyond dining to create moments that
+            last beyond the last bite. From signature cocktails to chef-curated
+            delicacies, experience luxury dining in the heart of Noida. Our
+            elegant banquet hall accommodates up to 150 guests, perfect for
+            corporate events, kitty parties, birthdays, and intimate
+            celebrations. With bespoke décor, impeccable service, and gourmet
+            menus, we ensure every occasion is unforgettable. <br />
           </p>
+          <span>
+            <i>
+              Stellar Binge – Where Taste, Luxury, and
+              Hospitality come together.
+            </i>
+          </span>
 
           {/* Stats */}
           {/* <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x border-t border-gray-300 mb-8">
@@ -157,8 +166,8 @@ const DiningExperienceSection: React.FC = () => {
 
         {/* Image with dotted background */}
         <div className="relative w-full h-full z-10">
-          <div className="hidden md:block absolute top-10 right-6 w-full h-full bg-[radial-gradient(var(--primary-color)_2.5px,transparent_2.5px)] bg-[length:28px_28px] z-0" />
-          <div className="hidden md:block absolute right-10 top-24 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[var(--primary-color)] z-0"></div>
+          <div className="hidden md:block absolute top-16 right-8 w-full h-full bg-[radial-gradient(var(--primary-color)_2.5px,transparent_2.5px)] bg-[length:28px_28px] z-0" />
+          <div className="hidden md:block absolute right-10 top-28 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[var(--primary-color)] z-0"></div>
           <Image
             src={Hero2}
             alt="Dining"
