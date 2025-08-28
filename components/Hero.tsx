@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import hero1 from "../assets/hero1.jpg";
-import hero2 from "../assets/hero2.jpg";
+import hero1 from "../assets/hero1.webp";
+import hero2 from "../assets/hero2.webp";
 import hero3 from "../assets/hero3.jpg";
 import hero4 from "../assets/hero4.jpg";
 import hero5 from "../assets/hero5.jpg";
-import hero6 from "../assets/hero6.jpg";
+import hero6 from "../assets/hero6.webp";
 import hero7 from "../assets/hero7.jpeg";
 
 const slides = [
@@ -74,12 +74,12 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-center"
         />
       </AnimatePresence>
 
       {/* Dark overlay across image */}
-      <div className="absolute inset-0 bg-black/35" />
+      <div className="absolute inset-0 bg-black/20" />
 
       {/* Address & Button - pinned to bottom-left */}
       <motion.div

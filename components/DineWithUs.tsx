@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
-import Hero2 from "../assets/hero2.jpg";
+import Hero2 from "../assets/hero2.webp";
 import Link from "next/link";
 
 const DiningExperienceSection: React.FC = () => {
@@ -63,13 +63,13 @@ const DiningExperienceSection: React.FC = () => {
     >
       <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-16">
         {/* Text Content */}
-        <div className="z-10">
+        <div className="z-10 space-y-16">
           <div className="mb-2">
             <p
               className="uppercase tracking-widest font-semibold mt-2 text-xs text-[var(--primary-color)]"
               data-aos="fade-right"
             >
-              Welcome to Stellar Binge
+              Welcome to Stellar Binge restaurant and lounge bar
             </p>
           </div>
           <h2
@@ -90,7 +90,7 @@ const DiningExperienceSection: React.FC = () => {
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x border-t border-gray-300 mb-8">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x border-t border-gray-300 mb-8">
             <div className="py-4 sm:pr-6">
               <p className="text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase mb-1">
                 Signature Creations
@@ -113,7 +113,7 @@ const DiningExperienceSection: React.FC = () => {
                 Years of creating memorable dining experiences.
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">

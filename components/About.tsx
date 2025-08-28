@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
-import Hero1 from "../assets/hero1.jpg";
+import Hero1 from "../assets/hero1.webp";
 import upwards from "../assets/upwards.png";
 import downwards from "../assets/downwards.png";
 import Link from "next/link";
@@ -28,7 +28,7 @@ const About = () => {
               Our Story
             </p>
             <h2 className="text-2xl md:text-4xl font-semibold text-white mt-2">
-              Binge — Redefining The Art Of Dining
+              Redefining The Art Of Dining
             </h2>
           </div>
         </div>

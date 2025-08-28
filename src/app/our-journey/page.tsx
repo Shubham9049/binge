@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
-import banner from "../../../assets/hero1.jpg";
-import aboutImage from "../../../assets/hero2.jpg";
-import foodImage from "../../../assets/hero2.jpg";
+import banner from "../../../assets/hero1.webp";
+import aboutImage from "../../../assets/hero2.webp";
+import foodImage from "../../../assets/hero2.webp";
 import { useRef } from "react";
 import upwards from "../../../assets/upwards.png";
 import downwards from "../../../assets/downwards.png";

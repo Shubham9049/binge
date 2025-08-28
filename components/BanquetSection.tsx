@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import BanquetImg from "../assets/banqutes/img1.webp"; // replace with your banquet image
+import Link from "next/link";
 
 const BanquetSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -136,6 +137,15 @@ const BanquetSection: React.FC = () => {
               ></span>
             </button>
           </a>
+          <Link href="/banquet">
+            <button className="relative group px-6 py-3 mx-4 text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] overflow-hidden transition-all duration-300 hover:text-white cursor-pointer">
+              <span className="relative z-10">Know More</span>
+              <span
+                className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
+                style={{ backgroundColor: "#B10203" }}
+              ></span>
+            </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -89,8 +89,8 @@ export default function ReviewSection() {
         </p>
 
         {/* Heading */}
-        <h2 className="text-2xl md:text-4xl font-semibold text-black mt-2 text-start mb-4">
-          From Our <span className="text-white">Kitchen</span> to Their
+        <h2 className="text-2xl md:text-4xl font-semibold text-white mt-2 text-start mb-4">
+          From Our Kitchen to Their
           <span className="text-white"> Hearts</span>
         </h2>
 

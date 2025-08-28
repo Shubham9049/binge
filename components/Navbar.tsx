@@ -40,7 +40,7 @@ import { span } from "framer-motion/client";
 
 const navItems = [
   { title: "Home", href: "/", icon: <Home size={16} /> },
-  { title: "Our Journey", href: "/our-journey", icon: <BookOpen size={16} /> },
+  // { title: "Our Journey", href: "/our-journey", icon: <BookOpen size={16} /> },
   // {
   //   title: "Meet the Chef",
   //   href: "/meet-the-chef",

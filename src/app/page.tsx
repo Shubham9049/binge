@@ -21,6 +21,8 @@ import ScrollToTopButton from "../../components/ScrollToTopButton";
 import MobileContactBar from "../../components/MobileContactBar";
 import WhatsAppButton from "../../components/floatingBtn";
 import BanquetSection from "../../components/BanquetSection";
+import Special from "../../components/Special";
+import Culinary from "../../components/Culinary";
 
 const fundamentals = [
   { poster: hero6 },
@@ -42,10 +44,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <DiningExperienceSection />
-      <BanquetSection />
       <About />
       <FoodPanoramaSlider />
-      <ReviewSection />
       {/* Section */}
       <section className="bg-white dark:bg-black font-raleway font-light dark:font-thin">
         <div className="w-11/12 md:w-5/6 mx-auto py-10">
@@ -77,6 +77,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <BanquetSection />
+      <Culinary />
+      <Special />
+      <ReviewSection />
 
       <Footer />
       <ScrollToTopButton />
