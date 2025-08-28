@@ -8,11 +8,10 @@ import Footer from "../../components/Footer";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import hero1 from "../../assets/ab1.jpg";
-import hero2 from "../../assets/ab2.jpg";
-import hero3 from "../../assets/ab3.jpg";
-import hero4 from "../../assets/ab4.jpg";
-import hero5 from "../../assets/ab5.jpg";
+import hero1 from "../../assets/ab11.webp";
+import hero3 from "../../assets/ab8.webp";
+import hero4 from "../../assets/ab9.webp";
+import hero5 from "../../assets/ab10.webp";
 import hero6 from "../../assets/ab6.jpg";
 import hero7 from "../../assets/ab7.jpg";
 import ReviewSection from "../../components/Testimonial";
@@ -27,7 +26,6 @@ import BlogPreview from "../../components/Blogs";
 
 const fundamentals = [
   { poster: hero6 },
-  { poster: hero2 },
   { poster: hero3 },
   { poster: hero4 },
   { poster: hero5 },
@@ -69,7 +67,7 @@ export default function Home() {
               <div
                 key={index}
                 className={`relative overflow-hidden rounded-sm bg-cover bg-center h-96 ${
-                  index === 0 ? "md:col-span-2" : ""
+                  index === 0 || index === 5 ? "md:col-span-2" : ""
                 }`}
                 style={{ backgroundImage: `url(${creation.poster.src})` }}
                 data-aos="zoom-in"

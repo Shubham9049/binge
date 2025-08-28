@@ -188,7 +188,7 @@ export default function MenuPage() {
                 </h2>
 
                 {/* Grid layout for all images */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
                   {allImages.map((img, idx) => (
                     <div
                       key={idx}

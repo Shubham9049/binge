@@ -52,7 +52,7 @@ const About = () => {
             data-aos="fade-up"
           >
             <h3 className="text-2xl md:text-4xl font-semibold text-black dark:text-white mb-4 relative">
-              The Binge Experience
+              The Stellar Binge Experience
             </h3>
             <p className="text-gray-700 dark:text-gray-300 max-w-xl mb-6">
               Binge was born from a simple idea — to create a place where food,
