@@ -56,14 +56,14 @@ export default function MenuPage() {
   // 👉 Structured Menu Categories
   const categories = [
     {
-      title: "Soups & Salads",
+      title: "Soups & Greens Delight",
       sub: [
         { name: "Soups", images: [menuPage2] },
         { name: "Salads", images: [menuPage26, menuPage27] },
       ],
     },
     {
-      title: "Cocktails & Mocktails",
+      title: "Signature Sips",
       sub: [
         { name: "Mocktails", images: [menuPage19] },
         {
@@ -83,7 +83,7 @@ export default function MenuPage() {
       ],
     },
     {
-      title: "Entrées (Starters)",
+      title: "Entrée",
       sub: [
         {
           name: "Tandoor Veg & Non-Veg",
@@ -99,7 +99,7 @@ export default function MenuPage() {
       ],
     },
     {
-      title: "Main Course",
+      title: "The Stellar Spread",
       sub: [
         {
           name: "Indian Main Course Veg & Non-Veg",
@@ -117,7 +117,7 @@ export default function MenuPage() {
       ],
     },
     {
-      title: "Desserts & Yogurts",
+      title: "Stellar Indulgence",
       sub: [
         { name: "Desserts", images: [menuPage32] },
         { name: "Yogurts", images: [menuPage32] },
