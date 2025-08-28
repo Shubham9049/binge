@@ -6,6 +6,7 @@ import Footer from "../../../components/Footer";
 import banner from "../../../assets/hero1.webp";
 import { useRef, useState } from "react";
 import MobileContactBar from "../../../components/MobileContactBar";
+import type { StaticImageData } from "next/image";
 
 // 👉 Import all images
 import menuPage1 from "../../../assets/menu/Indian main cousrse non-veg.webp";
@@ -126,10 +127,13 @@ export default function MenuPage() {
 
   // 👉 Modal state
   const [isOpen, setIsOpen] = useState(false);
-  const [currentImages, setCurrentImages] = useState<any[]>([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openModal = (images: any[], index: number) => {
+  // ...
+
+  const [currentImages, setCurrentImages] = useState<StaticImageData[]>([]);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  const openModal = (images: StaticImageData[], index: number) => {
     setCurrentImages(images);
     setCurrentIndex(index);
     setIsOpen(true);
