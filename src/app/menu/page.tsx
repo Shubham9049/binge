@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
-import banner from "../../../assets/hero1.jpg";
+import banner from "../../../assets/hero1.webp";
 
 import { useRef, useState } from "react";
 

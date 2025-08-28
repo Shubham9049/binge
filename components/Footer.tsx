@@ -18,15 +18,15 @@ const Footer = () => {
             {/* Heading */}
             <div className="w-full text-center lg:text-left">
               <h2 className="text-2xl md:text-4xl font-semibold">
-                Sign up for exclusive offers from us
+                Sign up for news & event updates.
               </h2>
             </div>
 
             {/* Input + Button */}
             <div className="w-full flex flex-col items-center lg:items-end gap-4">
-              <p className="text-center lg:text-left text-base">
+              {/* <p className="text-center lg:text-left text-base">
                 Sign up to our newsletter for all the latest news and events.
-              </p>
+              </p> */}
 
               <div className="w-full flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-3">
                 <input
