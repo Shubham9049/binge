@@ -18,7 +18,7 @@ const Footer = () => {
             {/* Heading */}
             <div className="w-full text-center lg:text-left">
               <h2 className="text-2xl md:text-4xl font-semibold">
-                Sign up for news & event updates.
+                Stay Connected with Stellar Updates
               </h2>
             </div>
 

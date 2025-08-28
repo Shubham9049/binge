@@ -2,7 +2,7 @@ import React from "react";
 
 const points = [
   {
-    title: "Fresh Ingredients",
+    title: "Farm-to-Table Goodness",
     desc: "We source farm-fresh produce and the finest spices to serve you quality in every bite.",
     icon: "🥗",
   },

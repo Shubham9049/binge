@@ -34,57 +34,83 @@ export default function BanquetPage() {
 
         {/* Content Section */}
         <section className="w-11/12 md:w-4/5 mx-auto py-16 leading-relaxed text-gray-700 space-y-6">
+          <i className="font-semibold">
+            Host Your Special Moments at{" "}
+            <span className="font-semibold">Stellar Binge</span>
+          </i>
+
           <p>
-            At <span className="font-semibold">Stellar Binge</span> is a great
-            place to host your special day - be it an engagement, a wedding or
-            any other social function. Rolling lawns, large indoor venues
-            including lavish food spreads and spacious seating arrangements,
-            with ample parking, all combine and contribute to making your
-            special event truly memorable. Our lawns can comfortably accommodate
-            2000 guests and the Banquet Halls can easily cater to functions of
-            upto 700 guests.
+            Looking for the perfect venue for an intimate celebration? Stellar
+            Binge offers an elegant space exclusively designed for smaller,
+            private gatherings whether it’s a birthday party, kitty party,
+            corporate meet, or a cozy family get-together.
           </p>
 
           <p>
-            At Stellar Binge, we endeavor collectively to set new standards in
-            the field of gastronomy matched with impeccable service.
+            Our chic and stylish banquet hall comfortably accommodates up to 150
+            guests , making it the ideal choice for those who value personalized
+            service and premium ambience . The space comes with spacious seating
+            arrangements, impeccable décor, and a curated menu to
+            suit your occasion.
+          </p>
+
+          <h3 className="font-semibold">
+            Why Choose Stellar Binge for Your Event?
+          </h3>
+          <ul>
+            <li>
+              <span className="font-semibold">Prime Location</span>–
+              Conveniently located in Sector 62, Noida, easy to access from all
+              parts of the city
+            </li>
+            <li>
+              <span className="font-semibold">Perfect Size </span>– Ideal for
+              small corporate events, social gatherings, kitty parties &
+              birthdays
+            </li>
+            <li>
+              <span className="font-semibold">Lavish Food Spreads</span>–
+              Multi-cuisine options featuring Indian, Chinese, and Continental
+              delicacies
+            </li>
+            <li>
+              <span className="font-semibold">Elegant Ambience</span> – Modern
+              interiors with flexible seating arrangements
+            </li>
+            <li>
+              <span className="font-semibold">Ample Parking</span> – Hassle-free
+              experience for all your guests
+            </li>
+            <li>
+              <span className="font-semibold">Complete Event Support</span>–
+              Audio-visual setup available on request
+            </li>
+          </ul>
+
+          <p>
+            <b>Dining at Binge Restaurant & Lounge</b>: Located right in Noida
+            city, Binge Restaurant & Lounge Bar offers a multi-cuisine dining
+            experience with lavish buffet spreads, à la carte selections, and a
+            chic atmosphere. It’s the perfect spot for celebratory meals,
+            informal meetings, or pre/post-event gatherings.
           </p>
 
           <p>
-            We also undertake Outdoor Catering for 100 to 2000 guests for your
-            special occasion at your preferred location in Noida.
-          </p>
-
-          <p>
-            <b>Dining</b>: Far away from the hustle & bustle of the city. Binge
-            Restaurant & Lounge Bar is one of it&#39;s kind & offers services
-            set in a lavish & chic ambience, The multi-cuisine restaurant is an
-            ideal place for discerning diners & specializes in Indian, Chinese
-            and Continental cuisine. It offers a blend of delectable food &
-            excellent service and boasts of beautiful interiors & a relaxed
-            ambience. Apart from a wide range of a-la-carte menu, it offers a
-            lavish buffet spread for a quick meal with colleagues & friends.
-          </p>
-
-          <p>
-            <b>Conferences & Banquets</b>: For meetings and events that leave an
-            enduring impression, Binge has a distinctive allure. We bring to
-            every event a dedicated focus and unbridled enthusiasm. Whether
-            you&#39;re planning a company strategy session, a corporate cocktail
-            party or a celebratory banquet, you always have our undivided
-            attention. The Conference & Banquet rooms can accommodate upto 150
-            guests and offers distinctive and flexible spaces. A wide range of
-            state-of-the-art audio-visual equipment is available on extra
-            charges.
+            <b>Elegant Spaces for Conferences & Celebrations</b>: For meetings
+            and events that leave an enduring impression, Binge has a
+            distinctive allure. We bring to every event a dedicated focus and
+            unbridled enthusiasm. Whether you&#39;re planning a company strategy
+            session, a corporate cocktail party or a celebratory banquet, you
+            always have our undivided attention. The Conference & Banquet rooms
+            can accommodate upto 150 guests and offers distinctive and flexible
+            spaces. A wide range of state-of-the-art audio-visual equipment is
+            available on extra charges.
           </p>
           <p>
-            <b>Lounge Bar</b>: Operational from 12 noon till 11 pm! Binge offers
-            a wide array of drinks & lip smacking cocktails in its Chic bar
-            offering a splendid evening. It has the finest and rarest collection
-            of whiskies, cognacs, single malts, beers and a selection of
-            cocktail mixes. It also runs Happy Hours offers from 12 noon till
-            10.30 pm. Binge Restaurant & Lounge Bar is more than a pit stop for
-            its discerning guests.
+            <b>The Lounge Bar</b>: Our stylish lounge bar serves an exquisite
+            range of whiskies, cognacs, cocktails, and premium spirits, with
+            Happy Hours from 12 noon to 10:30 pm. A perfect addition to your
+            event for an unforgettable experience.
           </p>
 
           <p className="">
