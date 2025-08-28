@@ -49,8 +49,8 @@ export default function BanquetPage() {
           <p>
             Our chic and stylish banquet hall comfortably accommodates up to 150
             guests , making it the ideal choice for those who value personalized
-            service and premium ambience . The space comes with spacious seating
-            arrangements, impeccable décor, and a curated menu to
+            service and premium ambience. <br /> The space comes with spacious
+            seating arrangements, impeccable décor, and a curated menu to
             suit your occasion.
           </p>
 

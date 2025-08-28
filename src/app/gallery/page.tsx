@@ -124,7 +124,7 @@ export default function OurCreationsPage() {
               }
               className="px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
             >
-              <option value="veg">🍃 Veg Menu</option>
+              <option value="veg">🍃 Veg Dishes</option>
               <option value="non-veg">🍗 Non-Veg Menu</option>
               <option value="restaurant">🏠 Restaurant Interiors</option>
             </select>
