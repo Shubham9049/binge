@@ -17,7 +17,7 @@ const Culinary = () => {
         {/* Left - Text */}
         <div className="space-y-6">
           <h2 className="text-4xl font-bold text-white">
-            Our <span className="text-black">Culinary</span> Philosophy
+            Our Culinary Philosophy
           </h2>
           <p className="text-lg text-gray-300 dark:text-gray-300">
             At our restaurant, food is not just about taste — it’s about
