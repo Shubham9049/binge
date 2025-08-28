@@ -56,8 +56,7 @@ export default function Home() {
           {/* Heading */}
           <div className="flex justify-between items-center mb-6 flex-wrap gap-4">
             <h2 className="text-2xl md:text-4xl font-semibold text-black dark:text-white mt-2">
-              At Stellar Binge, it’s a journey of taste, ambience, and
-              indulgence
+              Journey of Taste, Ambience, and Indulgence
             </h2>
           </div>
 

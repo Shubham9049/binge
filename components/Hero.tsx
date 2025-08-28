@@ -8,6 +8,8 @@ import hero4 from "../assets/hero4.jpg";
 import hero5 from "../assets/hero5.jpg";
 import hero6 from "../assets/hero6.webp";
 import hero7 from "../assets/hero7.jpeg";
+import hero8 from "../assets/banqutes/img1.webp";
+import hero9 from "../assets/banqute.webp";
 
 const slides = [
   {
@@ -51,6 +53,18 @@ const slides = [
     title: "Global Flavors, Local Heart",
     subtitle:
       "Authentic tastes from around the world, served with warm Indian hospitality.",
+  },
+  {
+    image: hero8,
+    title: "Celebrations Beyond Ordinary",
+    subtitle:
+      "From grand weddings to intimate gatherings, we create unforgettable experiences.",
+  },
+  {
+    image: hero9,
+    title: "Where Every Occasion Shines",
+    subtitle:
+      "Lavish spaces, exquisite dining, and seamless service for all your special events.",
   },
 ];
 

@@ -54,7 +54,7 @@ export default function SpringSlider() {
   return (
     <section className="w-11/12 md:w-5/6 mx-auto py-12 relative">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[var(--primary-color)]">
-        The Stellar Food Selection
+        Our Artisanal Dishes
       </h2>
       {/* Custom Navigation Buttons */}
       <button className="hidden md:block custom-prev absolute -left-14 top-1/2 -translate-y-1/2 z-10  ">

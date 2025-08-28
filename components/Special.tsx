@@ -28,7 +28,7 @@ const Special = () => {
       <div className="w-11/12 md:w-5/6 mx-auto px-6 text-center">
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[var(--primary-color)]">
-          What Makes Us Special
+          The Essence of Our Craft
         </h2>
         <p className="text-gray-600 mb-12">
           Discover what makes us the favorite choice for food lovers in town.

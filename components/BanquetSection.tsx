@@ -21,7 +21,7 @@ const BanquetSection: React.FC = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
-          animateValue(setEvents, 500, 1000); // total events hosted
+          animateValue(setEvents, 497, 1000); // total events hosted
           animateValue(setCapacity, 150, 1000); // max capacity
           setHasAnimated(true);
         }
@@ -89,7 +89,7 @@ const BanquetSection: React.FC = () => {
             className="text-2xl md:text-4xl font-semibold text-black mt-2"
             data-aos="fade-left"
           >
-            Elegant Banquet Hall for Your Special Occasions
+            Elegant Banquet Hall For All Your Special Occasions
           </h2>
           <p
             className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4"
@@ -108,7 +108,7 @@ const BanquetSection: React.FC = () => {
                 Events Hosted
               </p>
               <p className="text-gray-700 dark:text-gray-300 text-4xl font-sans font-semibold">
-                {events}+
+                {events}
               </p>
               <p className="text-gray-700 dark:text-gray-300 text-sm">
                 Memorable celebrations & corporate gatherings.
@@ -119,7 +119,7 @@ const BanquetSection: React.FC = () => {
                 Guest Capacity
               </p>
               <p className="text-gray-700 dark:text-gray-300 text-4xl font-semibold font-sans">
-                {capacity}+
+                {capacity}
               </p>
               <p className="text-gray-700 dark:text-gray-300 text-sm">
                 Guests can be accommodated with comfort & elegance.
