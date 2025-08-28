@@ -14,21 +14,21 @@ const Footer = () => {
       {/* Newsletter Section */}
       <div className="border-t border-gray-300 dark:border-gray-700 w-full">
         <div className="bg-white dark:bg-black text-black dark:text-white py-12 px-4 sm:px-6 md:px-10 font-raleway">
-          <div className="w-11/12 mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="w-11/12 mx-auto flex flex-col lg:flex-row items-center justify-center">
             {/* Heading */}
-            <div className="w-full text-center lg:text-left">
+            <div className="w-full text-center ">
               <h2 className="text-2xl md:text-4xl font-semibold">
-                Stay Connected with Stellar Updates
+                Exclusive Updates & Special Offers
               </h2>
             </div>
 
             {/* Input + Button */}
-            <div className="w-full flex flex-col items-center lg:items-end gap-4">
+            <div className="w-full  flex flex-col gap-4">
               {/* <p className="text-center lg:text-left text-base">
                 Sign up to our newsletter for all the latest news and events.
               </p> */}
 
-              <div className="w-full flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-3">
+              <div className="w-full flex flex-col sm:flex-row items-center  gap-3">
                 <input
                   type="email"
                   placeholder="Your email"
