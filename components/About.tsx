@@ -71,12 +71,12 @@ const About = () => {
               celebration, our focus is on creating moments that linger — long
               after the last bite.
             </p>
-            <div className="flex flex-wrap gap-2 mt-10">
+            <div className="flex flex-nowrap gap-3 mt-8 overflow-x-auto">
               <Link
                 href="https://www.zomato.com/ncr/stellar-binge-sector-62-noida"
                 target="_blank"
               >
-                <button className="relative group px-6 py-3 text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] overflow-hidden transition-all duration-300 hover:text-white cursor-pointer">
+                <button className="relative group px-4 py-2 text-xs md:text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] whitespace-nowrap overflow-hidden transition-all duration-300 hover:text-white cursor-pointer rounded-md">
                   <span className="relative z-10">🍴 Order on Zomato</span>
                   <span
                     className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
@@ -89,7 +89,7 @@ const About = () => {
                 href="https://www.swiggy.com/city/noida-1/stellar-binge-sector-62-rest61296"
                 target="_blank"
               >
-                <button className="relative group px-6 py-3 text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] overflow-hidden transition-all duration-300 hover:text-white cursor-pointer">
+                <button className="relative group px-4 py-2 text-xs md:text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] whitespace-nowrap overflow-hidden transition-all duration-300 hover:text-white cursor-pointer rounded-md">
                   <span className="relative z-10">🛵 Order on Swiggy</span>
                   <span
                     className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
@@ -99,7 +99,7 @@ const About = () => {
               </Link>
 
               <a href="tel:+919599816865">
-                <button className="relative group px-6 py-3 text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] overflow-hidden transition-all duration-300 hover:text-white cursor-pointer">
+                <button className="relative group px-4 py-2 text-xs md:text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] whitespace-nowrap overflow-hidden transition-all duration-300 hover:text-white cursor-pointer rounded-md">
                   <span className="relative z-10">📞 Call Us</span>
                   <span
                     className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"

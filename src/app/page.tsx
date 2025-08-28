@@ -23,6 +23,7 @@ import WhatsAppButton from "../../components/floatingBtn";
 import BanquetSection from "../../components/BanquetSection";
 import Special from "../../components/Special";
 import Culinary from "../../components/Culinary";
+import BlogPreview from "../../components/Blogs";
 
 const fundamentals = [
   { poster: hero6 },
@@ -81,7 +82,7 @@ export default function Home() {
       <Culinary />
       <Special />
       <ReviewSection />
-
+      <BlogPreview />
       <Footer />
       <ScrollToTopButton />
       <MobileContactBar />

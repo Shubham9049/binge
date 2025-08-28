@@ -24,11 +24,10 @@ export default function BanquetPage() {
           />
           <div className="relative z-10 text-center text-white">
             <h1 className="text-4xl md:text-6xl font-bold">
-              Banquet & Celebrations
+              Gather & Celebrate
             </h1>
             <p className="mt-3 text-lg md:text-xl">
-              Stellar Binge - A perfect venue for hosting your Wedding /
-              Reception:
+              The Ideal Space for Your Corporate Meets & Cozy Get-Togethers
             </p>
           </div>
         </section>
