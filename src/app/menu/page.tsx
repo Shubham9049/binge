@@ -119,10 +119,7 @@ export default function MenuPage() {
     },
     {
       title: "Stellar Indulgence",
-      sub: [
-        { name: "Desserts", images: [menuPage32] },
-        { name: "Yogurts", images: [menuPage32] },
-      ],
+      sub: [{ name: "Desserts", images: [menuPage32] }],
     },
   ];
 
