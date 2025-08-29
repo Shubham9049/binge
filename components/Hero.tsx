@@ -10,6 +10,7 @@ import hero6 from "../assets/hero6.webp";
 import hero7 from "../assets/hero7.jpeg";
 import hero8 from "../assets/banqutes/img1.webp";
 import hero9 from "../assets/banqute.webp";
+// import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
@@ -78,6 +79,12 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // 👉 Navigation handlers
+  // const nextSlide = () => setIndex(([prev]) => [(prev + 1) % slides.length, 1]);
+
+  // const prevSlide = () =>
+  //   setIndex(([prev]) => [(prev - 1 + slides.length) % slides.length, -1]);
+
   return (
     <div className="relative w-full h-[100vh] overflow-hidden font-raleway font-thin ">
       <AnimatePresence initial={false} custom={direction}>
@@ -111,6 +118,21 @@ const Hero = () => {
           {slides[index].subtitle}
         </p>
       </motion.div>
+      {/* <div className="group">
+        <button
+          onClick={prevSlide}
+          className="absolute left-5 top-1/2 -translate-y-1/2 bg-[var(--primary-color)] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"
+        >
+          <ChevronLeft size={28} />
+        </button>
+
+        <button
+          onClick={nextSlide}
+          className="absolute right-5 top-1/2 -translate-y-1/2  bg-[var(--primary-color)] text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"
+        >
+          <ChevronRight size={28} />
+        </button>
+      </div> */}
     </div>
   );
 };

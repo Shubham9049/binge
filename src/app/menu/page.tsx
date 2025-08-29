@@ -93,9 +93,9 @@ export default function MenuPage() {
         { name: "Global Starter Veg & Non-Veg", images: [menuPage7] },
         {
           name: "Pan Asian Starter Veg & Non-Veg",
-          images: [menuPage21, menuPage24],
+          images: [menuPage24, menuPage21],
         },
-        { name: "Appetizers Veg & Non-Veg", images: [menuPage3, menuPage4] },
+        { name: "Appetizers Veg & Non-Veg", images: [menuPage4, menuPage3] },
         { name: "Munchies", images: [menuPage20] },
       ],
     },
