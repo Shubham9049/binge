@@ -22,6 +22,7 @@ import downwards from "../../../assets/downwards.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import ScrollToTopButton from "../../../components/ScrollToTopButton";
 
 export default function BanquetPage() {
   useEffect(() => {
@@ -266,7 +267,7 @@ export default function BanquetPage() {
         </section>
       </main>
       <Footer />
-         
+      <ScrollToTopButton />
     </div>
   );
 }
