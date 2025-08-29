@@ -87,8 +87,9 @@ export default function BanquetPage() {
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
             Whether it’s a birthday party, kitty party, corporate meet, or a
-            cozy family gathering, Stellar Binge offers the perfect banquet hall
-            with elegant interiors, premium ambience, and tailored service
+            cozy family gathering <br /> Stellar Binge offers the perfect
+            banquet hall with elegant interiors, premium ambience, and tailored
+            service.
           </p>
         </section>
 
@@ -105,7 +106,7 @@ export default function BanquetPage() {
           </div>
           <div className="w-11/12 md:w-5/6 mx-auto">
             <h3 className="text-2xl md:text-4xl text-white font-semibold text-center mb-12">
-              Why Choose Stellar Binge?
+              Experience the Difference
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
@@ -140,7 +141,7 @@ export default function BanquetPage() {
                 {
                   icon: <Car className="w-8 h-8 text-[var(--primary-color)]" />,
                   title: "Ample Parking",
-                  desc: "Hassle-free experience with sufficient parking space for guests",
+                  desc: "Hassle-free experience with sufficient parking space for guests.",
                 },
                 {
                   icon: (

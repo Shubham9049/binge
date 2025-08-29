@@ -39,11 +39,17 @@ const Special = () => {
           {points.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition"
+              className="group bg-white rounded-2xl shadow-lg p-6 hover:bg-[#e02426] hover:shadow-2xl transition"
             >
-              <div className="text-4xl mb-4">{item.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-sm">{item.desc}</p>
+              <div className="text-4xl mb-4 group-hover:text-white">
+                {item.icon}
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-white">
+                {item.title}
+              </h3>
+              <p className="text-gray-600 text-sm group-hover:text-white">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>

@@ -85,7 +85,7 @@ export default function ContactPage() {
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">Contact Us</h1>
           <p className="text-lg md:text-2xl max-w-2xl mx-auto">
-            Got questions? We’re just a message away!
+            Let's not waste time & get started. Shall we?
           </p>
           <button
             onClick={scrollToNext}
@@ -138,12 +138,9 @@ export default function ContactPage() {
           </div>
           <p className="flex items-center gap-3">
             <FaPhoneAlt className="text-[var(--primary-color)]" />
-            +91 9599816865
+            +91 9599816865 | +91 9871952133
           </p>
-          <p className="flex items-center gap-3">
-            <FaPhoneAlt className="text-[var(--primary-color)]" />
-            +91 9871952133
-          </p>
+
           <p className="flex items-center gap-3">
             <FaClock className="text-[var(--primary-color)]" />
             Open 11 am ⋅ Closes 11 pm

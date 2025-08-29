@@ -72,12 +72,12 @@ const About = () => {
               after the last bite.
             </p>
             <div className="flex flex-nowrap gap-3 mt-8 overflow-x-auto">
-              <Link href="/contact">
+              <Link
+                href="https://www.zomato.com/ncr/stellar-binge-sector-62-noida"
+                target="_blank"
+              >
                 <button className="relative group px-4 py-2 text-xs md:text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] whitespace-nowrap overflow-hidden transition-all duration-300 hover:text-white cursor-pointer rounded-md">
-                  <span className="relative z-10 flex items-center gap-2">
-                    <Utensils className="w-5 h-5" />
-                    Restaurant
-                  </span>
+                  <span className="relative z-10">🍴 Order on Zomato</span>
                   <span
                     className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
                     style={{ backgroundColor: "#B10203" }}
@@ -85,12 +85,12 @@ const About = () => {
                 </button>
               </Link>
 
-              <Link href="/contact">
+              <Link
+                href="https://www.swiggy.com/city/noida-1/stellar-binge-sector-62-rest61296"
+                target="_blank"
+              >
                 <button className="relative group px-4 py-2 text-xs md:text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] whitespace-nowrap overflow-hidden transition-all duration-300 hover:text-white cursor-pointer rounded-md">
-                  <span className="relative z-10 flex items-center gap-2">
-                    <PartyPopper className="w-5 h-5" />
-                    Banquet
-                  </span>
+                  <span className="relative z-10">🛵 Order on Swiggy</span>
                   <span
                     className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
                     style={{ backgroundColor: "#B10203" }}

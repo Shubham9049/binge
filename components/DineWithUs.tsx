@@ -153,7 +153,7 @@ const DiningExperienceSection: React.FC = () => {
               </button>
             </Link>
 
-            <a href="tel:+919599816865">
+            {/* <a href="tel:+919599816865">
               <button className="relative group px-4 py-2 text-xs md:text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] whitespace-nowrap overflow-hidden transition-all duration-300 hover:text-white cursor-pointer rounded-md">
                 <span className="relative z-10">📞 Call Us</span>
                 <span
@@ -161,7 +161,7 @@ const DiningExperienceSection: React.FC = () => {
                   style={{ backgroundColor: "#B10203" }}
                 ></span>
               </button>
-            </a>
+            </a> */}
           </div>
         </div>
 

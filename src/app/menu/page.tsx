@@ -57,7 +57,7 @@ export default function MenuPage() {
   // 👉 Structured Menu Categories
   const categories = [
     {
-      title: "Soups & Greens Delight",
+      title: "Soups & Greens",
       sub: [
         { name: "Soups", images: [menuPage2] },
         { name: "Salads", images: [menuPage27] },
