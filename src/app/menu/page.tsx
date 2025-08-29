@@ -241,7 +241,7 @@ export default function MenuPage() {
                   {cat.title}
                 </h2>
 
-                <div className="flex flex-wrap gap-8">
+                <div className="flex flex-wrap gap-8 justify-center">
                   {allImages.map((img, idx) => (
                     <div
                       key={idx}
