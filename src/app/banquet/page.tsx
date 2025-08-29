@@ -68,7 +68,7 @@ export default function BanquetPage() {
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
             Whether it’s a birthday party, kitty party, corporate meet, or a
             cozy family gathering, Stellar Binge offers the perfect banquet hall
-            with elegant interiors, premium ambience, and tailored service.
+            with elegant interiors, premium ambience, and tailored service
           </p>
         </section>
 
@@ -120,7 +120,7 @@ export default function BanquetPage() {
                 {
                   icon: <Car className="w-8 h-8 text-[var(--primary-color)]" />,
                   title: "Ample Parking",
-                  desc: "Hassle-free experience with sufficient parking space for guests.",
+                  desc: "Hassle-free experience with sufficient parking space for guests",
                 },
                 {
                   icon: (
@@ -174,13 +174,13 @@ export default function BanquetPage() {
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 The chic interiors and inviting ambience make it the perfect
                 setting for everything from a casual dinner to a formal
-                celebration. Guests can enjoy gourmet dishes across Indian,
-                Continental, and Oriental cuisines, paired with carefully
-                curated beverages.
+                celebration. Guests can enjoy a variety of gourmet dishes from
+                Indian, Continental, and Oriental cuisines, paired with
+                carefully curated beverages.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg">
                 Whether you’re hosting a family gathering, a client lunch, or a
-                friends’ night out, the atmosphere blends comfort and elegance
+                friend’s night out, the atmosphere blends comfort and elegance
                 to make every dining occasion feel special.
               </p>
             </div>
@@ -194,7 +194,7 @@ export default function BanquetPage() {
               </h3>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 Our banquet and conference rooms are purpose-built to provide
-                the perfect balance of professionalism and style. With seating
+                the perfect balance of professionalism and style. With a seating
                 capacity of up to 150 guests, these versatile spaces adapt
                 easily to host board meetings, training sessions, product
                 launches, and celebratory banquets.
@@ -209,8 +209,8 @@ export default function BanquetPage() {
                 A wide range of state-of-the-art audio-visual equipment is
                 available on request, ensuring your presentations, speeches, and
                 entertainment are delivered flawlessly. Our dedicated staff is
-                always on hand to make sure your event runs seamlessly from
-                start to finish.
+                always on hand to ensure your event runs smoothly from start to
+                finish.
               </p>
             </div>
             <div
@@ -246,7 +246,7 @@ export default function BanquetPage() {
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 The Lounge Bar is the heartbeat of our banquet experience,
                 offering an exclusive selection of premium spirits, fine wines,
-                and handcrafted cocktails. it is designed to add an indulgent
+                and handcrafted cocktails. It is designed to add an indulgent
                 touch to your events.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
@@ -259,8 +259,8 @@ export default function BanquetPage() {
               <p className="text-gray-600 leading-relaxed text-lg">
                 From rare whiskies to signature blends, every sip is curated for
                 sophistication. Combined with our personalized service, the
-                Lounge Bar is not just a place to drink, it’s an experience to
-                savor.
+                Lounge Bar is more than just a place to drink - it’s an
+                experience to savor.
               </p>
             </div>
           </div>
