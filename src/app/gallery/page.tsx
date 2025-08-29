@@ -85,7 +85,7 @@ export default function OurCreationsPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative w-full h-[100vh] flex items-center justify-center pt-32">
+      <section className="relative w-full h-[70vh] md:h-[100vh] flex items-center justify-center pt-32">
         <Image
           src={banner}
           alt="Our Creations"

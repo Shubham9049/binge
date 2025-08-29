@@ -85,38 +85,38 @@ const Hero = () => {
   //   setIndex(([prev]) => [(prev - 1 + slides.length) % slides.length, -1]);
 
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden font-raleway font-thin ">
+    <div className="relative w-full h-[75vh] md:h-[100vh] overflow-hidden font-raleway font-thin ">
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
-          key={slides[index].image.src} // ✅ use .src for the key
-          src={slides[index].image.src} // ✅ string instead of StaticImageData
+          key={slides[index].image.src}
+          src={slides[index].image.src}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="absolute inset-0 w-full h-full object-center"
+          className="absolute inset-0 w-full h-full object-cover object-center" // ✅ use object-cover
         />
       </AnimatePresence>
 
-      {/* Dark overlay across image */}
-      <div className="absolute inset-0 bg-black/20" />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/40" />
 
-      {/* Address & Button - pinned to bottom-left */}
+      {/* Centered text */}
       <motion.div
         key={slides[index].title}
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-        className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6"
+        className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 md:px-6"
       >
-        <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-snug">
+        <h1 className="text-2xl md:text-5xl font-bold mb-6 leading-snug drop-shadow-lg">
           {slides[index].title}
         </h1>
-
-        <p className="mb-8 max-w-4xl text-lg md:text-xl text-gray-200 font-semibold">
+        <p className="mb-8 max-w-3xl text-base md:text-xl text-gray-200 font-medium drop-shadow">
           {slides[index].subtitle}
         </p>
       </motion.div>
+
       {/* <div className="group">
         <button
           onClick={prevSlide}

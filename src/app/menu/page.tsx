@@ -169,7 +169,7 @@ export default function MenuPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative w-full h-[100vh] flex items-center justify-center pt-32">
+      <section className="relative w-full h-[70vh] md:h-[100vh] flex items-center justify-center pt-32">
         <Image src={banner} alt="Menu" fill priority className="object-cover" />
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 text-center text-white px-4">
@@ -204,7 +204,7 @@ export default function MenuPage() {
         </div>
 
         {/* Mobile View - Dropdown */}
-        <div className="block md:hidden px-6 py-4">
+        <div className="block md:hidden px-6 pt-10 pb-5">
           <select
             onChange={(e) => scrollToCategory(e.target.value)}
             className="w-full px-4 py-3 border rounded-lg bg-[#af0002] text-white font-semibold shadow-md focus:outline-none"
@@ -242,7 +242,7 @@ export default function MenuPage() {
                     <div
                       key={idx}
                       onClick={() => openModal(allImages, idx)}
-                      className="relative  h-[600px] w-[400px] rounded-2xl overflow-hidden transition cursor-pointer"
+                      className="relative h-[450px] w-[300px]  md:h-[600px] md:w-[400px] rounded-2xl overflow-hidden transition cursor-pointer"
                     >
                       <Image
                         src={img}
