@@ -57,8 +57,7 @@ const slides = [
   {
     image: hero8,
     title: "Celebrations Beyond Ordinary",
-    subtitle:
-      "From grand weddings to intimate gatherings, we create unforgettable experiences.",
+    subtitle: "Perfect Spaces for Business and Social Events",
   },
   {
     image: hero9,

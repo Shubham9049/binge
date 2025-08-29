@@ -34,7 +34,7 @@ export default function BlogPreview() {
 
   return (
     <section className="w-11/12 md:w-5/6 mx-auto py-16">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10">
+      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 text-[var(--primary-color)]">
         Fresh Reads for Food Lovers
       </h2>
 
