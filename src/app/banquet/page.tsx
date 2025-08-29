@@ -61,7 +61,7 @@ export default function BanquetPage() {
           className="w-11/12 md:w-5/6 mx-auto py-12 text-center space-y-6"
           data-aos="fade-up"
         >
-          <h2 className="text-2xl md:text-4xl font-semibold  text-black">
+          <h2 className="text-2xl md:text-4xl font-semibold  text-[var(--primary-color)]">
             Host Your Special Moments at{" "}
             <span className="text-[var(--primary-color)]">Stellar Binge</span>
           </h2>
