@@ -19,8 +19,19 @@ import {
 } from "lucide-react";
 import upwards from "../../../assets/upwards.png";
 import downwards from "../../../assets/downwards.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function BanquetPage() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true, // whether animation should happen only once
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -35,17 +46,20 @@ export default function BanquetPage() {
             priority
           />
           <div className="relative z-10 text-center text-white max-w-2xl">
-            <h1 className="text-4xl md:text-6xl font-bold">
+            <h1 className="text-4xl md:text-6xl font-bold" data-aos="fade-up">
               Gather & Celebrate
             </h1>
-            <p className="mt-4 text-lg md:text-xl">
+            <p className="mt-4 text-lg md:text-xl" data-aos="fade-up">
               The Ideal Space for Corporate Meets & Cozy Get-Togethers
             </p>
           </div>
         </section>
 
         {/* Intro Section */}
-        <section className="w-11/12 md:w-5/6 mx-auto py-12 text-center space-y-6">
+        <section
+          className="w-11/12 md:w-5/6 mx-auto py-12 text-center space-y-6"
+          data-aos="fade-up"
+        >
           <h2 className="text-2xl md:text-4xl font-semibold  text-black">
             Host Your Special Moments at{" "}
             <span className="text-[var(--primary-color)]">Stellar Binge</span>
@@ -58,7 +72,10 @@ export default function BanquetPage() {
         </section>
 
         {/* Why Choose Section */}
-        <section className="relative bg-[var(--secondary-color)] pt-12 pb-20">
+        <section
+          className="relative bg-[var(--secondary-color)] pt-12 pb-20"
+          data-aos="fade-up"
+        >
           <div className="absolute top-0 left-0">
             <Image src={upwards} alt="upwards" />
           </div>
@@ -115,6 +132,8 @@ export default function BanquetPage() {
                 <div
                   key={i}
                   className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+                  data-aos="zoom-in"
+                  data-aos-delay={i * 100}
                 >
                   {item.icon}
                   <h4 className="mt-4 font-semibold text-lg">{item.title}</h4>
@@ -129,7 +148,10 @@ export default function BanquetPage() {
         <section className="w-11/12 md:w-5/6 mx-auto py-16 space-y-20">
           {/* Dining */}
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="overflow-hidden rounded-xl shadow-md">
+            <div
+              className="overflow-hidden rounded-xl shadow-md"
+              data-aos="zoom-in"
+            >
               <Image
                 src={banquetImages[0].src}
                 alt="Dining at Binge"
@@ -138,7 +160,7 @@ export default function BanquetPage() {
                 className="w-full h-[350px] md:h-[400px] object-cover hover:scale-105 transition-transform"
               />
             </div>
-            <div>
+            <div data-aos="fade-up">
               <h3 className="text-3xl font-semibold mb-4">
                 Dining at Binge Restaurant & Lounge
               </h3>
@@ -165,7 +187,7 @@ export default function BanquetPage() {
 
           {/* Conferences */}
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="order-2 md:order-1">
+            <div className="order-2 md:order-1" data-aos="fade-up">
               <h3 className="text-3xl font-semibold mb-4">
                 Elegant Spaces for Conferences & Celebrations
               </h3>
@@ -190,7 +212,10 @@ export default function BanquetPage() {
                 start to finish.
               </p>
             </div>
-            <div className="overflow-hidden rounded-xl shadow-md order-1 md:order-2">
+            <div
+              className="overflow-hidden rounded-xl shadow-md order-1 md:order-2"
+              data-aos="zoom-in"
+            >
               <Image
                 src={banquetImages[1].src}
                 alt="Conference Hall"
@@ -203,7 +228,10 @@ export default function BanquetPage() {
 
           {/* Lounge Bar */}
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="overflow-hidden rounded-xl shadow-md">
+            <div
+              className="overflow-hidden rounded-xl shadow-md"
+              data-aos="zoom-in "
+            >
               <Image
                 src={banquetImages[2].src}
                 alt="Lounge Bar"
@@ -212,7 +240,7 @@ export default function BanquetPage() {
                 className="w-full h-[350px] md:h-[400px] object-cover hover:scale-105 transition-transform"
               />
             </div>
-            <div>
+            <div data-aos="fade-up">
               <h3 className="text-3xl font-semibold mb-4">The Lounge Bar</h3>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 The Lounge Bar is the heartbeat of our banquet experience,
@@ -236,57 +264,6 @@ export default function BanquetPage() {
             </div>
           </div>
         </section>
-
-        {/* Gallery */}
-        {/* <section className="w-11/12 md:w-5/6 mx-auto pb-20">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
-            Our Banquet Venues & Events
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {banquetImages.map((img, i) => (
-              <div
-                key={i}
-                className="overflow-hidden rounded-2xl shadow-md hover:scale-105 transition-transform"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={500}
-                  height={350}
-                  className="object-cover w-full h-[250px]"
-                />
-              </div>
-            ))}
-          </div>
-        </section> */}
-
-        {/* Contact CTA */}
-        {/* <section className="bg-[var(--primary-color)] text-white py-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Let’s Plan Your Perfect Event
-          </h2>
-          <p className="mb-6">Call us today and reserve your dates now!</p>
-          <div className="space-x-4">
-            <Link
-              href="tel:+919599816863"
-              className="px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-white hover:text-black transition"
-            >
-              9599816863
-            </Link>
-            <Link
-              href="tel:+919599816618"
-              className="px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-white hover:text-black transition"
-            >
-              9599816618
-            </Link>
-            <Link
-              href="tel:+919599816866"
-              className="px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-white hover:text-black transition"
-            >
-              9599816866
-            </Link>
-          </div>
-        </section> */}
       </main>
       <Footer />
          

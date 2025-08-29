@@ -66,7 +66,7 @@ export default function OurCreationsPage() {
           <div className="relative flex-1">
             <Image
               src={item.img}
-              alt={item.name}
+              alt={item.name ?? "Gallery image"}
               fill
               className="object-cover bg-white hover:scale-105 transition-transform duration-300"
             />
@@ -163,7 +163,7 @@ export default function OurCreationsPage() {
           <div className="relative w-11/12 md:w-3/4 lg:w-1/2 h-[80vh]">
             <Image
               src={activeList[currentIndex].img}
-              alt={activeList[currentIndex].name}
+              alt={activeList[currentIndex].name ?? "Gallery image"}
               fill
               className="object-cover"
             />

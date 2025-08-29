@@ -97,7 +97,7 @@ import banquet3 from "../../assets/banqute2.webp";
 
 // ✅ Shared type
 export type GalleryItem = {
-  name: string;
+  name?: string;
   img: StaticImageData;
   type?: "veg" | "non-veg"; // only applies to food
 };
@@ -161,18 +161,18 @@ export const menuItems: GalleryItem[] = [...vegMenuItems, ...nonVegMenuItems];
 
 // ✅ Restaurant Images
 export const restaurantImages: GalleryItem[] = [
-  { name: "Restaurant Interior", img: rest1 },
-  { name: "Restaurant Interior", img: rest2 },
+  { img: rest1 },
+  { img: rest2 },
 
-  { name: "Restaurant Interior", img: rest20 },
+  { img: rest20 },
 
-  { name: "Restaurant Interior", img: rest26 },
+  { img: rest26 },
 
-  { name: "Restaurant Interior", img: rest33 },
-  { name: "Restaurant Interior", img: rest34 },
-  { name: "Restaurant Interior", img: rest35 },
-  { name: "Restaurant Interior", img: rest36 },
-  { name: "Restaurant Interior", img: rest38 },
+  { img: rest33 },
+  { img: rest34 },
+  { img: rest35 },
+  { img: rest36 },
+  { img: rest38 },
 ];
 
 export const banquetImages = [
