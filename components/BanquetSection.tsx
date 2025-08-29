@@ -6,6 +6,8 @@ import "aos/dist/aos.css";
 import Image from "next/image";
 import BanquetImg from "../assets/banqutes/img1.webp"; // replace with your banquet image
 import Link from "next/link";
+import upwards from "../assets/upwards.png";
+import downwards from "../assets/downwards.png";
 
 const BanquetSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -59,8 +61,14 @@ const BanquetSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-white text-black font-raleway font-light dark:font-thin relative overflow-hidden"
+      className="bg-[var(--secondary-color)] text-black font-raleway font-light dark:font-thin relative overflow-hidden pt-10 pb-16"
     >
+      <div className="absolute top-0 left-0">
+        <Image src={upwards} alt="upwards" />
+      </div>
+      <div className="absolute bottom-0 left-0">
+        <Image src={downwards} alt="downwards" />
+      </div>
       <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-16">
         {/* Image Left */}
         <div className="relative w-full h-full z-10 order-1 md:order-1">
@@ -79,20 +87,20 @@ const BanquetSection: React.FC = () => {
         <div className="z-10 order-2 md:order-2">
           <div className="mb-2">
             <p
-              className="uppercase tracking-widest font-semibold mt-2 text-xs text-[var(--primary-color)]"
+              className="uppercase tracking-widest font-semibold mt-2 text-xs text-white"
               data-aos="fade-left"
             >
               Celebrate at Stellar binge
             </p>
           </div>
           <h2
-            className="text-2xl md:text-4xl font-semibold text-black mt-2"
+            className="text-2xl md:text-4xl font-semibold text-white mt-2"
             data-aos="fade-left"
           >
             Elegant Banquet Hall For All Your Special Occasions
           </h2>
           <p
-            className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4"
+            className="text-gray-100 dark:text-gray-300 text-base mb-8 mt-4"
             data-aos="fade-left"
           >
             From weddings and receptions to corporate gatherings and family
@@ -104,24 +112,24 @@ const BanquetSection: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x border-t border-gray-300 mb-8">
             <div className="py-4 sm:pr-6">
-              <p className="text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase mb-1">
+              <p className="text-xs font-semibold text-gray-200 dark:text-gray-300 uppercase mb-1">
                 Events Hosted
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-4xl font-sans font-semibold">
+              <p className="text-gray-200 dark:text-gray-300 text-4xl font-sans font-semibold">
                 {events}
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-sm">
+              <p className="text-gray-200 dark:text-gray-300 text-md">
                 Memorable celebrations & corporate gatherings.
               </p>
             </div>
             <div className="py-4 sm:pl-6">
-              <p className="text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase mb-1">
+              <p className="text-xs font-semibold text-gray-200 dark:text-gray-300 uppercase mb-1">
                 Guest Capacity
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-4xl font-semibold font-sans">
+              <p className="text-gray-200 dark:text-gray-300 text-4xl font-semibold font-sans">
                 {capacity}
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-sm">
+              <p className="text-gray-200 dark:text-gray-300 text-md">
                 Guests can be accommodated with comfort & elegance.
               </p>
             </div>
@@ -129,20 +137,20 @@ const BanquetSection: React.FC = () => {
 
           {/* Call Us Button */}
           <a href="tel:+919599816865">
-            <button className="relative group px-6 py-3 text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] overflow-hidden transition-all duration-300 hover:text-white cursor-pointer">
-              <span className="relative z-10">📞 Call Us</span>
+            <button className="relative group px-6 py-3 text-sm uppercase border border-white text-white overflow-hidden transition-all duration-300 hover:text-[var(--primary-color)] cursor-pointer">
+              <span className="relative z-10"> Call Us</span>
               <span
                 className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
-                style={{ backgroundColor: "#B10203" }}
+                style={{ backgroundColor: "#FFFFFF" }}
               ></span>
             </button>
           </a>
           <Link href="/banquet">
-            <button className="relative group px-6 py-3 mx-4 text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] overflow-hidden transition-all duration-300 hover:text-white cursor-pointer">
+            <button className="relative group px-6 py-3 mx-4 text-sm uppercase border border-white text-white overflow-hidden transition-all duration-300 hover:text-[var(--primary-color)] cursor-pointer">
               <span className="relative z-10">Know More</span>
               <span
                 className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 z-0"
-                style={{ backgroundColor: "#B10203" }}
+                style={{ backgroundColor: "#FFFFFF" }}
               ></span>
             </button>
           </Link>
