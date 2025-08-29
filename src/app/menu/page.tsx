@@ -33,7 +33,6 @@ import menuPage22 from "../../../assets/menu/pan asian main course non-veg.webp"
 import menuPage23 from "../../../assets/menu/pan asian main course veg & non veg.webp";
 import menuPage24 from "../../../assets/menu/pan asian starter veg.webp";
 import menuPage25 from "../../../assets/menu/Rice&Biryani.webp";
-import menuPage26 from "../../../assets/menu/salads (2).webp";
 import menuPage27 from "../../../assets/menu/salads.webp";
 import menuPage28 from "../../../assets/menu/soft bevrage.webp";
 import menuPage29 from "../../../assets/menu/tandoor non-veg.webp";
@@ -61,7 +60,7 @@ export default function MenuPage() {
       title: "Soups & Greens Delight",
       sub: [
         { name: "Soups", images: [menuPage2] },
-        { name: "Salads", images: [menuPage26, menuPage27] },
+        { name: "Salads", images: [menuPage27] },
       ],
     },
     {
