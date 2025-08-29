@@ -127,12 +127,20 @@ export default function MenuPage() {
     },
   ];
 
-  // 👉 Scroll to category
   const scrollToCategory = (title: string) => {
     const section = categoryRefs.current[title];
     if (section) {
-      const yOffset = -80; // adjust for sticky header
-      const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+      // get sticky header height dynamically
+      const header = document.querySelector("nav"); // adjust selector if needed
+      const headerHeight = header ? header.clientHeight : 0;
+
+      // also include your category tabs height if they are sticky
+      const tabs = document.querySelector(".category-tabs"); // 👈 add a className on the wrapper div
+      const tabsHeight = tabs ? (tabs as HTMLElement).offsetHeight : 0;
+
+      const yOffset = -(headerHeight + tabsHeight + 80); // 20px extra breathing space
+      const y = section.offsetTop + yOffset;
+
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
@@ -234,18 +242,18 @@ export default function MenuPage() {
                   {cat.title}
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+                <div className="flex flex-wrap gap-8">
                   {allImages.map((img, idx) => (
                     <div
                       key={idx}
                       onClick={() => openModal(allImages, idx)}
-                      className="relative w-full h-[450px] shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition cursor-pointer"
+                      className="relative  h-[600px] w-[400px] rounded-2xl overflow-hidden transition cursor-pointer"
                     >
                       <Image
                         src={img}
                         alt={`${cat.title} Page ${idx + 1}`}
                         fill
-                        className="object-contain bg-white hover:scale-105 transition-transform duration-300"
+                        className="object-cover  transition-transform duration-300"
                       />
                     </div>
                   ))}
