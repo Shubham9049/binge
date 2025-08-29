@@ -88,7 +88,7 @@ export default function MenuPage() {
       sub: [
         {
           name: "Tandoor Veg & Non-Veg",
-          images: [menuPage29, menuPage30, menuPage31],
+          images: [menuPage30, menuPage31, menuPage29],
         },
         { name: "Global Starter Veg & Non-Veg", images: [menuPage7] },
         {
@@ -104,15 +104,15 @@ export default function MenuPage() {
       sub: [
         {
           name: "Indian Main Course Veg & Non-Veg",
-          images: [menuPage1, menuPage8, menuPage9],
+          images: [menuPage8, menuPage9, menuPage1],
         },
         {
           name: "Global Main Course Veg & Non-Veg",
-          images: [menuPage5, menuPage6],
+          images: [menuPage6, menuPage5],
         },
         {
           name: "Pan Asian Main Course Veg, Non-Veg, Mixed",
-          images: [menuPage22, menuPage23],
+          images: [menuPage23, menuPage22],
         },
         { name: "Rice & Biryani", images: [menuPage25] },
       ],
