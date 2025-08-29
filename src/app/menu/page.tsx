@@ -175,8 +175,7 @@ export default function MenuPage() {
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">Our Menu</h1>
           <p className="text-lg md:text-2xl max-w-3xl mx-auto">
-            Discover flavors crafted with passion , from appetizers to
-            cocktails.
+            Discover flavors crafted with passion, from appetizers to cocktails.
           </p>
           <button
             onClick={scrollToNext}

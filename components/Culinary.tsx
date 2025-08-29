@@ -19,7 +19,7 @@ const Culinary = () => {
           <h2 className="text-4xl font-bold text-white">
             Our Culinary Philosophy
           </h2>
-          <p className="text-lg text-gray-300 dark:text-gray-300">
+          <p className="text-lg text-gray-200 dark:text-gray-300 font-thin">
             At our restaurant, food is not just about taste , it’s about
             passion, freshness, and authenticity. We believe in sourcing the
             finest local ingredients and crafting every dish with love, care,
@@ -31,7 +31,7 @@ const Culinary = () => {
               <h4 className="font-semibold text-gray-200 ">
                 🌱 Fresh Ingredients
               </h4>
-              <p className="text-gray-300  text-sm">
+              <p className="text-gray-300  text-md font-thin">
                 Handpicked from local farmers and markets.
               </p>
             </div>
@@ -39,7 +39,7 @@ const Culinary = () => {
               <h4 className="font-semibold text-gray-200 dark:text-white">
                 👨‍🍳 Crafted with Love
               </h4>
-              <p className="text-gray-300 dark:text-gray-400 text-sm">
+              <p className="text-gray-300 dark:text-gray-400 text-md font-thin">
                 Every dish tells a story of our passion for food.
               </p>
             </div>

@@ -186,20 +186,20 @@ export default function BanquetPage() {
               <h3 className="text-3xl font-semibold mb-4">
                 Dining at Binge Restaurant & Lounge
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify">
+              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
                 Step into a world of flavours at Binge Restaurant & Lounge,
                 where every meal is designed to be a memorable experience. From
                 lavish buffet spreads to hand-picked à la carte delights, our
                 chefs bring together authentic recipes with a modern twist.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify">
+              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
                 The chic interiors and inviting ambience make it the perfect
                 setting for everything from a casual dinner to a formal
                 celebration. Guests can enjoy a variety of gourmet dishes from
                 Indian, Continental, and Oriental cuisines, paired with
                 carefully curated beverages.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify">
+              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
                 Whether you’re hosting a family gathering, a client lunch, or a
                 friend’s night out, the atmosphere blends comfort and elegance
                 to make every dining occasion feel special.
@@ -213,20 +213,20 @@ export default function BanquetPage() {
               <h3 className="text-3xl font-semibold mb-4">
                 Elegant Spaces for Conferences & Celebrations
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify">
+              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
                 Our banquet and conference rooms are purpose-built to provide
                 the perfect balance of professionalism and style. With a seating
                 capacity of up to 150 guests, these versatile spaces adapt
                 easily to host board meetings, training sessions, product
                 launches, and celebratory banquets.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify">
+              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
                 Designed with modern interiors and flexible layouts, every
                 detail has been thought of to enhance your event. From
                 comfortable seating to elegant lighting, the ambience elevates
                 both corporate and social gatherings.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify">
+              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
                 A wide range of state-of-the-art audio-visual equipment is
                 available on request, ensuring your presentations, speeches, and
                 entertainment are delivered flawlessly. Our dedicated staff is
@@ -264,20 +264,20 @@ export default function BanquetPage() {
             </div>
             <div data-aos="fade-up">
               <h3 className="text-3xl font-semibold mb-4">The Lounge Bar</h3>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify">
+              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
                 The Lounge Bar is the heartbeat of our banquet experience,
                 offering an exclusive selection of premium spirits, fine wines,
                 and handcrafted cocktails. It is designed to add an indulgent
                 touch to your events.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify">
+              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
                 Guests can unwind in a chic, vibrant setting that perfectly
                 complements both formal and informal occasions. Whether you’re
                 entertaining clients, hosting a cocktail evening, or simply
                 celebrating with friends, the Lounge Bar sets the stage for
                 unforgettable memories.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify">
+              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
                 From rare whiskies to signature blends, every sip is curated for
                 sophistication. Combined with our personalized service, the
                 Lounge Bar is more than just a place to drink - it’s an
