@@ -55,14 +55,14 @@ const About = () => {
               A Journey of Taste & Elegance
             </h3>
             <p className="text-gray-700 dark:text-gray-300 max-w-xl mb-6">
-              Binge was born from a simple idea — to create a place where food,
+              Binge was born from a simple idea, to create a place where food,
               flavor, and experience come together seamlessly. Every plate tells
               a story, crafted with fresh ingredients, bold creativity, and a
               deep respect for culinary traditions.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              At Binge, we believe dining is more than just a meal — it’s an
-              experience. From the warm ambience and inviting design, to the
+              At Binge, we believe dining is more than just a meal, it’s an
+              experience. From the warm ambience and inviting design to the
               chef’s signature creations, every detail is thoughtfully curated
               to make your experience memorable.
             </p>

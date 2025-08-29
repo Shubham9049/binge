@@ -83,7 +83,7 @@ const DiningExperienceSection: React.FC = () => {
             className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify"
             data-aos="fade-right"
           >
-            At Stellar Binge, every dish is a masterpiece—crafted with passion,
+            At Stellar Binge, every dish is a masterpiece, crafted with passion,
             plated with precision. We go beyond dining to create moments that
             last beyond the last bite. From signature cocktails to chef-curated
             delicacies, experience luxury dining in the heart of Noida. Our
@@ -94,8 +94,8 @@ const DiningExperienceSection: React.FC = () => {
           </p>
           <span>
             <i>
-              Stellar Binge – Where Taste, Luxury, and
-              Hospitality come together.
+              Stellar Binge – Where Taste, Luxury, and Hospitality come
+              together.
             </i>
           </span>
 
