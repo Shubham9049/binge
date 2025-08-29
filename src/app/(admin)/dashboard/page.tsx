@@ -32,12 +32,14 @@ export default function AdminDashboard() {
         const queriesRes = await axios.get(
           `${process.env.NEXT_PUBLIC_API_BASE}/query`
         );
-        setTotalQueries(queriesRes.data?.length || 0);
+        console.log(queriesRes);
+        setTotalQueries(queriesRes.data.data?.length || 0);
       } catch (err) {
         console.error("Failed to fetch dashboard data:", err);
 
         setTotalSubscribers(0);
         setTotalBlogs(0);
+        setTotalQueries(0);
       } finally {
         setLoading(false);
       }
