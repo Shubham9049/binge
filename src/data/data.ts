@@ -43,7 +43,6 @@ import img38 from "../../assets/food/Rara Gosht.webp";
 import img39 from "../../assets/food/tandoori dimisum.webp";
 import img40 from "../../assets/food/Tandoori Prawn.webp";
 import img41 from "../../assets/food/Tandoori Veg Platter.webp";
-import img42 from "../../assets/food/Veg Salt & Pepper.webp";
 
 // 👉 Restaurant Images
 import rest1 from "../../assets/interior/Int1 (1).webp";
@@ -127,7 +126,6 @@ export const vegMenuItems: GalleryItem[] = [
   { name: "🍃 Paneer Shashlik", img: img37, type: "veg" },
   { name: "🍃 Tandoori Dimisum", img: img39, type: "veg" },
   { name: "🍃 Tandoori Veg Platter", img: img41, type: "veg" },
-  { name: "🍃 Veg Salt & Pepper", img: img42, type: "veg" },
 ];
 
 // ✅ NON-VEG Food Menu Items
