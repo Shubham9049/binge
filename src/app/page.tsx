@@ -18,7 +18,7 @@ import ReviewSection from "../../components/Testimonial";
 import FoodPanoramaSlider from "../../components/FoodShowcase";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
 import MobileContactBar from "../../components/MobileContactBar";
-import WhatsAppButton from "../../components/floatingBtn";
+// import WhatsAppButton from "../../components/floatingBtn";
 import BanquetSection from "../../components/BanquetSection";
 import Special from "../../components/Special";
 import Culinary from "../../components/Culinary";
@@ -83,7 +83,7 @@ export default function Home() {
       <Footer />
       <ScrollToTopButton />
       <MobileContactBar />
-      <WhatsAppButton />
+      {/* <WhatsAppButton /> */}
     </div>
   );
 }

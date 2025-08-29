@@ -14,6 +14,7 @@ import {
   restaurantImages,
   type GalleryItem,
 } from "../../../src/data/data";
+import ScrollToTopButton from "../../../components/ScrollToTopButton";
 
 export default function OurCreationsPage() {
   const creationsRef = useRef<HTMLDivElement | null>(null);
@@ -173,6 +174,7 @@ export default function OurCreationsPage() {
 
       <Footer />
       <MobileContactBar />
+      <ScrollToTopButton />
     </div>
   );
 }
