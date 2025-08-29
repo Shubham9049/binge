@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import upwards from "../assets/upwards.png";
 import downwards from "../assets/downwards.png";
-import foodImage from "../assets/culinary.webp";
+import foodImage from "../assets/food.webp";
 
 const Culinary = () => {
   return (
@@ -49,13 +49,13 @@ const Culinary = () => {
         {/* Right - Image */}
         <div className="relative w-full h-full z-10">
           <div className="hidden md:block absolute top-16 right-6 w-full h-full bg-[radial-gradient(var(--primary-color)_2.5px,transparent_2.5px)] bg-[length:28px_28px] z-0" />
-          <div className="hidden md:block absolute right-16 top-28 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[var(--primary-color)] z-0"></div>
+          <div className="hidden md:block absolute right-16 top-24 md:bottom-0 md:right-0 w-[90%] h-[90%] md:w-[90%] md:h-[80%] bg-[var(--primary-color)] z-0"></div>
           <Image
             src={foodImage}
             alt="foodImage"
             width={600} // you can adjust based on actual image ratio
             height={400}
-            className="relative z-10 w-full h-[300px] md:h-[400px] object-cover"
+            className="relative z-10 w-full h-[300px] md:h-[400px] object-contain"
           />
         </div>
       </div>
