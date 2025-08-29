@@ -2,7 +2,7 @@
 "use client";
 
 import Image from "next/image";
-import banquetHero from "../../../assets/banqutes/img1.webp";
+import banquetHero from "../../../assets/banq.webp";
 import { banquetImages } from "../../../src/data/data";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
@@ -21,10 +21,11 @@ import upwards from "../../../assets/upwards.png";
 import downwards from "../../../assets/downwards.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import ScrollToTopButton from "../../../components/ScrollToTopButton";
 
 export default function BanquetPage() {
+  const banquetsRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     AOS.init({
       duration: 1000, // animation duration
@@ -32,6 +33,18 @@ export default function BanquetPage() {
       easing: "ease-in-out",
     });
   }, []);
+
+  const scrollToNext = () => {
+    if (banquetsRef.current) {
+      const yOffset = -70;
+      const y =
+        banquetsRef.current.getBoundingClientRect().top +
+        window.scrollY +
+        yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
 
   return (
     <div>
@@ -53,6 +66,12 @@ export default function BanquetPage() {
             <p className="mt-4 text-lg md:text-xl" data-aos="fade-up">
               The Ideal Space for Corporate Meets & Cozy Get-Togethers
             </p>
+            <button
+              onClick={scrollToNext}
+              className="mt-10 animate-bounce border rounded-full w-fit px-1 py-2 mx-auto cursor-pointer"
+            >
+              <span className="text-3xl">↓</span>
+            </button>
           </div>
         </section>
 
@@ -60,6 +79,7 @@ export default function BanquetPage() {
         <section
           className="w-11/12 md:w-5/6 mx-auto py-12 text-center space-y-6"
           data-aos="fade-up"
+          ref={banquetsRef}
         >
           <h2 className="text-2xl md:text-4xl font-semibold  text-[var(--primary-color)]">
             Host Your Special Moments at{" "}
