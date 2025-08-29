@@ -19,7 +19,7 @@ export default function AdminDashboard() {
         const subsRes = await axios.get(
           `${process.env.NEXT_PUBLIC_API_BASE}/subscribers`
         );
-        console.log(subsRes.data);
+
         setTotalSubscribers(subsRes.data?.length || 0);
 
         // ✅ Fetch Blogs
@@ -71,7 +71,7 @@ export default function AdminDashboard() {
         />
         <DashboardCard
           title="Total Queries"
-          value={loading ? null : totalBlogs}
+          value={loading ? null : totalQueries}
           icon={<BsQuestionOctagonFill size={28} />}
         />
       </div>
