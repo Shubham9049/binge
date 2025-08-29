@@ -47,46 +47,16 @@ import img41 from "../../assets/food/Tandoori Veg Platter.webp";
 // 👉 Restaurant Images
 import rest1 from "../../assets/interior/Int1 (1).webp";
 import rest2 from "../../assets/interior/Int1 (2).webp";
-import rest3 from "../../assets/interior/Int1 (3).webp";
-import rest4 from "../../assets/interior/Int1 (4).webp";
-import rest5 from "../../assets/interior/Int1 (5).webp";
-import rest6 from "../../assets/interior/Int1 (6).webp";
-import rest7 from "../../assets/interior/Int1 (7).webp";
-import rest8 from "../../assets/interior/Int1 (8).webp";
-import rest9 from "../../assets/interior/Int1 (9).webp";
-import rest10 from "../../assets/interior/Int1 (10).webp";
-import rest11 from "../../assets/interior/Int1 (11).webp";
-import rest12 from "../../assets/interior/Int1 (12).webp";
-import rest13 from "../../assets/interior/Int1 (13).webp";
-import rest14 from "../../assets/interior/Int1 (14).webp";
-import rest15 from "../../assets/interior/Int1 (15).webp";
-import rest16 from "../../assets/interior/Int1 (16).webp";
-import rest17 from "../../assets/interior/Int1 (17).webp";
-import rest18 from "../../assets/interior/Int1 (18).webp";
-import rest19 from "../../assets/interior/Int1 (19).webp";
+
 import rest20 from "../../assets/interior/Int1 (20).webp";
-import rest21 from "../../assets/interior/Int1 (21).webp";
-import rest22 from "../../assets/interior/Int1 (22).webp";
-import rest23 from "../../assets/interior/Int1 (23).webp";
-import rest24 from "../../assets/interior/Int1 (24).webp";
-import rest25 from "../../assets/interior/Int1 (25).webp";
+
 import rest26 from "../../assets/interior/Int1 (26).webp";
-import rest27 from "../../assets/interior/Int1 (27).webp";
-import rest28 from "../../assets/interior/Int1 (28).webp";
-import rest29 from "../../assets/interior/Int1 (29).webp";
-import rest30 from "../../assets/interior/Int1 (30).webp";
-import rest31 from "../../assets/interior/Int1 (31).webp";
-import rest32 from "../../assets/interior/Int1 (32).webp";
+
 import rest33 from "../../assets/interior/Int1 (33).webp";
 import rest34 from "../../assets/interior/Int1 (34).webp";
 import rest35 from "../../assets/interior/Int1 (35).webp";
 import rest36 from "../../assets/interior/Int1 (36).webp";
-import rest37 from "../../assets/interior/Int1 (37).webp";
 import rest38 from "../../assets/interior/Int1 (38).webp";
-import rest39 from "../../assets/interior/Int1 (39).webp";
-import rest40 from "../../assets/interior/Int1 (40).webp";
-import rest41 from "../../assets/interior/Int1 (41).webp";
-import rest42 from "../../assets/interior/Int1 (42).webp";
 
 // banquate
 
