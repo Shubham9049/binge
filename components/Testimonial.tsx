@@ -23,16 +23,16 @@ interface Review {
 
 const reviews: Review[] = [
   {
-    name: "AARAV SHARMA",
+    name: "ANUJ SAHU",
     content:
       "Stellar Binge is hands down the best restaurant in Noida! The food was absolutely delicious, and the service was warm and welcoming. Perfect place for family dinners.",
     rating: 5,
     source: "google",
   },
   {
-    name: "PRIYA VERMA",
+    name: "PRIYA SINGH",
     content:
-      "Loved the ambience here — cozy yet elegant. The staff was very polite and attentive, and the food was fresh with authentic flavors. Will definitely be coming back!",
+      "✨ Vibe check = Passed 💯 | Food = Even Better 😍From the quirky interiors to the drool-worthy dishes, Stellar Binge is a totalmood!Perfect for brunch, date nights, or just bingeing with your besties 💛🍝🍸",
     rating: 5,
     source: "zomato",
   },
@@ -44,16 +44,16 @@ const reviews: Review[] = [
     source: "swiggy",
   },
   {
-    name: "ANANYA GUPTA",
+    name: "MAYNK KUMAR",
     content:
-      "Celebrated my birthday here, and it was a wonderful experience. The hospitality was amazing, the staff even arranged a small surprise dessert for me. Highly recommended!",
+      "Stellar Binge has truly outdone itself with the recent renovation! The revamped look and feel of the restaurant are absolutely stunning. The new decor is modern yet cozy, with a perfect blend of vibrant colors and elegant lighting that... ",
     rating: 5,
     source: "google",
   },
   {
-    name: "ROHAN MALHOTRA",
+    name: "RAHUL",
     content:
-      "A must-visit spot in Noida if you’re looking for great food and a relaxing atmosphere. The service was quick, and every dish we tried was perfectly cooked.",
+      "it was great experience food and service is amazing polite staff and well professional tnx Binge team to treat us very well we come again soon",
     rating: 5,
     source: "zomato",
   },
