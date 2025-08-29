@@ -68,7 +68,7 @@ const About = () => {
             </p>
             <p className="text-gray-700 dark:text-gray-300">
               Whether you’re joining us for a casual evening or a special
-              celebration, our focus is on creating moments that linger — long
+              celebration, our focus is on creating moments that linger , long
               after the last bite.
             </p>
             <div className="flex flex-nowrap gap-3 mt-8 overflow-x-auto">

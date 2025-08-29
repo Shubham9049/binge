@@ -133,7 +133,7 @@ export default function OurJourney() {
               Our <span className="text-black">Culinary</span> Philosophy
             </h2>
             <p className="text-lg text-gray-300 dark:text-gray-300">
-              At our restaurant, food is not just about taste — it’s about
+              At our restaurant, food is not just about taste , it’s about
               passion, freshness, and authenticity. We believe in sourcing the
               finest local ingredients and crafting every dish with love, care,
               and tradition.

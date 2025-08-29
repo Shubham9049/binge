@@ -97,7 +97,7 @@ export default function OurCreationsPage() {
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">Our Creations</h1>
           <p className="text-lg md:text-2xl max-w-2xl mx-auto">
-            A showcase of flavors, artistry, and passion — crafted by our chefs
+            A showcase of flavors, artistry, and passion , crafted by our chefs
             to delight your senses.
           </p>
           <button
