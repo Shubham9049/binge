@@ -45,6 +45,8 @@ export default function Home() {
       <DiningExperienceSection />
       <About />
       <FoodPanoramaSlider />
+      <Culinary />
+      <Special />
       {/* Section */}
       <section className="bg-white dark:bg-black font-raleway font-light dark:font-thin">
         <div className="w-11/12 md:w-5/6 mx-auto py-10">
@@ -76,8 +78,7 @@ export default function Home() {
         </div>
       </section>
       <BanquetSection />
-      <Culinary />
-      <Special />
+
       <ReviewSection />
       <BlogPreview />
       <Footer />
