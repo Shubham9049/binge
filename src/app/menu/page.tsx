@@ -40,9 +40,11 @@ import menuPage29 from "../../../assets/menu/tandoor non-veg.webp";
 import menuPage30 from "../../../assets/menu/tandoor veg.webp";
 import menuPage31 from "../../../assets/menu/tandoor-veg.webp";
 import menuPage32 from "../../../assets/menu/yougets & deserts.webp";
+import ScrollToTopButton from "../../../components/ScrollToTopButton";
 
 export default function MenuPage() {
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const categoryRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   const scrollToNext = () => {
     if (menuRef.current) {
@@ -125,11 +127,18 @@ export default function MenuPage() {
     },
   ];
 
+  // 👉 Scroll to category
+  const scrollToCategory = (title: string) => {
+    const section = categoryRefs.current[title];
+    if (section) {
+      const yOffset = -80; // adjust for sticky header
+      const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   // 👉 Modal state
   const [isOpen, setIsOpen] = useState(false);
-
-  // ...
-
   const [currentImages, setCurrentImages] = useState<StaticImageData[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -174,20 +183,57 @@ export default function MenuPage() {
         </div>
       </section>
 
+      {/* CATEGORY TABS */}
+      <div className="sticky top-30 z-40 bg-white shadow-md">
+        {/* Desktop View - Horizontal Tabs */}
+        <div className="hidden md:flex justify-center space-x-6 px-6 py-4">
+          {categories.map((cat, i) => (
+            <button
+              key={i}
+              onClick={() => scrollToCategory(cat.title)}
+              className="relative px-6 py-3 bg-[#af0002] text-white font-semibold rounded-lg shadow-md 
+                 transform transition-all duration-200 
+                 hover:scale-105 active:scale-95"
+            >
+              {cat.title}
+            </button>
+          ))}
+        </div>
+
+        {/* Mobile View - Dropdown */}
+        <div className="block md:hidden px-6 py-4">
+          <select
+            onChange={(e) => scrollToCategory(e.target.value)}
+            className="w-full px-4 py-3 border rounded-lg bg-[#af0002] text-white font-semibold shadow-md focus:outline-none"
+          >
+            <option value="">Select Category</option>
+            {categories.map((cat, i) => (
+              <option key={i} value={cat.title}>
+                {cat.title}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+
       {/* MENU GRID SECTION */}
       <section ref={menuRef} className="bg-white py-16">
         <div className="w-11/12 md:w-5/6 mx-auto">
           {categories.map((cat, cIdx) => {
-            // collect all images from subcategories into one flat array
             const allImages = cat.sub.flatMap((s) => s.images);
 
             return (
-              <div key={cIdx} className="mb-16">
+              <div
+                key={cIdx}
+                ref={(el) => {
+                  categoryRefs.current[cat.title] = el;
+                }}
+                className="mb-16"
+              >
                 <h2 className="text-4xl font-bold mb-8 text-center">
                   {cat.title}
                 </h2>
 
-                {/* Grid layout for all images */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
                   {allImages.map((img, idx) => (
                     <div
@@ -244,6 +290,7 @@ export default function MenuPage() {
 
       <Footer />
       <MobileContactBar />
+      <ScrollToTopButton />
     </div>
   );
 }
