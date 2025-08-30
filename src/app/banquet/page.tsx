@@ -115,7 +115,7 @@ export default function BanquetPage() {
                     <MapPin className="w-8 h-8 text-[var(--primary-color)]" />
                   ),
                   title: "Prime Location",
-                  desc: "Located in Sector 62, Noida, easily accessible from all parts of the city.",
+                  desc: "Located in Steller IT Park, Sector 62, Noida, easily accessible from all parts of the city.",
                 },
                 {
                   icon: (
