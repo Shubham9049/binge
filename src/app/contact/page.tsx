@@ -131,9 +131,9 @@ export default function ContactPage() {
               Ground Floor, Stellar IT Park, C-25, Sector 62,
               <br /> Noida - 201309
               <br />
-              <span className="text-sm text-gray-500">
+              {/* <span className="text-sm text-gray-500">
                 Floor G · Stellar IT Park
-              </span>
+              </span> */}
             </span>
           </div>
           <p className="flex items-center gap-3">

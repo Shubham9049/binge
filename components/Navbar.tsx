@@ -100,8 +100,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-2">
           <MapPin className="w-4 h-4 text-[var(--primary-color)]" />
           <Link href="https://maps.app.goo.gl/NKoKxW8kgo1MkHsy9" target="blank">
-            STELLAR IT PARK, C-25, C Block, Phase 2, Sector 62, Noida, Uttar
-            Pradesh 201307
+            Ground Floor, Stellar IT Park, C-25, Sector 62, Noida - 201309
           </Link>
         </div>
 

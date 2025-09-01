@@ -138,9 +138,9 @@ const Footer = () => {
             Ground Floor, Stellar IT Park, C-25,
             <br /> Sector 62, Noida - 201309
           </p>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          {/* <p className="text-sm text-gray-500 dark:text-gray-400">
             Floor G · Stellar IT Park
-          </p>
+          </p> */}
           <p>
             <Link
               href="tel:+919599816865"
