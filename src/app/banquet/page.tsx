@@ -144,7 +144,7 @@ export default function BanquetPage() {
                     <Building className="w-8 h-8 text-[var(--primary-color)]" />
                   ),
                   title: "Lounge ",
-                  desc: "Spacious lounge  designed for grand celebrations, corporate events, and private gatherings.",
+                  desc: "Spacious lounge  designed for corporate events, and private gatherings.",
                 },
                 {
                   icon: (
