@@ -251,7 +251,7 @@ export default function BanquetPage() {
           </div>
 
           {/* Lounge Bar */}
-          {/* <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
             <div
               className="overflow-hidden rounded-xl shadow-md"
               data-aos="zoom-in "
@@ -286,7 +286,7 @@ export default function BanquetPage() {
                 experience to savor.
               </p>
             </div>
-          </div> */}
+          </div>
         </section>
       </main>
       <Footer />
