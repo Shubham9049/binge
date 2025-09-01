@@ -103,8 +103,8 @@ const BanquetSection: React.FC = () => {
             className="text-gray-100 dark:text-gray-300 text-base mb-8 mt-4"
             data-aos="fade-left"
           >
-            From corporate gatherings to family celebrations, our banquet hall
-            provides the perfect ambiance. With elegant interiors, premium
+            From corporate gatherings to small family celebrations, our banquet
+            hall provides the perfect ambiance. With elegant interiors, premium
             service, and customized catering, we make every event unforgettable.
           </p>
 
