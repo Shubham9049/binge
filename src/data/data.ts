@@ -61,7 +61,7 @@ import rest38 from "../../assets/interior/Int1 (38).webp";
 // banquate
 
 import banquet1 from "../../assets/banqutes/img1.webp";
-import banquet2 from "../../assets/banqute.webp";
+import banquet2 from "../../assets/confrence.webp";
 import banquet3 from "../../assets/banqute2.webp";
 
 // ✅ Shared type

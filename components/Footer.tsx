@@ -135,8 +135,8 @@ const Footer = () => {
         <div className="text-center lg:text-right space-y-2 text-gray-700 dark:text-gray-200">
           <h3 className="text-lg font-semibold">Contact Us</h3>
           <p>
-            STELLAR IT PARK, C-25, C Block, Phase 2,
-            <br /> Sector 62, Noida, Uttar Pradesh 201307
+            Ground Floor, Stellar IT Park, C-25,
+            <br /> Sector 62, Noida - 201309
           </p>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             Floor G · Stellar IT Park

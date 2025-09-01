@@ -140,7 +140,7 @@ const DiningExperienceSection: React.FC = () => {
               </button>
             </Link>
 
-            <Link href="/contact">
+            <Link href="/banquet">
               <button className="relative group px-4 py-2 text-xs md:text-sm uppercase border border-[var(--primary-color)] text-[var(--primary-color)] whitespace-nowrap overflow-hidden transition-all duration-300 hover:text-white cursor-pointer rounded-md">
                 <span className="relative z-10 flex items-center gap-2">
                   <PartyPopper className="w-5 h-5" />

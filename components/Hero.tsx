@@ -5,7 +5,7 @@ import hero1 from "../assets/hero1.webp";
 import hero2 from "../assets/hero2.webp";
 import hero3 from "../assets/hero3.jpg";
 import hero4 from "../assets/hero4.jpg";
-import hero5 from "../assets/hero5.jpg";
+import hero5 from "../assets/restru.webp";
 import hero6 from "../assets/hero6.webp";
 import hero7 from "../assets/hero7.jpeg";
 import hero8 from "../assets/banqutes/img1.webp";

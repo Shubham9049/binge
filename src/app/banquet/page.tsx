@@ -16,6 +16,7 @@ import {
   Headphones,
   Wine,
   Briefcase,
+  Building,
 } from "lucide-react";
 import upwards from "../../../assets/upwards.png";
 import downwards from "../../../assets/downwards.png";
@@ -29,7 +30,7 @@ export default function BanquetPage() {
   useEffect(() => {
     AOS.init({
       duration: 1000, // animation duration
-      once: true, // whether animation should happen only once
+      once: false, // whether animation should happen only once
       easing: "ease-in-out",
     });
   }, []);
@@ -139,9 +140,11 @@ export default function BanquetPage() {
                   desc: "Modern interiors with stylish décor & flexible seating.",
                 },
                 {
-                  icon: <Car className="w-8 h-8 text-[var(--primary-color)]" />,
-                  title: "Ample Parking",
-                  desc: "Hassle-free experience with sufficient parking space for guests.",
+                  icon: (
+                    <Building className="w-8 h-8 text-[var(--primary-color)]" />
+                  ),
+                  title: "Lounge ",
+                  desc: "Spacious lounge  designed for grand celebrations, corporate events, and private gatherings.",
                 },
                 {
                   icon: (
@@ -184,25 +187,24 @@ export default function BanquetPage() {
             </div>
             <div data-aos="fade-up">
               <h3 className="text-3xl font-semibold mb-4">
-                Dining at Binge Restaurant & Lounge
+                Celebrate at Binge Banquet & Events
               </h3>
               <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
-                Step into a world of flavours at Binge Restaurant & Lounge,
-                where every meal is designed to be a memorable experience. From
-                lavish buffet spreads to hand-picked à la carte delights, our
-                chefs bring together authentic recipes with a modern twist.
+                Discover the perfect venue for corporate events, family
+                gatherings, and celebrations at Binge Banquet & Lounge. Our
+                versatile spaces combine elegance with a warm, welcoming
+                ambiance for every occasion.
               </p>
               <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
-                The chic interiors and inviting ambience make it the perfect
-                setting for everything from a casual dinner to a formal
-                celebration. Guests can enjoy a variety of gourmet dishes from
-                Indian, Continental, and Oriental cuisines, paired with
-                carefully curated beverages.
+                From meetings and client lunches to birthdays and anniversaries,
+                we offer tailored solutions with effortless planning and
+                flawless execution.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
-                Whether you’re hosting a family gathering, a client lunch, or a
-                friend’s night out, the atmosphere blends comfort and elegance
-                to make every dining occasion feel special.
+              <p className="text-gray-700 dark:text-gray-300 text-base  text-justify font-thin">
+                Savor gourmet menus crafted by expert chefs, featuring Indian,
+                Continental, and Oriental delicacies with premium beverages.
+                Every detail—décor, seating, lighting, and service—is customized
+                to your theme.
               </p>
             </div>
           </div>
@@ -249,7 +251,7 @@ export default function BanquetPage() {
           </div>
 
           {/* Lounge Bar */}
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+          {/* <div className="grid md:grid-cols-2 gap-10 items-center">
             <div
               className="overflow-hidden rounded-xl shadow-md"
               data-aos="zoom-in "
@@ -284,7 +286,7 @@ export default function BanquetPage() {
                 experience to savor.
               </p>
             </div>
-          </div>
+          </div> */}
         </section>
       </main>
       <Footer />

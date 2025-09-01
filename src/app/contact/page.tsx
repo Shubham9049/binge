@@ -128,8 +128,8 @@ export default function ContactPage() {
           <div className="flex items-start gap-3">
             <FaMapMarkerAlt className="mt-1 text-[var(--primary-color)]" />
             <span>
-              STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area,
-              <br /> Sector 62, Noida, Uttar Pradesh 201307
+              Ground Floor, Stellar IT Park, C-25, Sector 62,
+              <br /> Noida - 201309
               <br />
               <span className="text-sm text-gray-500">
                 Floor G · Stellar IT Park
