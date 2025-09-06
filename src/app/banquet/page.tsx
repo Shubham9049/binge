@@ -189,18 +189,18 @@ export default function BanquetPage() {
               <h3 className="text-3xl font-semibold mb-4">
                 Celebrate at Binge Banquet & Events
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
+              <p className="text-gray-900  text-base mb-8 mt-4 text-justify font-light">
                 Discover the perfect venue for corporate events, family
                 gatherings, and celebrations at Binge Banquet & Lounge. Our
                 versatile spaces combine elegance with a warm, welcoming
                 ambiance for every occasion.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
+              <p className="text-gray-900  dark:text-gray-300 text-base mb-8 mt-4 text-justify font-light">
                 From meetings and client lunches to birthdays and anniversaries,
                 we offer tailored solutions with effortless planning and
                 flawless execution.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-base  text-justify font-thin">
+              <p className="text-gray-900  dark:text-gray-300 text-base  text-justify font-light">
                 Savor gourmet menus crafted by expert chefs, featuring Indian,
                 Continental, and Oriental delicacies with premium beverages.
                 Every detail—décor, seating, lighting, and service—is customized
@@ -215,20 +215,20 @@ export default function BanquetPage() {
               <h3 className="text-3xl font-semibold mb-4">
                 Elegant Spaces for Conferences & Celebrations
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
+              <p className="text-gray-900 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-light">
                 Our banquet and conference rooms are purpose-built to provide
                 the perfect balance of professionalism and style. With a seating
                 capacity of up to 150 guests, these versatile spaces adapt
                 easily to host board meetings, training sessions, product
                 launches, and celebratory banquets.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
+              <p className="text-gray-900 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-light ">
                 Designed with modern interiors and flexible layouts, every
                 detail has been thought of to enhance your event. From
                 comfortable seating to elegant lighting, the ambience elevates
                 both corporate and social gatherings.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-thin">
+              <p className="text-gray-900 dark:text-gray-300 text-base mb-8 mt-4 text-justify font-light">
                 A wide range of state-of-the-art audio-visual equipment is
                 available on request, ensuring your presentations, speeches, and
                 entertainment are delivered flawlessly. Our dedicated staff is

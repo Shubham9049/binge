@@ -32,7 +32,7 @@ const Culinary = () => {
                 🌱 Fresh Ingredients
               </h4>
               <p className="text-gray-300  text-md font-thin">
-                Handpicked from local farmers and markets.
+                Curated with care to bring freshness and flavor to every dish.
               </p>
             </div>
             <div>

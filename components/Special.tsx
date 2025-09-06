@@ -2,13 +2,14 @@ import React from "react";
 
 const points = [
   {
-    title: "Farm-to-Table Goodness",
-    desc: "We source farm-fresh produce and the finest spices to serve you quality in every bite.",
+    title: "Quality Ingredients",
+    desc: "We carefully select fresh ingredients and premium spices from trusted vendors to ensure great taste in every bite.",
     icon: "🥗",
   },
+
   {
-    title: "Authentic Recipes",
-    desc: "Passed down through generations, our recipes bring true traditional flavors to your table.",
+    title: "Signature Recipes",
+    desc: "Crafted with passion by our team of first-generation entrepreneurs, bringing you bold and original taste experiences.",
     icon: "🍲",
   },
   {
