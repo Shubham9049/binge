@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
   return (
     <div>
       <Navbar />
-      <div className=" text-black min-h-screen py-28 md:py-24 px-6 md:px-16">
+      <div className=" text-black min-h-screen py-28 md:py-20 px-6 md:px-16 mt-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">
             Privacy Policy

@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
-import banner from "../../../assets/hero1.jpeg";
-import aboutImage from "../../../assets/hero2.jpeg";
-import foodImage from "../../../assets/hero2.jpeg";
+import banner from "../../../assets/hero1.webp";
+import aboutImage from "../../../assets/hero2.webp";
+import foodImage from "../../../assets/hero2.webp";
 import { useRef } from "react";
 import upwards from "../../../assets/upwards.png";
 import downwards from "../../../assets/downwards.png";
@@ -37,7 +37,7 @@ export default function OurJourney() {
   const ourStory = useRef<HTMLDivElement | null>(null);
   const scrollToNext = () => {
     if (ourStory.current) {
-      const yOffset = -50; // 👈 adjust gap from top (e.g., navbar height)
+      const yOffset = -70; // 👈 adjust gap from top (e.g., navbar height)
       const y =
         ourStory.current.getBoundingClientRect().top + window.scrollY + yOffset;
 
@@ -47,7 +47,7 @@ export default function OurJourney() {
   return (
     <div>
       <Navbar />
-      <section className="relative w-full h-[80vh] flex items-center justify-center pt-32">
+      <section className="relative w-full h-[100vh] flex items-center justify-center pt-32">
         {/* Background Image */}
         <Image
           src={banner}
@@ -130,10 +130,10 @@ export default function OurJourney() {
           {/* Left - Text */}
           <div className="space-y-6">
             <h2 className="text-4xl font-bold text-white">
-              Our Culinary Philosophy
+              Our <span className="text-black">Culinary</span> Philosophy
             </h2>
             <p className="text-lg text-gray-300 dark:text-gray-300">
-              At our restaurant, food is not just about taste — it’s about
+              At our restaurant, food is not just about taste , it’s about
               passion, freshness, and authenticity. We believe in sourcing the
               finest local ingredients and crafting every dish with love, care,
               and tradition.

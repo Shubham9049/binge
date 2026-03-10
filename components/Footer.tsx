@@ -14,21 +14,21 @@ const Footer = () => {
       {/* Newsletter Section */}
       <div className="border-t border-gray-300 dark:border-gray-700 w-full">
         <div className="bg-white dark:bg-black text-black dark:text-white py-12 px-4 sm:px-6 md:px-10 font-raleway">
-          <div className="w-11/12 mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="w-11/12 mx-auto flex flex-col lg:flex-row items-center justify-center">
             {/* Heading */}
-            <div className="w-full text-center lg:text-left">
+            <div className="w-full text-center ">
               <h2 className="text-2xl md:text-4xl font-semibold">
-                Sign up for exclusive offers from us
+                Exclusive Updates & Special Offers
               </h2>
             </div>
 
             {/* Input + Button */}
-            <div className="w-full flex flex-col items-center lg:items-end gap-4">
-              <p className="text-center lg:text-left text-base">
+            <div className="w-full  flex flex-col gap-4">
+              {/* <p className="text-center lg:text-left text-base">
                 Sign up to our newsletter for all the latest news and events.
-              </p>
+              </p> */}
 
-              <div className="w-full flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-3">
+              <div className="w-full flex flex-col sm:flex-row items-center  gap-3">
                 <input
                   type="email"
                   placeholder="Your email"
@@ -97,10 +97,10 @@ const Footer = () => {
         <div className="flex flex-col items-center space-y-4">
           <ul className="space-y-2 text-center">
             {[
-              { name: "About Us", href: "/our-journey" },
-              { name: "Contact Us", href: "/contact" },
               { name: "Menu", href: "/menu" },
               { name: "Our Creations", href: "/gallery" },
+              { name: "About Us", href: "/our-journey" },
+              { name: "Contact Us", href: "/contact" },
             ].map((item, idx) => (
               <li key={idx}>
                 <Link
@@ -117,7 +117,7 @@ const Footer = () => {
             {[
               { name: "Privacy Policy", href: "/privacy-policy" },
               { name: "Terms & Conditions", href: "/terms" },
-              { name: "Sitemap", href: "/sitemap" },
+              // { name: "Sitemap", href: "/sitemap" },
             ].map((item, idx) => (
               <li key={idx}>
                 <Link
@@ -135,18 +135,26 @@ const Footer = () => {
         <div className="text-center lg:text-right space-y-2 text-gray-700 dark:text-gray-200">
           <h3 className="text-lg font-semibold">Contact Us</h3>
           <p>
-            STELLAR IT PARK, C-25, C Block, Phase 2,
-            <br /> Sector 62, Noida, Uttar Pradesh 201307
+            Ground Floor, Stellar IT Park, C-25,
+            <br /> Sector 62, Noida - 201309
           </p>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          {/* <p className="text-sm text-gray-500 dark:text-gray-400">
             Floor G · Stellar IT Park
-          </p>
+          </p> */}
           <p>
             <Link
               href="tel:+919599816865"
               className="hover:text-[var(--primary-color)] transition"
             >
-              +91 95998 16865
+              +91 9599816865
+            </Link>
+          </p>
+          <p>
+            <Link
+              href="tel:+919871952133"
+              className="hover:text-[var(--primary-color)] transition"
+            >
+              +91 9871952133
             </Link>
           </p>
         </div>

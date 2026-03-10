@@ -19,7 +19,7 @@ export default function AdminDashboard() {
         const subsRes = await axios.get(
           `${process.env.NEXT_PUBLIC_API_BASE}/subscribers`
         );
-        console.log(subsRes.data);
+
         setTotalSubscribers(subsRes.data?.length || 0);
 
         // ✅ Fetch Blogs
@@ -32,12 +32,14 @@ export default function AdminDashboard() {
         const queriesRes = await axios.get(
           `${process.env.NEXT_PUBLIC_API_BASE}/query`
         );
-        setTotalQueries(queriesRes.data?.length || 0);
+        console.log(queriesRes);
+        setTotalQueries(queriesRes.data.data?.length || 0);
       } catch (err) {
         console.error("Failed to fetch dashboard data:", err);
 
         setTotalSubscribers(0);
         setTotalBlogs(0);
+        setTotalQueries(0);
       } finally {
         setLoading(false);
       }
@@ -71,7 +73,7 @@ export default function AdminDashboard() {
         />
         <DashboardCard
           title="Total Queries"
-          value={loading ? null : totalBlogs}
+          value={loading ? null : totalQueries}
           icon={<BsQuestionOctagonFill size={28} />}
         />
       </div>

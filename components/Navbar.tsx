@@ -19,6 +19,7 @@ import {
   Utensils,
   Images,
   Newspaper,
+  Building2,
   MessageCircle,
 } from "lucide-react";
 import Image from "next/image";
@@ -35,18 +36,24 @@ import {
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { span } from "framer-motion/client";
 
 const navItems = [
   { title: "Home", href: "/", icon: <Home size={16} /> },
-  { title: "Our Journey", href: "/our-journey", icon: <BookOpen size={16} /> },
-  {
-    title: "Meet the Chef",
-    href: "/meet-the-chef",
-    icon: <ChefHat size={16} />,
-  },
+  // { title: "Our Journey", href: "/our-journey", icon: <BookOpen size={16} /> },
+  // {
+  //   title: "Meet the Chef",
+  //   href: "/meet-the-chef",
+  //   icon: <ChefHat size={16} />,
+  // },
   { title: "Menu", href: "/menu", icon: <Utensils size={16} /> },
-  { title: "Our Creations", href: "/gallery", icon: <Images size={16} /> },
+  { title: "Gallery", href: "/gallery", icon: <Images size={16} /> },
   { title: "Blogs", href: "/blogs", icon: <Newspaper size={16} /> },
+  {
+    title: "Banquet",
+    href: "/banquet",
+    icon: <Building2 size={16} />,
+  },
   {
     title: "Let’s Connect",
     href: "/contact",
@@ -92,10 +99,9 @@ const Navbar = () => {
       <div className="bg-gray-100 shadow text-black text-sm px-4 md:px-16 py-2 flex justify-between items-center flex-wrap gap-2">
         <div className="hidden md:flex items-center gap-2">
           <MapPin className="w-4 h-4 text-[var(--primary-color)]" />
-          <span>
-            STELLAR IT PARK, C-25, C Block, Phase 2, Sector 62, Noida, Uttar
-            Pradesh 201307
-          </span>
+          <Link href="https://maps.app.goo.gl/NKoKxW8kgo1MkHsy9" target="blank">
+            Ground Floor, Stellar IT Park, C-25, Sector 62, Noida - 201309
+          </Link>
         </div>
 
         <div className="flex items-center gap-3 w-full md:w-auto justify-end">
@@ -231,7 +237,7 @@ const Navbar = () => {
               </Link>
             </div>
           </div> */}
-          <span className="text-md text-[#000000] font-thin cursor-pointer hover:text-[var(--primary-color)]">
+          <span className="text-md text-[#af0002] font-thin cursor-pointer hover:text-[var(--primary-color)]">
             <Link href="tel:+919599816865">
               <span className="inline-flex items-center gap-2">
                 <FaPhoneAlt />

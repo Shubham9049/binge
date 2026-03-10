@@ -19,7 +19,7 @@ const MobileContactBar = () => {
         className="w-1/2 flex flex-col items-center justify-center py-2 bg-white  text-[var(--primary-color)]"
       >
         <MessageCircle className="w-4 h-4" />
-        <span className="text-xs mt-1">Enquire Us</span>
+        <span className="text-xs mt-1">Contact Us</span>
       </a>
     </div>
   );

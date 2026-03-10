@@ -18,7 +18,7 @@ import img8 from "../assets/food/Murgh Malai Kebab.webp";
 import img9 from "../assets/food/Mutton Galouti.webp";
 import img10 from "../assets/food/Non-Veg Kebab Paltter.webp";
 import img11 from "../assets/food/Tandoori Chicken.webp";
-import img12 from "../assets/food/Veg Manchurian Dry.webp";
+import img12 from "../assets/food/Hummus with pita bread.webp";
 import img13 from "../assets/food/Fish Curry.webp";
 import img14 from "../assets/food/Mutton Roganjosh.webp";
 import img15 from "../assets/food/Diwani Handi.webp";
@@ -40,7 +40,7 @@ const foodImages: { src: StaticImageData; title: string }[] = [
   { src: img9, title: "Mutton Galouti 🍖" },
   { src: img10, title: "Non-Veg Kebab Platter 🍗🍖" },
   { src: img11, title: "Tandoori Chicken 🍗" },
-  { src: img12, title: "Veg Manchurian Dry 🥦" },
+  { src: img12, title: "Hummus with pita bread 🥦" },
   { src: img13, title: "Fish Curry 🐟" },
   { src: img14, title: "Mutton Roganjosh 🍗🍖" },
   { src: img15, title: "Diwani Handi 🥦" },
@@ -53,6 +53,9 @@ const foodImages: { src: StaticImageData; title: string }[] = [
 export default function SpringSlider() {
   return (
     <section className="w-11/12 md:w-5/6 mx-auto py-12 relative">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[var(--primary-color)]">
+        Our Artisanal Dishes
+      </h2>
       {/* Custom Navigation Buttons */}
       <button className="hidden md:block custom-prev absolute -left-14 top-1/2 -translate-y-1/2 z-10  ">
         <ChevronLeft

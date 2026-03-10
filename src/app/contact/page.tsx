@@ -3,7 +3,7 @@
 import { FaMapMarkerAlt, FaPhoneAlt, FaClock } from "react-icons/fa";
 import { MdDeliveryDining, MdOutlineLocalDining } from "react-icons/md";
 import { RiTakeawayFill } from "react-icons/ri";
-import contactBanner from "../../../assets/hero5.jpeg";
+import contactBanner from "../../../assets/hero5.jpg";
 import { useRef, useState } from "react";
 import axios from "axios";
 import Navbar from "../../../components/Navbar";
@@ -55,7 +55,7 @@ export default function ContactPage() {
   const contactRef = useRef<HTMLDivElement | null>(null);
   const scrollToNext = () => {
     if (contactRef.current) {
-      const yOffset = -50;
+      const yOffset = -70;
       const y =
         contactRef.current.getBoundingClientRect().top +
         window.scrollY +
@@ -73,7 +73,7 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Hero Banner */}
-      <section className="relative w-full h-[80vh] flex items-center justify-center pt-32">
+      <section className="relative w-full h-[70vh] md:h-[100vh] flex items-center justify-center pt-32">
         <Image
           src={contactBanner}
           alt="Contact page"
@@ -85,8 +85,7 @@ export default function ContactPage() {
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">Contact Us</h1>
           <p className="text-lg md:text-2xl max-w-2xl mx-auto">
-            We&#39;d love to hear from you! Reach out with questions, feedback,
-            or reservation inquiries.
+            Let&#39;s not waste time & get started. Shall we?
           </p>
           <button
             onClick={scrollToNext}
@@ -129,21 +128,22 @@ export default function ContactPage() {
           <div className="flex items-start gap-3">
             <FaMapMarkerAlt className="mt-1 text-[var(--primary-color)]" />
             <span>
-              STELLAR IT PARK, C-25, C Block, Phase 2, Industrial Area,
-              <br /> Sector 62, Noida, Uttar Pradesh 201307
+              Ground Floor, Stellar IT Park, C-25, Sector 62,
+              <br /> Noida - 201309
               <br />
-              <span className="text-sm text-gray-500">
+              {/* <span className="text-sm text-gray-500">
                 Floor G · Stellar IT Park
-              </span>
+              </span> */}
             </span>
           </div>
           <p className="flex items-center gap-3">
             <FaPhoneAlt className="text-[var(--primary-color)]" />
-            +91 95998 16865
+            +91 9599816865 | +91 9871952133
           </p>
+
           <p className="flex items-center gap-3">
             <FaClock className="text-[var(--primary-color)]" />
-            Open ⋅ Closes 11 pm
+            Open 11 am ⋅ Closes 11 pm
           </p>
         </div>
 
@@ -198,7 +198,19 @@ export default function ContactPage() {
           </button>
         </form>
       </section>
-
+      {/* Map Section */}
+      <section className="w-11/12 md:w-5/6 mx-auto h-[400px] md:h-[400px]  ">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.585670226247!2d77.3624109!3d28.6122041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce56996f6ab5b%3A0xda132206ab62c25f!2sStellar%20Binge!5e0!3m2!1sen!2sin!4v1756282825010!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="rounded-2xl"
+        ></iframe>
+      </section>
       <Footer />
       <MobileContactBar />
     </div>
